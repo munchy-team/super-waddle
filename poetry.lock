@@ -1,21 +1,21 @@
 [[package]]
-category = "main"
-description = "ASGI specs, helper code, and adapters"
 name = "asgiref"
+version = "3.3.1"
+description = "ASGI specs, helper code, and adapters"
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "3.3.1"
 
 [package.extras]
 tests = ["pytest", "pytest-asyncio"]
 
 [[package]]
-category = "main"
-description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
 name = "django"
+version = "3.1.5"
+description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "3.1.5"
 
 [package.dependencies]
 asgiref = ">=3.2.10,<4"
@@ -27,24 +27,33 @@ argon2 = ["argon2-cffi (>=16.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-sudo"
+version = "3.1.0"
+description = "Extra security for your sensitive pages"
 category = "main"
-description = "World timezone definitions, modern and historical"
-name = "pytz"
 optional = false
 python-versions = "*"
-version = "2020.5"
 
 [[package]]
+name = "pytz"
+version = "2020.5"
+description = "World timezone definitions, modern and historical"
 category = "main"
-description = "A non-validating SQL parser."
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "sqlparse"
+version = "0.4.1"
+description = "A non-validating SQL parser."
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "0.4.1"
 
 [metadata]
-content-hash = "258c756954908c648e7416565d2696cc0e68284931f1dfc9b8d60e0325321315"
+lock-version = "1.1"
 python-versions = "^3.8"
+content-hash = "158878ede9829122baa594d4bcbad97f44fd46d3807218ac38642930a443c5fa"
 
 [metadata.files]
 asgiref = [
@@ -54,6 +63,10 @@ asgiref = [
 django = [
     {file = "Django-3.1.5-py3-none-any.whl", hash = "sha256:efa2ab96b33b20c2182db93147a0c3cd7769d418926f9e9f140a60dca7c64ca9"},
     {file = "Django-3.1.5.tar.gz", hash = "sha256:2d78425ba74c7a1a74b196058b261b9733a8570782f4e2828974777ccca7edf7"},
+]
+django-sudo = [
+    {file = "django-sudo-3.1.0.tar.gz", hash = "sha256:671c9b819580d35688f2084e3f2cf60ebc1bfee7cbcf07882160ccf3fbb85a67"},
+    {file = "django_sudo-3.1.0-py2.py3-none-any.whl", hash = "sha256:fdd005910851def6cd0a2a121a9a41c98b714c345faaaf74fbb75bd95f2f5959"},
 ]
 pytz = [
     {file = "pytz-2020.5-py2.py3-none-any.whl", hash = "sha256:16962c5fb8db4a8f63a26646d8886e9d769b6c511543557bc84e9569fb9a9cb4"},

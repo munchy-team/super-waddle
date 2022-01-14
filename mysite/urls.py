@@ -19,6 +19,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# from progress.views import HttpResponse
+
+
+
 from . import views
 
 
@@ -26,7 +30,7 @@ admin.site.site_header= "Project Progress Website"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('progress/', admin.site.urls),
+  
 
     
 

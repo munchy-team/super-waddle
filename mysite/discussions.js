@@ -23,3 +23,20 @@ This is very slow.
 
 
  */
+/*
+Hello all peoples!
+Sry I couldent get on last night
+Wait someone just launched the code, is someone else here?
+:(
+  good moring
+
+  */
+  
+  let happinessLevel = happinessLevelInput
+  let howSadIAmToBeAllAlone = lonlienessLevelInput
+  let howSadIAmToBeAllAlone - happinessLevel = overallSadness
+
+  if overallSadness > 10 print "Hudson is so sad b/c he is sadder than the max sadness (10)"
+
+
+  

@@ -19,7 +19,10 @@ what does it mean by 2000 github action minutes
 This is very slow.
 
 
+Hello. get on the doc. 
+do you have live share ready
 
+how fast is theis on your end?
 
 
  */

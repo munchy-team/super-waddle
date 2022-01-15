@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'progress.apps.ProgressConfig',
+  #  'progress.apps.WebsiteIdeasConfig',
 ]
 
 MIDDLEWARE = [
@@ -73,7 +74,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+       'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
@@ -83,21 +84,17 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME':
+       'NAME':
         'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
-    {
-        'NAME':
-        'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME':
+   {
+      'NAME':
         'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
-    {
+   {
         'NAME':
         'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    }
 ]
 
 # Internationalization

@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'progress.apps.ProgressConfig',
-  #  'progress.apps.WebsiteIdeasConfig',
+   # 'progress.apps.WebsiteIdeasConfig',
 ]
 
 MIDDLEWARE = [

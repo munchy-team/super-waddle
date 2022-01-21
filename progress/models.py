@@ -15,6 +15,15 @@ class WebsiteIdea(models.Model):
   Date = models.DateTimeField()
   Describe_Your_Idea = models.TextField(max_length=500)
 
+class Excel(models.Model):
+  Title = models.CharField(max_length=250)
+  Date = models.DateTimeField()
+  Link = models.URLField(max_length=1000, blank=True)
+
+class Contact(models.Model):
+  Name = models.CharField(max_length=250)
+  Date = models.DateTimeField()
+  Link = models.URLField(max_length=1000, blank=True)
 
   
 

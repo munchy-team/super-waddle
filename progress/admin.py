@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Progresse, WebsiteIdea, VisualStudioCodeLink, Excel
+from .models import Progresse, WebsiteIdea, VisualStudioCodeLink, Excel, Assignment
 
 class ProgresseAdmin(admin.ModelAdmin):
   list_display = ('name', 'date')
@@ -13,8 +13,13 @@ class VisualStudioCodeLinkAdmin(admin.ModelAdmin):
 class ExcelAdmin(admin.ModelAdmin):
   list_display = ('Title', 'Date')
 
+class AssignmentAdmin(admin.ModelAdmin):
+  list_display = ('Date_Assigned', 'Assigned_To','Assigned_By', 'Due_Date', 'Task')
+
+
 admin.site.register(Progresse, ProgresseAdmin)
 admin.site.register(WebsiteIdea, WebsiteIdeaAdmin)
 admin.site.register(VisualStudioCodeLink,VisualStudioCodeLinkAdmin)
 admin.site.register(Excel, ExcelAdmin)
+admin.site.register(Assignment, AssignmentAdmin )
 # Register your models here.

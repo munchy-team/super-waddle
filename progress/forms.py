@@ -1,6 +1,7 @@
-# from django import forms
+ from django import forms
+ from .models import Assignment
 
-#class UploadFileForm(forms.Form):
- #   title = forms.CharField(max_length=50)
- #   file = forms.FileField()
-
+class Assignment(forms.ModelForm):\
+    class Meta:
+         model = Assignment
+         fields = ['Assigned_To', 'Assigned_By']

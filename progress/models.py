@@ -39,6 +39,6 @@ class Assignment(models.Model):
   Optional_Link = models.URLField(max_length=2000, blank=True)
   Optional_Link = models.URLField(max_length=2000, blank=True)
   Optional_Link = models.URLField(max_length=2000, blank=True)
-  
+  #class links(models.Model):
+    #Title 
 
-# Create your models here.

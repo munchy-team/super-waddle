@@ -39,6 +39,16 @@ class Assignment(models.Model):
   Optional_Link = models.URLField(max_length=2000, blank=True)
   Optional_Link = models.URLField(max_length=2000, blank=True)
   Optional_Link = models.URLField(max_length=2000, blank=True)
+  res_choices = (
+    ('Not Yet', 'Not Yet'),
+    ('Yes', 'Yes'),
+    ('Postponed', 'Postponed'),
+    ('Out The Window!(Canceled)',  'Out The Window!(Canceled)'))
+  Resolved = models.CharField(max_length=30, choices=res_choices)
+  # it does not work. 
+  Latest_Important_Message = models.CharField(max_length=100, blank=True)
+  Message_Posted_At = models.TimeField(blank=True, null=True)
+  Less_Important_Messages_And_Chat = models.TextField(blank=True, max_length=5000)  
   #class links(models.Model):
     #Title 
 

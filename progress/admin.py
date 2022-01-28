@@ -14,7 +14,7 @@ class ExcelAdmin(admin.ModelAdmin):
   list_display = ('Title', 'Date')
 
 class AssignmentAdmin(admin.ModelAdmin):
-  list_display = ('Task', 'Date_Assigned', 'Assigned_To','Assigned_By', 'Due_Date', )
+  list_display = ('Task', 'Resolved','Date_Assigned', 'Assigned_To','Assigned_By', 'Due_Date', 'Latest_Important_Message','Message_Posted_At',)
 
 
 admin.site.register(Progresse, ProgresseAdmin)

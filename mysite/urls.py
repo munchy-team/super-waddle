@@ -27,12 +27,12 @@ from django.urls import path, include
 from . import views
 
 
-admin.site.site_header= "Project Progress Website"
+admin.site.site_header= "Project Progress Website V17"
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
+    path('', views.version),
     path('home', views.home),
     path('firstview', views.firstview),
 

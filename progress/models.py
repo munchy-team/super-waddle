@@ -58,11 +58,11 @@ class Messages(models.Model):
       ('S,L', 'S,L'),
       )
   Time = models.DateTimeField()
-  To = models.CharField(choices=ppl, max_length=250)
+  To = models.CharField(choices=ppl, max_length=100)
   Subject = models.CharField(max_length=250,  blank=True)
-  Message = models.CharField(max_length=250)
-  Response = models.CharField(max_length=250,blank=True)
-  From = models.CharField(max_length=255, choices=ppl)
+  Message = models.CharField(max_length=500)
+  Response = models.CharField(max_length=500,blank=True)
+  From = models.CharField(max_length=100, choices=ppl)
 
 #class Special_Messages(models.Model):
    # ppl = (

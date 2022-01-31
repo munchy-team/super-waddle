@@ -32,7 +32,7 @@ admin.site.site_header= "Project Progress Website V19"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.version),
+    path('', views.index),
     path('home', views.home),
     path('firstview', views.firstview),
 

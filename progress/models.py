@@ -50,6 +50,19 @@ class Assignment(models.Model):
   Message_Posted_At = models.TimeField(blank=True, null=True)
   Less_Important_Messages_And_Chat = models.TextField(blank=True, max_length=5000)  
 
+class Messages(models.Model):
+  ppl = (
+     ('test', 'test'),
+      ('C,H', 'C,H'),
+      ('S,A', 'S,A'),
+      ('S,L', 'S,L'),
+      )
+  Time = models.DateTimeField()
+  To = models.CharField(choices=ppl, max_length=250)
+  Subject = models.CharField(max_length=250,  blank=True)
+  Message = models.CharField(max_length=250)
+  From = models.CharField(max_length=250, choices=ppl)
+
 #class Special_Messages(models.Model):
    # ppl = (
      #('test', 'test'),

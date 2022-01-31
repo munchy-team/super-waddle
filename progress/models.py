@@ -62,7 +62,7 @@ class Messages(models.Model):
   Subject = models.CharField(max_length=250,  blank=True)
   Message = models.CharField(max_length=250)
   Response = models.CharField(max_length=250,default="Type your response here.")
-  From = models.CharField(max_length=250, choices=ppl)
+  From = models.CharField(max_length=255, choices=ppl)
 
 #class Special_Messages(models.Model):
    # ppl = (

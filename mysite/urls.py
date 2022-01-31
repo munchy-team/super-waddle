@@ -27,7 +27,7 @@ from django.urls import path, include
 from . import views
 
 
-admin.site.site_header= "Project Progress Website V17"
+admin.site.site_header= "Project Progress Website V19"
 
 
 urlpatterns = [

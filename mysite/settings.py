@@ -9,8 +9,12 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-
 import os
+
+my_secret = os.environ['DBPW']
+
+
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -80,7 +84,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'dfauu6s2p9c2mc', 
         'USER': 'sjndilncqlgysz',
-        'PASSWORD': 'e8538d5f8ee333d967cea5ec709d41be8106f14a642dbf270ef43535217c58f6',
+        'PASSWORD': my_secret,
+
         'HOST': 'ec2-34-230-198-12.compute-1.amazonaws.com',
         'PORT': '5432',
     }

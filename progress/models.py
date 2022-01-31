@@ -49,6 +49,15 @@ class Assignment(models.Model):
   Latest_Important_Message = models.CharField(max_length=100, blank=True)
   Message_Posted_At = models.TimeField(blank=True, null=True)
   Less_Important_Messages_And_Chat = models.TextField(blank=True, max_length=5000)  
-  #class links(models.Model):
-    #Title 
 
+#class Special_Messages(models.Model):
+   # ppl = (
+     #('test', 'test'),
+      #('C,H', 'C,H'),
+      #('S,A', 'S,A'),
+      #('S,L', 'S,L'),
+      #)
+    #To = models.CharField(max_length=250)
+  #  Date = models.DateTimeField()
+   # Link = models.URLField(max_length=1000, blank=True)
+  #class links(models.Model)

@@ -16,18 +16,23 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+
+
+
 from django.contrib import admin
 from django.urls import path, include
 # from mysite import settings
 
-# from progress.views import HttpResponse
+
+
 
 
 
 from . import views
 
 
-admin.site.site_header= "Project Progress Website V19"
+admin.site.site_header= "Project Progress Website V"
 
 
 urlpatterns = [
@@ -35,7 +40,8 @@ urlpatterns = [
     path('', views.index),
     path('home', views.home),
     path('firstview', views.firstview),
-
+    path('progress/', include('progress.urls'))
+    
     #path('home/', ) # this wont work i think.
   
 

@@ -43,8 +43,8 @@ class Assignment(models.Model):
     ('Not Yet', 'Not Yet'),
     ('Yes', 'Yes'),
     ('Postponed', 'Postponed'),
-    ('Canceled', 'Canceled'),
-    ('Out The Window!(No More)',  'Out The Window!(No More)'))
+    ('bye bye bye', 'gone'),
+    ('Out The Window!(Canceled)',  'Out The Window!(Canceled)'))
   Resolved = models.CharField(max_length=30, choices=res_choices)
   # it does not work. 
   Latest_Important_Message = models.CharField(max_length=100, blank=True)
@@ -64,7 +64,7 @@ class Messages(models.Model):
   Message = models.CharField(max_length=500)
   From = models.CharField(max_length=100, choices=ppl)
   Response = models.CharField(max_length=500,blank=True)
-  Response_From = models.CharField(max_length=10, choices=ppl)
+  Response_From = models.CharField(max_length=10, choices=ppl,default='test')
   Time_Of_Response = models.TimeField(null=True, blank=True)
   
 

@@ -62,6 +62,7 @@ class Messages(models.Model):
   Subject = models.CharField(max_length=250,  blank=True)
   Message = models.CharField(max_length=500)
   Response = models.CharField(max_length=500,blank=True)
+  Time_Of_Response = models.TimeField(null=True, blank=True)
   From = models.CharField(max_length=100, choices=ppl)
 
 #class Special_Messages(models.Model):

@@ -1,7 +1,7 @@
 from django.db import models
 class munchy(models.Model):
   name = models.CharField(max_length=200)
-  data = models.DateTimeField()
+  date = models.DateTimeField()
   Munchy_message = models.TextField(max_length=700, blank=True)
 
 class Progresse(models.Model):

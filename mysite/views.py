@@ -28,7 +28,17 @@ def test(request):
   #stupid innternet
   #ready to send 
   # go ahead 
+  # give me an idea for a ss presentation. 
+  #about what 
+  # ss
+  # do one on japan
+  # what are the issues on japan 
+  #aging population
+  #wait i will see. 
+  # we should make a sign up page.
+  # also i got to connect the links
 def navigation(request):
+
   html = '<html> <title>Munchy-Site | Navigation</title> <h2>Navigation</h2><p>Or just go back to the <a href="/admin">log in</a> page. </p><h3>/Progress</h3> <ul> <li><a href="#">Link 1</a> </li> <li><a href="#">Link 2</a> </li><li><a href="#">Link 3</a> </li></ul> </html>'
   return HttpResponse(html)
 

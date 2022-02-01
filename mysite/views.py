@@ -2,7 +2,8 @@ from django.http import HttpResponse
 from django.shortcuts import render 
 
 def index(request):
-  return HttpResponse('This works')
+  html = "<html><title>super website</title><p1>This Works</p1></html>"
+  return HttpResponse(html)
 
 def home(request):
   return HttpResponse('This is the Updates Page')

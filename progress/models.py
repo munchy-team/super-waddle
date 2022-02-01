@@ -1,5 +1,8 @@
 from django.db import models
-
+class munchy(models.Model):
+  name = models.CharField(max_length=200)
+  data = models.DateTimeField()
+  Munchy_message = models.TextField(max_length=700, blank=True)
 
 class Progresse(models.Model):
   name = models.CharField(max_length=255)
@@ -43,6 +46,7 @@ class Assignment(models.Model):
     ('Not Yet', 'Not Yet'),
     ('Yes', 'Yes'),
     ('Postponed', 'Postponed'),
+    ('bye bye bye', 'gone'),
     ('Out The Window!(Canceled)',  'Out The Window!(Canceled)'))
   Resolved = models.CharField(max_length=30, choices=res_choices)
   # it does not work. 

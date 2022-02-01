@@ -6,7 +6,7 @@ from . import views
 urlpatterns = [
 path('munchy',views.munchy),
 path('time',views.date),
-
+path('li',views.li),
 ]
 
 

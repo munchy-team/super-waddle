@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render 
 
 def index(request):
-  html = "<html><title>Munchy-Site | Super Website</title><p1>This Works</p1></html>"
+  html = '<html><title>Munchy-Site | Super Website</title><p1><a href=/admin>Log in here</a> </p1></html>'
   return HttpResponse(html)
 
 def home(request):

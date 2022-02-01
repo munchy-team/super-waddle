@@ -41,7 +41,10 @@ urlpatterns = [
     path('home', views.home),
     path('firstview', views.firstview),
     path('progress', views.progress),
-    path('progress/', include('progress.urls'))
+    path('progress/', include('progress.urls')),
+    path('test/', views.test),
+    path('navigation/', views.navigation),
+  
     
     #path('home/', ) # this wont work i think.
   

@@ -9,6 +9,7 @@ def date(request):
   now = datetime.datetime.now()
   html = "<html><body>it is %snhtml>"% now
   return HttpResponse(html)
+  
 def li(request):
   html = '<html><title>Li did this</title></html>'
   return HttpResponse(html)

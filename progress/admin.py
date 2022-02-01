@@ -1,5 +1,8 @@
+#DO NOT SEND TO GITHUB INCOMPLTLE CODE WILL BREAK WEBSITE
+
+
 from django.contrib import admin
-from .models import Progresse, WebsiteIdea, VisualStudioCodeLink, Excel, Assignment, Messages, munchy
+from .models import Progresse, WebsiteIdea, VisualStudioCodeLink, Excel, Assignment, Messages
 
 class ProgresseAdmin(admin.ModelAdmin):
   list_display = ('name', 'date')
@@ -18,9 +21,7 @@ class AssignmentAdmin(admin.ModelAdmin):
 
 class MessagesAdmin(admin.ModelAdmin):
   list_display = ('Message', 'Time','To', 'From','Response', 'Response_From','Time_Of_Response')
-class MunchyAdmin(admin.ModelAdmin):
-  list_display = ('name', 'date','Munchy_message')
-admin.site.register(munchy,MunchyAdmin)
+
 admin.site.register(Progresse, ProgresseAdmin)
 admin.site.register(WebsiteIdea, WebsiteIdeaAdmin)
 admin.site.register(VisualStudioCodeLink,VisualStudioCodeLinkAdmin)

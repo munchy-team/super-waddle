@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-   
+    'testing.apps.TestingConfig',
     'progress.apps.ProgressConfig',
    # 'progress.apps.WebsiteIdeasConfig',
 ]

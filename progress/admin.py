@@ -17,7 +17,7 @@ class AssignmentAdmin(admin.ModelAdmin):
   list_display = ('Task', 'Resolved','Date_Assigned', 'Assigned_To','Assigned_By', 'Due_Date', 'Latest_Important_Message','Message_Posted_At',)
 
 class MessagesAdmin(admin.ModelAdmin):
-  list_display = ('Message', 'Time','To', 'From','Response', 'Time_Of_Response')
+  list_display = ('Message', 'Time','To', 'From','Response', 'Response_From','Time_Of_Response')
 
 
 admin.site.register(Progresse, ProgresseAdmin)

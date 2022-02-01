@@ -9,5 +9,8 @@ def home(request):
 
 def firstview(request):
   return HttpResponse('Our first view.py is up at 1:23PM')
-def version(requset):
+def version(request):
   return HttpResponse('this is version 19')
+
+def progress(request):
+  return HttpResponse('this is the progress thingy')

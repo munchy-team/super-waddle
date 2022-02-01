@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'testing.apps.TestingConfig',
+   # 'Links.apps.LinksConfig',
     'progress.apps.ProgressConfig',
+    
    # 'progress.apps.WebsiteIdeasConfig',
 ]
 

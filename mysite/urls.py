@@ -1,4 +1,4 @@
-\
+
 
 
 """mysite URL Configuration
@@ -36,8 +36,11 @@ admin.site.site_header= "Project Progress Website V"
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.index),
+    #path('admin/', admin.site.urls),
+    #path('', views.index),
+   # path('admin/', views.index),
+    path('index/', views.index),
+    path('', admin.site.urls),
     path('home', views.home),
     path('firstview', views.firstview),
     path('progress', views.progress),

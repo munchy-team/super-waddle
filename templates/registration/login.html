@@ -1,0 +1,9 @@
+{% block content %}
+<h2>Log In</h2>
+<form method="post">
+  <!-- Bootstrap, connect bootstrap css. -->
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Log in now</button>
+  {% endblock content %}
+  <!-- does not seem to work yet -->

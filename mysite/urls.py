@@ -45,7 +45,7 @@ urlpatterns = [
     path('test/', views.test),
     path('navigation/', views.navigation),
     path('links/', views.navigation),
-    path('munchyauth/', include('djnago.contrib.auth.urls'))
+    path('accounts/', include('django.contrib.auth.urls'))
   
     
     #path('home/', ) # this wont work i think.

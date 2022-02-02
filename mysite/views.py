@@ -17,7 +17,7 @@ def progress(request):
   return HttpResponse('this is the progress thingy')
 
 def test(request):
-  html = '<html> <title>this is a test page do whatever you want</title> <h1>THIS MUST WORKS!</h1> <h2>yes this works</h2> <h2><a href="https://droopylostmachinecode.codingproject101010101.repl.co/navigation/"> Go back to the Directory</a> </h2></html>'
+  html = '<html> <title>this is a test page do whatever you want</title> <h1>THIS MUST WORKS!</h1> <h2>yes this works</h2> <h2><a href="/navigation/"> Go back to the Directory</a> </h2></html>'
   return HttpResponse(html)
 #HEY TYPE YOUR PW IN COMMAND PROMPT
 #okay

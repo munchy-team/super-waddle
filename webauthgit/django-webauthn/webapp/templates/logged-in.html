@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Logged In Successfully
+{% endblock %}
+
+{% block content %}
+  <h1>Hello {{ user }}!</h1>
+
+  <p><a href="{% url "home" %}">Back to Home</a></p>
+{% endblock %}

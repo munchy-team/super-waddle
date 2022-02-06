@@ -22,7 +22,7 @@ class Excel(models.Model):
   Link = models.URLField(max_length=1000, blank=True)
 
 class Assignment(models.Model):
-  Name_Of_Assignment = models.CharField(max_length=50)
+  Name_Of_Assignment = models.CharField(max_length=150)
   Date_Assigned = models.DateTimeField()
   ppl = (
      ('test', 'test'),
@@ -35,7 +35,7 @@ class Assignment(models.Model):
   Task = models.CharField(max_length=250)
   Due_Date = models.DateField()
   Description = models.TextField(max_length=1000)
-  Link = models.URLField(max_length=2000)
+  Link = models.URLField(max_length=2000, blank=True)
   Optional_Link = models.URLField(max_length=2000, blank=True)
   Optional_Link = models.URLField(max_length=2000, blank=True)
   Optional_Link = models.URLField(max_length=2000, blank=True)
@@ -66,16 +66,9 @@ class Messages(models.Model):
   Response = models.CharField(max_length=500,blank=True)
   Response_From = models.CharField(max_length=10, choices=ppl,default='test')
   Time_Of_Response = models.TimeField(null=True, blank=True)
-  
 
-#class Special_Messages(models.Model):
-   # ppl = (
-     #('test', 'test'),
-      #('C,H', 'C,H'),
-      #('S,A', 'S,A'),
-      #('S,L', 'S,L'),
-      #)
-    #To = models.CharField(max_length=250)
-  #  Date = models.DateTimeField()
-   # Link = models.URLField(max_length=1000, blank=True)
-  #class links(models.Model)
+class File_Upload_Center(models.Model):
+  Time = models.DateTimeField()
+  File_Name = models.CharField(max_length=250)
+  Upload_File = models.FileField()
+  Description = models.TextField(max_length=250)

@@ -1,9 +1,11 @@
 from django.http import HttpResponse
 from django.shortcuts import render 
+from django.shortcuts import render, redirect
+from django.conf import settings
+from django.core.files.storage import FileSystemStorage
+from Uploads.models import File
+from django.contrib.auth.decorators import login_required
 
-def index(request):
-  html = '<!-- <html><title>Munchy-Site | Super Website</title><p1><a href=/admin>Log in here</a>--> <h3 style=font-family:"Calibri";>       Home:</h3> <ul><li><form action="/admin">    <input type="submit" value="Log In" /></form></li><li><form action="https://munchy-site.herokuapp.com">    <input type="submit" value="Go to Super Website" /></form></li><li><form action="https://munchy-site.herokuapp.com/admin">    <input type="submit" value="Go to Super Website Log In" /></form></li><li><form action="https://replit.com">    <input type="submit" value="Go to Replit" /></form></li><li><form action="https://github.com/cs947939/didactic-waddle.git">    <input type="submit" value="Go to GitHub" /></form></li><li><form action="https://heroku.com">    <input type="submit" value="Go to Heroku" /></form></li><li><form action="https://data.heroku.com">    <input type="submit" value="Go to Heroku Data" /></form><li><form action="https://stackoverflow.com">    <input type="submit" value="Go to Stack Overflow" /></form></li><li><form action="https://w3schools.com">    <input type="submit" value="Go to W3 Schools" /></form></li><li><form action="https://www.djangoproject.com/">    <input type="submit" value="Go to Django Docs 4.0" /></form></li><li><form action="https://docs.djangoproject.com/en/4.0/ref/models/fields/#field-types">    <input type="submit" value="Go to Django Model Types" /></form></li></li><li><form action="/navigation">    <input type="submit" value="Go to Navigation Menu" /></form></li></li></ul> </p1></html>'
-  return HttpResponse(html)
 
 def home(request):
   return HttpResponse('This is the Updates Page')
@@ -42,3 +44,18 @@ def navigation(request):
   html = '<html> <title>Munchy-Site | Navigation</title> <h2>Navigation</h2><p>Or just go back to the <a href="/admin">log in</a> or <a href="/">home</a> page. </p><h3>/Progress</h3> <ul> <li><a href="#">Link 1</a> </li> <li><a href="#">Link 2</a> </li><li><a href="#">Link 3</a> </li></ul> </html>'
   return HttpResponse(html)
 
+def simple_upload(request):
+    if request.method == 'POST' and request.FILES['myfile']:
+        myfile = request.FILES['myfile']
+        fs = FileSystemStorage()
+        filename = fs.save(myfile.name, myfile)
+        uploaded_file_url = fs.url(filename)
+        return render(request, 'Uploads/main.html', {
+            'uploaded_file_url': uploaded_file_url
+        })
+    return render(request, 'Uploads/uploader.html')
+
+@login_required
+def main(request):
+    Files = File.objects.all()
+    return render(request, 'Uploads/main.html', { 'file': Files})

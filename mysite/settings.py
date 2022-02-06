@@ -40,8 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'testing.apps.TestingConfig',
+    #'WebAuthn.apps.WebAuthnConfig',
     'Links.apps.LinksConfig',
     'progress.apps.ProgressConfig',
+    'Uploads.apps.UploadsConfig',
     
    # 'progress.apps.WebsiteIdeasConfig',
 ]
@@ -63,7 +65,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -140,3 +142,5 @@ STATICFILES_FINDERS = (
 
  )
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'

@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <hr>
-<p5><strong>{% if user.is_authenticated %}Hello, {{ user.username }}.{% endif %}</strong></p5>
+<p5><center><strong>{% if user.is_authenticated %}Hello, {{ user.username }}.{% endif %}</strong></center></p5>
 <hr>
+<center> 
+  
 <h3 style=font-family:"Calibri";>  
   Home:</h3> <ul><li><form action="/admin"> 
     <input type="submit" value="Go To Admin" />

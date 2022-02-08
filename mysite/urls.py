@@ -48,7 +48,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name="Home.html")),
     path('home', views.home),
-    path('firstview', views.firstview),
+    path('firstview', TemplateView.as_view(template_name="firstview.html")),
     path('progress', views.progress),
     path('progress/', include('progress.urls')),
     path('test/', views.test),

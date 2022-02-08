@@ -1,0 +1,40 @@
+
+<!-- <html><title>Munchy-Site | Super Website</title><p1><a href=/accounts/login>Log in here</a>--> 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <hr>
+<p5><strong><center>{% if user.is_authenticated %}Hello, {{ user.username }}.{% endif %}</center></strong></p5>
+<hr>
+<h3 style=font-family:"Calibri";>  
+  Home:</h3> <ul><li><form action="/admin"> 
+    <input type="submit" value="Go To Admin" />
+  </form></li><li><form action="/accounts/login">  
+    <input type="submit" value="Log In Page" />
+  </form></li>
+  <li><form action="/admin/progress/assignment">
+    <input type="submit" value="Go to Assignments" />
+  </form></li>
+   <li><form action="/upload-tool/"> 
+    <input type="submit" value="Go to File Upload Center" disabled="disabled"/>
+  </form></li>
+  
+  
+  
+  <li><form action="https://munchy-site.herokuapp.com"> 
+    <input type="submit" value="Go to Super Website" />
+  </form></li>
+  <li><form action="https://munchy-site.herokuapp.com/admin"> 
+    <input type="submit" value="Go to Super Website Log In" />
+  </form></li>
+  <li><form action="https://replit.com">    <input type="submit" value="Go to Replit" />
+  </form></li>
+  <li><form action="https://github.com/cs947939/didactic-waddle.git">
+    <input type="submit" value="Go to GitHub" />
+  </form></li>
+  <li><form action="https://heroku.com">    <input type="submit" value="Go to Heroku" />
+
+</html>
+
+

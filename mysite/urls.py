@@ -25,7 +25,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from django.conf.urls import url
+# from django.conf.urls import url
 from uploader import views
 
 #from django.conf.urls import url
@@ -55,8 +55,8 @@ urlpatterns = [
     path('navigation/', views.navigation),
     path('links/', views.navigation),
     path('accounts/', include('django.contrib.auth.urls')),
-    url(r'^upload-tool/$', views.main, name='main'),
-    url(r'^uploader/media/$', views.simple_upload, name='simple_upload'),
+   # url(r'^upload-tool/$', views.main, name='main'),
+  #  url(r'^uploader/media/$', views.simple_upload, name='simple_upload'),
    # url(r'^media/documents/test.txt$', views.main, name='simple_upload'),
    # url(r'^main/$', views.main, name='main'),
    # url(r'^downloads/$', views.simple_upload, name='simple_upload'),

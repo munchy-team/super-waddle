@@ -1,11 +1,11 @@
 from django.contrib import admin
 from .models import File
-# document is the model
 
-class FileAdmin(admin.ModelAdmin):
-    list_display = ('Title', 'uploaded_at')
+
+#class FileAdmin(admin.ModelAdmin):
+  #  list_display = ('Title', 'uploaded_at')
 
 # Register your models here.
-admin.site.register(File, FileAdmin)
+#admin.site.register(File, FileAdmin)
 
 # Register your models here.

@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.shortcuts import render, redirect
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
-from Uploads.models import File
+from uploader.models import Document
 from django.contrib.auth.decorators import login_required
 
 
@@ -44,18 +44,20 @@ def navigation(request):
   html = '<html> <title>Munchy-Site | Navigation</title> <h2>Navigation</h2><p>Or just go back to the <a href="/admin">log in</a> or <a href="/">home</a> page. </p><h3>/Progress</h3> <ul> <li><a href="#">Link 1</a> </li> <li><a href="#">Link 2</a> </li><li><a href="#">Link 3</a> </li></ul> </html>'
   return HttpResponse(html)
 
+def main(request):
+    documents = Document.objects.all()
+    return render(request, 'uploader/main.html', { 'documents': documents })
+
+@login_required
 def simple_upload(request):
     if request.method == 'POST' and request.FILES['myfile']:
         myfile = request.FILES['myfile']
         fs = FileSystemStorage()
         filename = fs.save(myfile.name, myfile)
         uploaded_file_url = fs.url(filename)
-        return render(request, 'Uploads/main.html', {
+        return render(request, 'uploader/uploading.html', {
             'uploaded_file_url': uploaded_file_url
         })
-    return render(request, 'Uploads/uploader.html')
 
-@login_required
-def main(request):
-    Files = File.objects.all()
-    return render(request, 'Uploads/main.html', { 'file': Files})
+
+    return render(request, 'uploader/uploading.html')

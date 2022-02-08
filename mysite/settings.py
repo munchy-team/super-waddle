@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'Links.apps.LinksConfig',
     'progress.apps.ProgressConfig',
     'Uploads.apps.UploadsConfig',
+    'uploader.apps.UploaderConfig',
+
     
    # 'progress.apps.WebsiteIdeasConfig',
 ]

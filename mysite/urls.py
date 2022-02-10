@@ -63,12 +63,14 @@ urlpatterns = [
    # url(r'^media/documents/test.txt$', views.main, name='simple_upload'),
    # url(r'^main/$', views.main, name='main'),
    # url(r'^downloads/$', views.simple_upload, name='simple_upload'),
-     path('dev-tools', TemplateView.as_view(template_name="dev-tools.html")),
 
 ]
 if settings.DEBUG==True:
-   urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_URL)
-   urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+   urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+   #urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_URL)
+   #urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+   #urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+   urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
  # how can we implement this: https://www.youtube.com/watch?v=v5FWAxi5QqQ look at timestamp 7:18. I dont know how to implement that in html. #no idea help 
   
     

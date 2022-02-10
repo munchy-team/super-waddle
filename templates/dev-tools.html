@@ -8,6 +8,9 @@
 {% if user.is_authenticated %}
 <hr>
 <center><p5 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><strong>Hello, {{ user.username }}!</strong></p5></center>
+<center><form action="/admin/logout/">
+    <input type="submit" value="Log Out" />
+  </form></center>
 <hr>
 {% endif %}
 
@@ -33,11 +36,4 @@
  <li><form action="https://www.djangoproject.com/"><input type="submit" value="Go to Django Docs 4.0" /></form></li>
  <li><form action="https://docs.djangoproject.com/en/4.0/ref/models/fields/#field-types"> <input type="submit" value="Go to Django Model Types" /></form></li>
 </li><li><form action="/navigation"> <input type="submit" value="Go to Navigation Menu" /></form></li>
-</li>
-<li><form action="/admin"> 
-    <input type="submit" value="Go To Admin" />
-  </form></li>
-  <li><form action="/"> 
-    <input type="submit" value="Go To Munchy-Site Home" />
-  </form></li>
-</ul> </p1></html>
+</li></ul> </p1></html>

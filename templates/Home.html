@@ -7,8 +7,10 @@
  <!-- if user is auth -->
   
   <!-- another update as of 02-2022-->
-<p5><center><strong>{% if user.is_authenticated %}Hello, {{ user.username }}.{% endif %}</strong></center></p5>
+  <hr>
+<p5 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><center><strong>{% if user.is_authenticated %}Hello, {{ user.username }}!</strong></center></p5>
 <hr>
+{% endif %}
 <!-- end if  -->
 <!--
 <center> <form><input type="submit" value="Go to File Upload Center" action="munchysite-uploader.herokuapp.com"/>
@@ -22,7 +24,7 @@
 
 </center>
 -->
-<h3 style=font-family:"Calibri";>  
+<h3>  
 Home:</h3> <ul><li><form action="/admin"> 
   <input type="submit" value="Go To Admin" />
 </form></li><li><form action="/accounts/login">  
@@ -31,7 +33,7 @@ Home:</h3> <ul><li><form action="/admin">
 <li><form action="/admin/progress/assignment">
   <input type="submit" value="Go to Assignments" />
 </form></li>
- <li><form action="/upload-tool/"> 
+ <li><form action="/theuploader/"> 
   <input type="submit" value="Go to File Upload Center"/>
 </form></li>
 

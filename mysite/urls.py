@@ -22,7 +22,7 @@ Including another URLconf
 
 
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
 # from django.conf.urls import url
@@ -41,7 +41,7 @@ from . import views
 
 
 from django.views.generic import TemplateView
-admin.site.site_header= "Project Progress Website V"
+admin.site.site_header= "Project Progress Website"
 
 
 urlpatterns = [
@@ -55,6 +55,9 @@ urlpatterns = [
     path('navigation/', views.navigation),
     path('links/', views.navigation),
     path('accounts/', include('django.contrib.auth.urls')),
+    re_path(r'^theuploader/$', views.main, name='main'),
+    #url(r'/^$', views.main, name='main'),
+    re_path(r'^uploader/media/$', views.simple_upload, name='simple_upload'),
    # url(r'^upload-tool/$', views.main, name='main'),
   #  url(r'^uploader/media/$', views.simple_upload, name='simple_upload'),
    # url(r'^media/documents/test.txt$', views.main, name='simple_upload'),

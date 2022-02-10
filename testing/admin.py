@@ -2,12 +2,16 @@
 # ow is 1 now easy pw py
 #upload to github 
 from django.contrib import admin
+
+from testing.models import DriveUploader
 from .models import munchy
 
 
 class MunchyAdmin(admin.ModelAdmin):
   list_display = ('name', 'date','Munchy_message')
 admin.site.register(munchy,MunchyAdmin)
-
+admin.site.register(DriveUploader, DriveAdmin)
+class DriveAdmin(admin.ModelAdmin):
+  list_display = ('Title', 'drive_file_link','Name_of_file')
 
 # Register your models here.

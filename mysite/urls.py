@@ -63,6 +63,7 @@ urlpatterns = [
    # url(r'^media/documents/test.txt$', views.main, name='simple_upload'),
    # url(r'^main/$', views.main, name='main'),
    # url(r'^downloads/$', views.simple_upload, name='simple_upload'),
+     path('dev-tools', TemplateView.as_view(template_name="dev-tools.html")),
 
 ]
 if settings.DEBUG==True:

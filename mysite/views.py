@@ -61,3 +61,6 @@ def simple_upload(request):
 
 
     return render(request, 'uploader/uploading.html')
+
+  def dev_tools(request):
+    return HttpResponse()

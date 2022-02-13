@@ -9,9 +9,11 @@ from .models import munchy
 
 class MunchyAdmin(admin.ModelAdmin):
   list_display = ('name', 'date','Munchy_message')
-admin.site.register(munchy,MunchyAdmin)
-admin.site.register(DriveUploader, DriveAdmin)
+
 class DriveAdmin(admin.ModelAdmin):
   list_display = ('Title', 'drive_file_link','Name_of_file')
+
+admin.site.register(munchy,MunchyAdmin)
+admin.site.register(DriveUploader, DriveAdmin)
 
 # Register your models here.

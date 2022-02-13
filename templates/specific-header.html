@@ -1,0 +1,61 @@
+<html>
+    <!-- <html><title>Munchy-Site | Super Website</title><p1><a href=/accounts/login>Log in here</a>--> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<body>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     
+     {% if user.is_authenticated %}
+     <hr>
+   <center><h5><strong>Hello, {{ user.username }}!</strong></h5></center>
+   <center><form action="/admin/logout/">
+     <input type="submit" value="Log Out" />
+   </form></center>
+   <hr>
+   {% endif %}
+<ul>
+<h4>  
+Go to a Specific Header:</h4> <hr><ul> <li><form action="/navigation/#admin"> 
+    <input type="submit" value="Go to Munchy-Team Admin" />
+  </form></li>
+  <li><form action="/navigation/#dev-tools"> 
+    <input type="submit" value="Go to Munchy-Team Dev Tools" />
+  </form></li>
+  <li><form action="/navigation/#repos"> 
+    <input type="submit" value="Go to Munchy-Team GitHub Repos" />
+  </form></li>
+  <li><form action="/navigation/#replits"> 
+    <input type="submit" value="Go to Munchy-Team Replits" />
+  </form></li>
+  <li><form action="/navigation/#heroku"> 
+    <input type="submit" value="Go to Munchy-Team Heroku" />
+  </form></li>
+  <li><form action="/navigation/#dev-apps"> 
+    <input type="submit" value="Go to Munchy-Team Dev-Apps" />
+  </form></li>
+  <li><form action="/navigation/#ui-design"> 
+    <input type="submit" value="Go to Munchy-Team UI Design" />
+  </form></li>
+  <li><form action="/navigation/#planning-tools"> 
+    <input type="submit" value="Go to Munchy-Team Planning Tools" />
+  </form></li>
+  <li><form action="/navigation/#replits"> 
+    <input type="submit" value="Go to Munchy-Team Replits" />
+  </form></li>
+  <li><form action="/navigation/#munchyteam-websites"> 
+    <input type="submit" value="Go to Munchy-Team Replits" />
+  </form></li>
+  <!-- specific header-->
+  
+  
+ 
+                       
+
+</ul>
+<hr>
+                        <center><form action="/">
+                          <input type="submit" value="Go Back to Homepage"  /></form></center>  
+</body>
+</html>
+
+

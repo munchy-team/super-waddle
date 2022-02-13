@@ -1,0 +1,169 @@
+<html>
+    <!-- <html><title>Munchy-Site | Super Website</title><p1><a href=/accounts/login>Log in here</a>--> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<body>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     
+     {% if user.is_authenticated %}
+     <hr>
+   <center><h5><strong>Hello, {{ user.username }}!</strong></h5></center>
+   <center><form action="/admin/logout/">
+     <input type="submit" value="Log Out" />
+   </form></center>
+   <hr>
+   {% endif %}
+<ul>
+<h4>  
+  Navigation:</h4> <hr><ul> <li><form action="/"> 
+    <input type="submit" value="Go to Homepage" />
+  </form></li><li><form action="/a-z"> 
+    <input type="submit" value="A-Z Directory List" />
+  </form></li>
+  <li><form action="/navigation/specific-header"> 
+    <input type="submit" value="Go to a Specific Header" />
+  </form></li>
+ 
+  <hr>
+  <span class="admin">
+  <h5>Munchy-Team Admin:</h5>
+  <li><form action="/accounts/login">  
+    <input type="submit" value="Munchy-Team's HTML Log In Page" />
+  </form></li>
+  <li><form action="/admin">  
+    <input type="submit" value="Administrator Log In Page" />
+  </form></li>
+  <li><form action="admin/progress/progresse/">
+    <input type="submit" value="Go to Progresses" />
+  </form></li>
+  <li><form action="/admin/progress/messages">
+    <input type="submit" value="Go to Messages" />
+  </form></li>
+  <li><form action="/munchys/"> 
+    <input type="submit" value="Go to Admin Munchys"/>
+  </form></li>
+  <li><form action="/website-ideas/"> 
+    <input type="submit" value="Go to the Website Ideas"/>
+  </form></li>
+   <li><form action="/upload-tool/"> 
+    <input type="submit" value="Go to Munchy-Site File Upload Center"/>
+  </form></li>
+</span>
+  <hr>
+  <span class="dev-tools">
+  <h5>Munchy-Team Dev Tools:</h5>
+  
+   <li><form action="https://replit.com">    <input type="submit" value="Go to Replit" />
+  </form></li>
+  <li><form action="https://github.com/munchy-team/">
+    <input type="submit" value="Go to GitHub" />
+  </form></li>
+  <li><form action="https://github.com/munchy-team/didactic-waddle.git">
+    <input type="submit" value="Go to Didactic-Waddle" />
+  </form></li>
+  <li><form action="https://github.com/munchy-team/effective-spoon.git">
+    <input type="submit" value="Go to Effective-Spoon" />
+  </form></li>
+  <li><form action="https://heroku.com">    <input type="submit" value="Go to Heroku" /></form></li>
+    <li><form action="https://data.heroku.com">
+        <input type="submit" value="Go to Heroku Data" /></form></li>
+        <li><form action="https://stackoverflow.com">
+         <input type="submit" value="Go to Stack Overflow" /></form></li>
+         <li><form action="https://w3schools.com"><input type="submit" value="Go to W3 Schools" /></form></li>
+         <li><form action="https://www.djangoproject.com/"><input type="submit" value="Go to Django Docs 4.0" /></form></li>
+         <li><form action="https://docs.djangoproject.com/en/4.0/ref/models/fields/#field-types"> <input type="submit" value="Go to Django Model Types" /></form></li>
+        </li><!--<li><form action="/navigation"> <input type="submit" value="Go to Navigation Menu" /></form></li>
+        </li>-->
+      </span>
+
+        <hr>
+        <span class="repos">
+        <h5>Munchy-Team GitHub Repos:</h5>
+        <li><form action="https://github.com/munchy-team/">
+          <input type="submit" value="Go to Munchy-Team GitHub" />
+        </form></li>
+        <li><form action="https://github.com/munchy-team/didactic-waddle.git">
+          <input type="submit" value="Go to Didactic-Waddle" />
+        </form></li>
+        <li><form action="https://github.com/munchy-team/effective-spoom.git">
+          <input type="submit" value="Go to Effective-Spoon" />
+        </form></li>
+      </span>
+        <hr>
+        <span class="replits">
+        <h5>Munchy-Team Replits:</h5>
+        <li><form action="https://replit.com/@codingproject101010101">    <input type="submit" value="Go to Munchy-Team's Replit Page" />
+        </form></li>
+        <li><form action="https://replit.com/@codingproject101010101/VeryDependableGarbage?v=1">    <input type="submit" value="Go to VeryDependableGarbage Replit" />
+        </form></li>
+        <li><form action="https://replit.com/@codingproject101010101/RoboticBerriesCode
+          ">    <input type="submit" value="Go to RoboticBerriesCode Replit" />
+          <ul><li><small>This contains the real MunchySite code at <a href="https://munchysite.herokuapp.com">https://munchysite.herokuapp.com</a>.</small></li></ul>
+        </form></li>
+        <li><form action="        https://replit.com/@codingproject101010101/AppleJugglerCode?v=1
+          ">    <input type="submit" value="Go to AppleJugglerCode Replit" />
+          <ul><li><small>This contains the real MunchySite-Uploader code at <a href="https://munchysite-uploader.herokuapp.com">munchysite-uploader.herokuapp.com</a>.</small></li></ul>
+        </form></li>
+      </span>
+        <hr>
+        <span class="heroku">
+        <h5>Munchy-Team Heroku:</h5>
+        <li><form action="https://heroku.com">    <input type="submit" value="Go to Heroku" /></form></li>
+        <li><form action="https://data.heroku.com">
+            <input type="submit" value="Go to Heroku Data" /></form></li>
+          </span>
+            <hr>
+          <span class="drives">
+          <h5>Munchy-Team Drives:</h5>
+          <li><form action="https://drive.google.com">    <input type="submit"  disabled="disabled" value="Go to Google Drive" /></form></li>
+          <li><form action="https://onedrive.com">
+              <input type="submit" value="Go to OneDrive" disabled="disabled" /></form></li>
+            </span>
+             <hr>
+            <span class="dev-apps">
+             <h5>Munchy-Team Dev Apps:</h5>
+             <li><form action="https://code.visualstudio.com/">    <input type="submit" value="Go to Visual Studio Code Community" /></form></li>
+             <li><form action="https://visualstudio.microsoft.com/vs/">
+                 <input type="submit" value="Go to Visual Studio 2022 Community"  /></form></li> 
+                 <li><form action="https://vscode.dev">
+                  <input type="submit" value="Go to vscode.dev"  /></form></li> 
+                  <li><form action="https://github.dev">
+                    <input type="submit" value="Go to github.dev"  /></form></li> 
+                  </span>
+                    <hr>
+                    <span class="ui-design">
+                    <h5>Munchy-Team UI Design:</h5>
+                    <li><form action="https://remove.bg">
+                      <input type="submit" value="Go to remove.bg"  /></form></li> 
+                      <li><form action="https://slides.google.com">
+                        <input type="submit" value="Go to Google Slides"  /></form></li> 
+                        <li><form action="https://vscode.dev">
+                          <input type="submit" value="Go to vscode.dev"  /></form></li> 
+                          <li><form action="https://drawings.google.com">
+                            <input type="submit" value="Go to Google Drawings"  /></form></li> 
+                          </span>
+                    <hr>
+                    <span id="planning-tools">
+                    <h5>Munchy-Team Planning Tools:</h5>
+                    <li><form action="https://lucidchart.com/pages">
+                      <input type="submit" value="Go to Lucidchart"  /></form></li> 
+                      <li><form action="https://slides.google.com">
+                        <input type="submit" value="Go to Google Slides"  /></form></li> 
+                      </span>
+                      <hr>
+                      <span id="munchyteam-websites">
+                        <h5>Munchy-Team Websites:</h5>
+                        <li><form action="https://munchysite.herokuapp.com">
+                          <input type="submit" value="Go to MunchySite"  /></form></li> 
+                          <li><form action="https://munchysite-uploader.herokuapp.com">
+                            <input type="submit" value="Go to Munchysite-Uploader"  /></form></li> 
+                          </span>
+
+</ul>
+<hr>
+                        <center><form action="/">
+                          <input type="submit" value="Go Back to Homepage"  /></form></center>  
+</body>
+</html>
+
+

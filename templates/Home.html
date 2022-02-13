@@ -9,7 +9,7 @@
   <!-- another update as of 02-2022-->
   {% if user.is_authenticated %}
   <hr>
-<center><h5 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><strong>Hello, {{ user.username }}!</strong></h5></center>
+<center><h5><strong>Hello, {{ user.username }}!</strong></h5></center>
 <center><form action="/admin/logout/">
   <input type="submit" value="Log Out" />
 </form></center>
@@ -28,7 +28,7 @@
 
 </center>
 -->
-<title>This is offline</title>
+<title>MunchySite| MunchyTeam</title>
 <h3>  
 Home:</h3> <ul>
   <li><form action="/admin"> 
@@ -46,6 +46,8 @@ Home:</h3> <ul>
 </form></li>
 
 <li><form action="/dev-tools">    <input type="submit" value="Go to Munchy-Team Dev Tools" />
+</form></li>
+<li><form action="/navigation">    <input type="submit" value="Go to Navigation" />
 </form></li>
 
 

@@ -17,7 +17,7 @@ class ExcelAdmin(admin.ModelAdmin):
   list_display = ('Title', 'Date')
 
 class AssignmentAdmin(admin.ModelAdmin):
-  list_display = ('Task', 'Resolved','Date_Assigned', 'Assigned_To','Assigned_By', 'Due_Date', 'Latest_Important_Message','Message_Posted_At',)
+  list_display = ('Task', 'Resolved','Date_Assigned','Assigned_By',  'Primary_Assigned_Person', 'Secondary_Assigned_Person', 'Tertiary_Assigned_Person','Due_Date', 'Latest_Important_Message','Message_Posted_At',)
 
 class MessagesAdmin(admin.ModelAdmin):
   list_display = ('Message', 'Time','To', 'From','Response', 'Response_From','Time_Of_Response')

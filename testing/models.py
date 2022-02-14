@@ -1,11 +1,20 @@
 #from typing_extensions import Required
+from unittest.util import _MAX_LENGTH
 from django.db import models
 
 # something is wrong here. 
 class munchy(models.Model):
+  ppl = (
+     ('test', 'test'),
+      ('C,H', 'C,H'),
+      ('S,A', 'S,A'),
+      ('S,L', 'S,L'),
+      )
+  From = models.CharField(max_length=5, choices=ppl)
+  To = models.CharField(max_length=5, choices=ppl)
   name = models.CharField(max_length=200)
   date = models.DateTimeField()
-  Munchy_message = models.TextField(max_length=700, blank=True)
+  Munchy_Message = models.TextField(max_length=700, blank=True)
 
 class Upload(models.Model):
     upload_file = models.FileField()    

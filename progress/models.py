@@ -30,20 +30,22 @@ class Assignment(models.Model):
       ('S,A', 'S,A'),
       ('S,L', 'S,L'),
       )
-  Assigned_To = models.CharField(max_length=5,choices=ppl)
   Assigned_By = models.CharField(max_length=5, choices=ppl)
+  Primary_Assigned_Person = models.CharField(max_length=5,choices=ppl)
+  Secondary_Assigned_Person = models.CharField(max_length=5,choices=ppl, blank=True)
+  Tertiary_Assigned_Person = models.CharField(max_length=5,choices=ppl, blank=True)  
   Task = models.CharField(max_length=250)
   Due_Date = models.DateField()
   Description = models.TextField(max_length=1000)
   Link = models.URLField(max_length=2000, blank=True)
-  Optional_Link = models.URLField(max_length=2000, blank=True)
-  Optional_Link = models.URLField(max_length=2000, blank=True)
-  Optional_Link = models.URLField(max_length=2000, blank=True)
+  Optional_Link_1 = models.URLField(max_length=2000, blank=True)
+  Optional_Link_2 = models.URLField(max_length=2000, blank=True)
+  Optional_Link_3 = models.URLField(max_length=2000, blank=True)
   res_choices = (
     ('Not Yet', 'Not Yet'),
     ('Yes', 'Yes'),
     ('Postponed', 'Postponed'),
-    ('bye bye bye', 'gone'),
+   # ('bye bye bye', 'gone'),
     ('Out The Window!(Canceled)',  'Out The Window!(Canceled)'))
   Resolved = models.CharField(max_length=30, choices=res_choices)
   # it does not work. 

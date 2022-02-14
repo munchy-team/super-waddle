@@ -8,7 +8,7 @@ from .models import munchy
 
 
 class MunchyAdmin(admin.ModelAdmin):
-  list_display = ('name', 'date','Munchy_message')
+  list_display = ('name','From','To', 'date','Munchy_Message')
 
 class DriveAdmin(admin.ModelAdmin):
   list_display = ('Title', 'drive_file_link','Name_of_file')

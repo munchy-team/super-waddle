@@ -17,6 +17,8 @@ def version(request):
 
 def progress(request):
   return HttpResponse('this is the progress thingy')
+def ml(request):
+  return HttpResponse('you are logged in')
 
 def test(request):
   html = '<html> <title>this is a test page do whatever you want</title> <h1>THIS MUST WORKS!</h1> <h2>yes this works</h2> <h2><a href="/navigation/"> Go back to the Directory</a> </h2></html>'

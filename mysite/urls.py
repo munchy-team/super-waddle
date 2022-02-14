@@ -54,6 +54,7 @@ urlpatterns = [
     path('test/', views.test),
     path('navigation/', views.navigation),
     path('links/', views.navigation),
+    path('accounts/login/ml',TemplateView.as_view(template_name="logedin.html")),
     path('accounts/', include('django.contrib.auth.urls')),
     re_path(r'^theuploader/$', views.main, name='main'),
     #url(r'/^$', views.main, name='main'),
@@ -61,6 +62,8 @@ urlpatterns = [
     path('dev-tools', TemplateView.as_view(template_name="dev-tools.html")), 
     path('navigation', TemplateView.as_view(template_name="navigation.html")),
     path('navigation/specific-header', TemplateView.as_view(template_name="specific-header.html")),
+    path('ml/', views.ml)
+    
    # url(r'^upload-tool/$', views.main, name='main'),
   #  url(r'^uploader/media/$', views.simple_upload, name='simple_upload'),
    # url(r'^media/documents/test.txt$', views.main, name='simple_upload'),

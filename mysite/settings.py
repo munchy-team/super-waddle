@@ -27,7 +27,7 @@ SECRET_KEY = 'b#s*_o(3t3ai_k(c5po@h7a=nj5#vjkd3u7ckhnx@)mi=8fn67'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 #need to define
-LOGIN_REDIRECT_URL = ''
+LOGIN_REDIRECT_URL = '/ml'
 ALLOWED_HOSTS = ["*"]
 
 # Application definition

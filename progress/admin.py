@@ -2,7 +2,7 @@
 
 
 from django.contrib import admin
-from .models import Progresse, WebsiteIdea, VisualStudioCodeLink, Assignment, Messages, File_Upload_Center
+from .models import Progresse, WebsiteIdea, VisualStudioCodeLink, Assignment, Messages, File_Upload_Center, Statuses, ScheduledTasks
 
 class ProgresseAdmin(admin.ModelAdmin):
   list_display = ('name', 'date')
@@ -12,6 +12,9 @@ class WebsiteIdeaAdmin(admin.ModelAdmin):
 
 class VisualStudioCodeLinkAdmin(admin.ModelAdmin):
   list_display = ('Title', 'Date')
+  
+class StatusesAdmin(admin.ModelAdmin):
+  list_display = ('Document_Name',)
 
 
 
@@ -23,6 +26,9 @@ class MessagesAdmin(admin.ModelAdmin):
 
 class File_Upload_CenterAdmin(admin.ModelAdmin):
   list_display = ('File_Name', 'Time')
+  
+class ScheduledTasksAdmin(admin.ModelAdmin):
+  list_display = ('Task_Name', 'Due')
 
 admin.site.register(Progresse, ProgresseAdmin)
 admin.site.register(WebsiteIdea, WebsiteIdeaAdmin)
@@ -30,6 +36,8 @@ admin.site.register(VisualStudioCodeLink,VisualStudioCodeLinkAdmin)
 
 admin.site.register(Assignment, AssignmentAdmin )
 admin.site.register(Messages, MessagesAdmin )
+admin.site.register(Statuses, StatusesAdmin )
+admin.site.register(ScheduledTasks, ScheduledTasksAdmin )
 #admin.site.register(File_Upload_Center,File_Upload_CenterAdmin )
 
 # Register your models here.

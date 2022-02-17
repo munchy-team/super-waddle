@@ -62,8 +62,8 @@ urlpatterns = [
     path('dev-tools', TemplateView.as_view(template_name="dev-tools.html")), 
     path('navigation', TemplateView.as_view(template_name="navigation.html")),
     path('navigation/specific-header', TemplateView.as_view(template_name="specific-header.html")),
-    path('ml/', TemplateView.as_view(template_name="logedin.html"))
-    
+    path('ml/', TemplateView.as_view(template_name="logedin.html")),
+  path('CSerror', views.CSRF_ERROR)
    # url(r'^upload-tool/$', views.main, name='main'),
   #  url(r'^uploader/media/$', views.simple_upload, name='simple_upload'),
    # url(r'^media/documents/test.txt$', views.main, name='simple_upload'),

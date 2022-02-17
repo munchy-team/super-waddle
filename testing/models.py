@@ -1,5 +1,5 @@
 #from typing_extensions import Required
-from unittest.util import _MAX_LENGTH
+
 from django.db import models
 
 # something is wrong here. 
@@ -22,5 +22,20 @@ class Upload(models.Model):
 
 class DriveUploader(models.Model):    
     Title = models.CharField(max_length=100)
-    drive_file_link = models.URLField(max_length=1000)
-    Name_of_file = models.CharField(max_length=100)
+    drive_file_link = models.URLField(max_length=1000, blank=True)
+    Name_of_file = models.CharField(max_length=100, blank=True)
+    filetype = (
+    ('-----', '-----'),
+    ('Drive', 'Drive'),
+    ('munchy', 'munchy'),  
+     ('.docx', '.docx'),
+     ('.xlsx', '.xlsx'), 
+      ('.pptx', '.pptx'),
+      ('.pdf', '.pdf'),
+      ('Other', 'Other'),
+      )
+    File_Type = models.CharField(max_length=10, default="-----", choices=filetype)
+    File_Link = models.URLField(max_length=2500, blank=True)
+# please make the migrations and migrate I will work on dwa. getting off docs too.
+
+# okay have to work on dwa. I will be offline unfortunately. 

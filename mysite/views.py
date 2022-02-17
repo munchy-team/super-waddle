@@ -65,3 +65,5 @@ def simple_upload(request):
 
 def dev_tools(request):
     return HttpResponse()
+def CSRF_ERROR(request):
+  return HttpResponse('bad error hahahahahahahahahahahahah')

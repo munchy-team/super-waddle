@@ -16,6 +16,13 @@ class WebsiteIdea(models.Model):
   Date = models.DateTimeField()
   Describe_Your_Idea = models.TextField(max_length=500)
 
+class Statuses(models.Model):
+  Document_Name = models.CharField(max_length=500)
+  Document_Link = models.URLField(max_length=2500)
+  
+class ScheduledTasks(models.Model):
+  Task_Name = models.CharField(max_length=500,blank=True)
+  Due = models.TimeField(blank=True)
 
 
 class Assignment(models.Model):

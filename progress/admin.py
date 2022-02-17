@@ -2,11 +2,11 @@
 
 
 from django.contrib import admin
-<<<<<<< HEAD
-from .models import Progresse, WebsiteIdea, VisualStudioCodeLink, Assignment, Messages, File_Upload_Center, Statuses, ScheduledTasks
-=======
+#<<<<<<< HEAD
+from .models import Progresse, WebsiteIdea, VisualStudioCodeLink, Assignment, Messages, File_Upload_Center, Statuse, ScheduledTask
+#=======
 from .models import Progresse, WebsiteIdea, VisualStudioCodeLink, Assignment, Messages, File_Upload_Center, Availability
->>>>>>> origin/Testing
+#>>>>>>> origin/Testing
 
 class ProgresseAdmin(admin.ModelAdmin):
   list_display = ('name', 'date')
@@ -17,7 +17,7 @@ class WebsiteIdeaAdmin(admin.ModelAdmin):
 class VisualStudioCodeLinkAdmin(admin.ModelAdmin):
   list_display = ('Title', 'Date')
   
-class StatusesAdmin(admin.ModelAdmin):
+class StatuseAdmin(admin.ModelAdmin):
   list_display = ('Document_Name',)
 
 class AvailabilityAdmin(admin.ModelAdmin):
@@ -34,7 +34,7 @@ class MessagesAdmin(admin.ModelAdmin):
 class File_Upload_CenterAdmin(admin.ModelAdmin):
   list_display = ('File_Name', 'Time')
   
-class ScheduledTasksAdmin(admin.ModelAdmin):
+class ScheduledTaskAdmin(admin.ModelAdmin):
   list_display = ('Task_Name', 'Due')
 
 admin.site.register(Progresse, ProgresseAdmin)
@@ -43,12 +43,12 @@ admin.site.register(VisualStudioCodeLink,VisualStudioCodeLinkAdmin)
 
 admin.site.register(Assignment, AssignmentAdmin )
 admin.site.register(Messages, MessagesAdmin )
-<<<<<<< HEAD
-admin.site.register(Statuses, StatusesAdmin )
-admin.site.register(ScheduledTasks, ScheduledTasksAdmin )
-=======
+#<<<<<<< HEAD
+admin.site.register(Statuse, StatuseAdmin )
+admin.site.register(ScheduledTask, ScheduledTaskAdmin )
+#=======
 admin.site.register(Availability, AvailabilityAdmin)
->>>>>>> origin/Testing
+#>>>>>>> origin/Testing
 #admin.site.register(File_Upload_Center,File_Upload_CenterAdmin )
 
 # Register your models here.

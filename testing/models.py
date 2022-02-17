@@ -1,9 +1,14 @@
-#from typing_extensions import Required
-<<<<<<< HEAD
+#hey is this working
+#project doc thanks
+# all is well deploy?
 
-=======
+
+#from typing_extensions import Required
+#<<<<<<< HEAD
+
+#=======
 #from unittest.util import _MAX_LENGTH
->>>>>>> origin/Testing
+#>>>>>>> origin/Testing
 from django.db import models
 
 # something is wrong here. 

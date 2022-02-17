@@ -35,7 +35,7 @@ class File_Upload_CenterAdmin(admin.ModelAdmin):
   list_display = ('File_Name', 'Time')
   
 class ScheduledTaskAdmin(admin.ModelAdmin):
-  list_display = ('Task_Name', 'Due')
+  list_display = ('Task_Name', 'Due', 'Resolved')
 
 admin.site.register(Progresse, ProgresseAdmin)
 admin.site.register(WebsiteIdea, WebsiteIdeaAdmin)

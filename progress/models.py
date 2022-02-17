@@ -40,6 +40,13 @@ class Statuse(models.Model):
 class ScheduledTask(models.Model):
   Task_Name = models.CharField(max_length=500,blank=True)
   Due = models.TimeField(blank=True)
+  res_choices = (
+    ('Not Yet', 'Not Yet'),
+    ('Yes', 'Yes'),
+    ('Postponed', 'Postponed'),
+   # ('bye bye bye', 'gone'),
+    ('Out The Window!(Canceled)',  'Out The Window!(Canceled)'))
+  Resolved = models.CharField(max_length=30, choices=res_choices)
 
 
 class Assignment(models.Model):

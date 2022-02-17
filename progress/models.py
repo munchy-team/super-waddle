@@ -1,5 +1,22 @@
 from django.db import models
 
+class Availability(models.Model):
+  ppl = (
+     ('test', 'test'),
+      ('C,H', 'C,H'),
+      ('S,A', 'S,A'),
+      ('S,L', 'S,L'),
+      )
+  yesno = (
+     ('Yes', 'Yes'),
+     ('No', 'No'),
+    # ('test', 'test'),
+      )
+  Name = models.CharField(max_length=5, choices=ppl)
+  Available = models.CharField(max_length=5, choices=yesno)
+  On_Docs = models.CharField(max_length=5, choices=yesno)
+  Notes = models.CharField(max_length=250,blank=True)
+  Updated_At = models.TimeField(blank=True, null=True)
 
 class Progresse(models.Model):
   name = models.CharField(max_length=255)
@@ -57,14 +74,19 @@ class Messages(models.Model):
       ('S,A', 'S,A'),
       ('S,L', 'S,L'),
       )
-  Time = models.DateTimeField()
-  To = models.CharField(choices=ppl, max_length=100)
-  Subject = models.CharField(max_length=250,  blank=True)
-  Message = models.CharField(max_length=500)
-  From = models.CharField(max_length=100, choices=ppl)
-  Response = models.CharField(max_length=500,blank=True)
-  Response_From = models.CharField(max_length=10, choices=ppl,default='test')
-  Time_Of_Response = models.TimeField(null=True, blank=True)
+  From = models.CharField(max_length=5, choices=ppl, blank=True)
+  To = models.CharField(max_length=5, choices=ppl, blank=True)
+  #name = models.CharField(max_length=200)
+  date = models.DateTimeField(null=True, blank=True)
+  Message = models.TextField(max_length=700)
+  #Time = models.DateTimeField()
+  #To = models.CharField(choices=ppl, max_length=100)
+ # Subject = models.CharField(max_length=250,  blank=True)
+ # Message = models.CharField(max_length=500)
+ # From = models.CharField(max_length=100, choices=ppl)
+ # Response = models.CharField(max_length=500,blank=True)
+ # Response_From = models.CharField(max_length=10, choices=ppl,default='test')
+ # Time_Of_Response = models.TimeField(null=True, blank=True)
 
 class File_Upload_Center(models.Model):
   Time = models.DateTimeField()

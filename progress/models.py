@@ -36,10 +36,12 @@ class WebsiteIdea(models.Model):
 class Statuse(models.Model):
   Document_Name = models.CharField(max_length=500)
   Document_Link = models.URLField(max_length=2500)
+  Date_Published = models.DateField(blank=True)
   
 class ScheduledTask(models.Model):
   Task_Name = models.CharField(max_length=500,blank=True)
-  Due = models.TimeField(blank=True)
+  #Due = models.TimeField(blank=True)
+  Due_At = models.DateTimeField(blank=True)
   res_choices = (
     ('Not Yet', 'Not Yet'),
     ('Yes', 'Yes'),

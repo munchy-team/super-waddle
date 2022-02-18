@@ -18,7 +18,7 @@ class VisualStudioCodeLinkAdmin(admin.ModelAdmin):
   list_display = ('Title', 'Date')
   
 class StatuseAdmin(admin.ModelAdmin):
-  list_display = ('Document_Name',)
+  list_display = ('Document_Name','Date_Published')
 
 class AvailabilityAdmin(admin.ModelAdmin):
   list_display = ('Name', 'Available', 'On_Docs', 'Notes','Updated_At')
@@ -35,7 +35,7 @@ class File_Upload_CenterAdmin(admin.ModelAdmin):
   list_display = ('File_Name', 'Time')
   
 class ScheduledTaskAdmin(admin.ModelAdmin):
-  list_display = ('Task_Name', 'Due', 'Resolved')
+  list_display = ('Task_Name', 'Due_At', 'Resolved')
 
 admin.site.register(Progresse, ProgresseAdmin)
 admin.site.register(WebsiteIdea, WebsiteIdeaAdmin)

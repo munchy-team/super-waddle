@@ -1,4 +1,4 @@
-# Developing Django on Repl.it
+python # Developing Django on Repl.it
 
 - Fork this template to get started
 - do not start this incomplete code 

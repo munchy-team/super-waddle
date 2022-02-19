@@ -31,7 +31,7 @@ class Upload(models.Model):
 
 class DriveUploader(models.Model):    
     Title = models.CharField(max_length=100)
-    drive_file_link = models.URLField(max_length=1000, blank=True)
+    drive_file_link = models.URLField(max_length=1000, blank=True, help_text='If file is on Dropbox, go to Dropbox Link and select dropbox.com. Otherwise, leave "Dropbox Link" blank.')
     Name_of_file = models.CharField(max_length=100, blank=True)
     filetype = (
     ('-----', '-----'),
@@ -55,7 +55,7 @@ class DriveUploader(models.Model):
     dbopt = (
     ('dropbox.com', 'dropbox.com'),
     )
-    Dropbox_Link = models.CharField(max_length=25, blank=True, choices=dbopt)
+    Dropbox_Link = models.CharField(max_length=25, blank=True, choices=dbopt, help_text="If file is on Dropbox,select dropbox.com, otherwise leave blank.")
     
   
 # please make the migrations and migrate I will work on dwa. getting off docs too.

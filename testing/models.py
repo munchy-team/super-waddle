@@ -51,13 +51,13 @@ class DriveUploader(models.Model):
     ('Dropbox', 'Dropbox'),  
     ('Google Drive', 'Google Drive'),
     )
-    File_Location = models.CharField(max_length=20, blank=True, choices=fileln)
+    File_Location = models.CharField(max_length=50, blank=True, choices=fileln)
     dbopt = (
     ('dropbox.com', 'dropbox.com'),
     ('https://www.dropbox.com/home/folder1', 'https://www.dropbox.com/home/folder1'),
       
     )
-    Dropbox_Link = models.CharField(max_length=25, blank=True, choices=dbopt, help_text='If file is on Dropbox, select dropbox.com,or "https://www.dropbox.com/home/folder1" otherwise leave blank.'')
+    Dropbox_Link = models.CharField(max_length=50, blank=True, choices=dbopt, help_text='If file is on Dropbox, select dropbox.com,or "https://www.dropbox.com/home/folder1" otherwise leave blank.'')
     
   
 # please make the migrations and migrate I will work on dwa. getting off docs too.

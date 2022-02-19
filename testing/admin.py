@@ -11,7 +11,7 @@ class MunchyAdmin(admin.ModelAdmin):
   list_display = ('name','From','To', 'date','Munchy_Message')
 
 class DriveAdmin(admin.ModelAdmin):
-  list_display = ('Title', 'drive_file_link','File_Type')
+  list_display = ('Title', 'drive_file_link','File_Type','File_Location')
 
 admin.site.register(munchy,MunchyAdmin)
 admin.site.register(DriveUploader, DriveAdmin)

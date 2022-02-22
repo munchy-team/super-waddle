@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "munchysite"
+version = "1.0.1"
+description = "munchy site code and all dependices"
+authors = ["cs947939, coding235429878"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Django = "^4.0.2"
+psycopg2-binary = "^2.9.3"
+whitenoise = "^6.0.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

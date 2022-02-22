@@ -3,6 +3,7 @@
 import os
 import sys
 
+#pip install psycopg2-binary
 ALLOWED_HOSTS = ['*']
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')

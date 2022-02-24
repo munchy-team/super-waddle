@@ -83,7 +83,7 @@ class Assignment(models.Model):
   Message_Posted_At = models.TimeField(blank=True, null=True)
   Less_Important_Messages_And_Chat = models.TextField(blank=True, max_length=5000)  
 
-class Messages(models.Model):
+class Message(models.Model):
   ppl = (
      ('test', 'test'),
       ('C,H', 'C,H'),
@@ -93,8 +93,8 @@ class Messages(models.Model):
   From = models.CharField(max_length=5, choices=ppl, blank=True)
   To = models.CharField(max_length=5, choices=ppl, blank=True)
   #name = models.CharField(max_length=200)
-  date = models.DateTimeField(null=True, blank=True)
-  Message = models.TextField(max_length=700)
+  Posted_At = models.DateTimeField(null=True, blank=True)
+  Message = models.TextField(max_length=135)
   #Time = models.DateTimeField()
   #To = models.CharField(choices=ppl, max_length=100)
  # Subject = models.CharField(max_length=250,  blank=True)

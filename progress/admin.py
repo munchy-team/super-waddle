@@ -3,9 +3,9 @@
 
 from django.contrib import admin
 #<<<<<<< HEAD
-from .models import Progresse, WebsiteIdea, VisualStudioCodeLink, Assignment, Messages, File_Upload_Center, Statuse, ScheduledTask
+from .models import Progresse, WebsiteIdea, VisualStudioCodeLink, Assignment, Message, File_Upload_Center, Statuse, ScheduledTask
 #=======
-from .models import Progresse, WebsiteIdea, VisualStudioCodeLink, Assignment, Messages, File_Upload_Center, Availability
+from .models import Progresse, WebsiteIdea, VisualStudioCodeLink, Assignment, Message, File_Upload_Center, Availability
 #>>>>>>> origin/Testing
 
 class ProgresseAdmin(admin.ModelAdmin):
@@ -28,8 +28,8 @@ class AvailabilityAdmin(admin.ModelAdmin):
 class AssignmentAdmin(admin.ModelAdmin):
   list_display = ('Name_Of_Assignment', 'Resolved','Date_Assigned','Assigned_By',  'Primary_Assigned_Person', 'Secondary_Assigned_Person', 'Tertiary_Assigned_Person','Due_Date', 'Latest_Important_Message','Message_Posted_At',)
 
-class MessagesAdmin(admin.ModelAdmin):
-  list_display = ('Message','From','To', 'date')
+class MessageAdmin(admin.ModelAdmin):
+  list_display = ('Message','From','To', 'Posted_At')
 
 class File_Upload_CenterAdmin(admin.ModelAdmin):
   list_display = ('File_Name', 'Time')
@@ -42,7 +42,7 @@ admin.site.register(WebsiteIdea, WebsiteIdeaAdmin)
 admin.site.register(VisualStudioCodeLink,VisualStudioCodeLinkAdmin)
 
 admin.site.register(Assignment, AssignmentAdmin )
-admin.site.register(Messages, MessagesAdmin )
+admin.site.register(Message, MessageAdmin )
 #<<<<<<< HEAD
 admin.site.register(Statuse, StatuseAdmin )
 admin.site.register(ScheduledTask, ScheduledTaskAdmin )

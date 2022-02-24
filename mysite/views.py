@@ -5,10 +5,13 @@ from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from uploader.models import Document
 from django.contrib.auth.decorators import login_required
+from progress.models import Message
 
 
 def home(request):
-  return HttpResponse('This is the Updates Page')
+  messages = Message.objects.all().order_by('-Posted_At')
+  return render(request, 'progress/home.html', {'messages': messages  })
+  
 
 def firstview(request):
   return HttpResponse('Our first view.py is up at 1:23PM')

@@ -16,7 +16,7 @@ class Availability(models.Model):
   Available = models.CharField(max_length=5, choices=yesno)
   On_Docs = models.CharField(max_length=5, choices=yesno)
   Notes = models.CharField(max_length=250,blank=True)
-  Updated_At = models.TimeField(blank=True, null=True)
+  Updated_at = models.DateTimeField(blank=True, null=True)
 
 class Progresse(models.Model):
   name = models.CharField(max_length=255)

@@ -87,10 +87,10 @@ tr{
             <a class="btn btn-primary" href="/admin" role="button">Admin</a> 
            </div>
            <div class="form-group">
-            <a class="btn btn-primary" href="#Messages" role="button">Messages</a> 
+            <a class="btn btn-primary" href="#messages" role="button">Messages</a> 
            </div>
            <div class="form-group">
-            <a class="btn btn-primary" href="#" role="button">Availabilitys</a> 
+            <a class="btn btn-primary" href="#availabilitys" role="button">Availabilitys</a> 
            </div>
            <div class="form-group">
             <a class="btn btn-primary" href="#" role="button">Assignments</a> 
@@ -131,7 +131,7 @@ tr{
 
     <center>
     
-    <h4 id="Messages">Messages:</h4>
+    <h4 id="messages">Messages:</h4>
     <small>(If too many, delete old ones. Click <a id="link-a" href="admin/progress/message/add">here</a> to reply to a message.) </small>
   </center>
     {% for obj in messages %}
@@ -159,13 +159,50 @@ tr{
 
 </center>
     {% endfor %}
+
+        <hr>
+      <center>
+    <h4 id="availabilitys">Availabilitys:</h4>
+    <small>( Click <a id="link-a" href="admin/progress/availability/">here</a> to change availability status.) </small>
+  </center>
+    {% for obj in availabilitys %}
+    <center>
+      
+    <table width="95%">
+        <ol>
+        <hr>
+        <tr>
+          <th width="10%">Name:</th>
+          <th  width="10%">Available?</th>
+          <th width="10%">On Docs?</th>
+          <th  width="40%">Notes:</th>
+          <th  width="20%">Updated At:</th>
+        </tr>
+        <tr>
+          <strong><td width="10%" style="color:rgb(25, 155, 25);"><strong>{{obj.Name}}</strong></td></strong>
+         
+          <strong><td  width="10%" style="color: rgb(0, 255, 247);"><strong>{{obj.Available}}</strong></td></strong>
+          <strong><td width="10%" style="color:rgb(0, 255, 250);"  ><strong>{{obj.On_Docs}}</strong></td></strong>
+          <td  width="40%">{{obj.Notes}}</td>
+          <td  width="20%">{{obj.Updated_at}}</td>
+          
+      </table>
+      
+    </ol>
+  <!-- deleting::: https://www.youtube.com/watch?v=3VBHWLFza4s -->
+
+</center>
+    {% endfor %}
+
+    
+
  
     
     <!--
     <ul>
         <li>
             <a href="/admin/uploader/document/add/"><button> upload</button></a>
-            <!-- core is app name
+             core is app name
     </li>
     </ul>
     -->

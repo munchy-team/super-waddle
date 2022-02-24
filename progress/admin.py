@@ -21,7 +21,7 @@ class StatuseAdmin(admin.ModelAdmin):
   list_display = ('Document_Name','Date_Published')
 
 class AvailabilityAdmin(admin.ModelAdmin):
-  list_display = ('Name', 'Available', 'On_Docs', 'Notes','Updated_At')
+  list_display = ('Name', 'Available', 'On_Docs', 'Notes','Updated_at')
 
 
 

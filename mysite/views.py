@@ -5,12 +5,19 @@ from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from uploader.models import Document
 from django.contrib.auth.decorators import login_required
-from progress.models import Message
+from progress.models import Availability, Message
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 
 
 def home(request):
+  availabilitys = Availability.objects.all()
   messages = Message.objects.all().order_by('-Posted_At')
-  return render(request, 'progress/home.html', {'messages': messages  })
+  return render(request, 'progress/home.html', {'messages': messages, 'availabilitys' : availabilitys })
+
+# class MessageDelete(DeleteView):
+#    model = Message
+#    success_url = reverse_lazy('messages')
   
 
 def firstview(request):
@@ -26,6 +33,8 @@ def ml(request):
 def test(request):
   html = '<html> <title>this is a test page do whatever you want</title> <h1>THIS MUST WORKS!</h1> <h2>yes this works</h2> <h2><a href="/navigation/"> Go back to the Directory</a> </h2></html>'
   return HttpResponse(html)
+
+  
 #HEY TYPE YOUR PW IN COMMAND PROMPT
 #okay
 # over ride the warning!

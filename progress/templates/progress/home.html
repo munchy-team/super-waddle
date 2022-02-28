@@ -60,7 +60,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <a class="navbar-brand mb-0 h1" href="/home">MunchySite</a>
+          <a class="navbar-brand mb-0 h1" href="/home">MunchySite</a> 
+          <!-- <li class="nav-item"><img src="C:\Users\lunas\source\repos\didactic-waddle\progress\templates\progress\pic2.png" alt="lgo1"></li> -->
+          
+           
+            
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Posts</a>
             </li>
@@ -278,7 +282,7 @@ tr{
    {% endif %}
 
     <center>
-    
+      <!-- <img src="C:\Users\lunas\source\repos\didactic-waddle\progress\templates\progress\pic2" alt="logo2" height="540" width="960"> -->
     <h4 id="messages">Messages:</h4>
     <small>(If too many, delete old ones. Click <a id="link-a" href="admin/progress/message/add">here</a> to reply to a message.) </small>
   </center>
@@ -341,7 +345,37 @@ tr{
 
 </center>
     {% endfor %}
+    <!--
+    {% for obj in Assignments %}
+    <center>
+      
+    <table width="95%">
+        <ol>
+        <hr>
+        <tr>
+          <th width="10%">Name:</th>
+          <th  width="10%">Available?</th>
+          <th width="10%">On Docs?</th>
+          <th  width="40%">Notes:</th>
+          <th  width="20%">Updated At:</th>
+        </tr>
+        <tr>
+          <strong><td width="10%" style="color:rgb(25, 155, 25);"><strong>{{obj.Name}}</strong></td></strong>
+         
+          <strong><td  width="10%" style="color: rgb(0, 255, 247);"><strong>{{obj.Available}}</strong></td></strong>
+          <strong><td width="10%" style="color:rgb(0, 255, 250);"  ><strong>{{obj.On_Docs}}</strong></td></strong>
+          <td  width="40%">{{obj.Notes}}</td>
+          <td  width="20%">{{obj.Updated_at}}</td>
+          
+      </table>
+      
+    </ol>
 
+ deleting::: https://www.youtube.com/watch?v=3VBHWLFza4s 
+
+</center>
+    {% endfor %}
+-->
     
 
  

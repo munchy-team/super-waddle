@@ -15,6 +15,11 @@ def home(request):
   messages = Message.objects.all().order_by('-Posted_At')
   return render(request, 'progress/home.html', {'messages': messages, 'availabilitys' : availabilitys })
 
+def realhomepage(request):
+  availabilitys = Availability.objects.all()
+  messages = Message.objects.all().order_by('-Posted_At')
+  return render(request, 'progress/homepage.html', {'messages': messages, 'availabilitys' : availabilitys })
+
 # class MessageDelete(DeleteView):
 #    model = Message
 #    success_url = reverse_lazy('messages')

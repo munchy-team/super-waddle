@@ -56,7 +56,7 @@ urlpatterns = [
     path('test/', views.test),
     path('navigation/', views.navigation),
     path('links/', views.navigation),
-   
+   path('veriosn', TemplateView.as_view(template_name="versions.html")),
     path('accounts/', include('django.contrib.auth.urls')),
     re_path(r'^theuploader/$', views.main, name='main'),
     #url(r'/^$', views.main, name='main'),

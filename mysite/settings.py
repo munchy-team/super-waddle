@@ -27,7 +27,7 @@ SECRET_KEY = 'b#s*_o(3t3ai_k(c5po@h7a=nj5#vjkd3u7ckhnx@)mi=8fn67'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 #need to define
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = ''
 ALLOWED_HOSTS = ["*"]
 
 # Application definition
@@ -47,11 +47,11 @@ INSTALLED_APPS = [
     'Uploads.apps.UploadsConfig',
     'uploader.apps.UploaderConfig',
 
-        'allauth',
+    'allauth',
     'allauth.account',
     'allauth.socialaccount',
-      'allauth.socialaccount.providers.google',
-  'allauth.socialaccount.providers.github',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.github',
    # 'progress.apps.WebsiteIdeasConfig',
 ]
 

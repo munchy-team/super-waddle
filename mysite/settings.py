@@ -27,7 +27,7 @@ SECRET_KEY = 'b#s*_o(3t3ai_k(c5po@h7a=nj5#vjkd3u7ckhnx@)mi=8fn67'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 #need to define
-LOGIN_REDIRECT_URL = '/ml'
+LOGIN_REDIRECT_URL = '/'
 ALLOWED_HOSTS = ["*"]
 
 # Application definition
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
       'allauth.socialaccount.providers.google',
+  'allauth.socialaccount.providers.github',
    # 'progress.apps.WebsiteIdeasConfig',
 ]
 
@@ -185,3 +186,4 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
+#SOCIALACCOUNT_QUERY_EMAIL = True

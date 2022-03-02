@@ -184,6 +184,19 @@ SOCIALACCOUNT_PROVIDERS = {
         "AUTH_PARAMS": {
             "access_type": "online",
         }
-    }
+    },
+    "github": {
+    "APP":{
+      "client_id": "fa60c81b5821c344c7d4",
+    "client_secret":"3dbea7bcb8a1b9e51574084430b3c2e2ebdbafa3",
+    },
+      "SCOPE": [
+        "user:email"
+      ]
+  
+      
 }
+
+
+  
 #SOCIALACCOUNT_QUERY_EMAIL = True

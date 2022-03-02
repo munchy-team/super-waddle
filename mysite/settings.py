@@ -184,3 +184,4 @@ SOCIALACCOUNT_PROVIDERS = {
             "access_type": "online",
         }
     }
+}

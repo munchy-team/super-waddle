@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+   'django.contrib.sites',
     'testing.apps.TestingConfig',
     #'WebAuthn.apps.WebAuthnConfig',
     'Links.apps.LinksConfig',
@@ -46,7 +47,10 @@ INSTALLED_APPS = [
     'Uploads.apps.UploadsConfig',
     'uploader.apps.UploaderConfig',
 
-    
+        'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+      'allauth.socialaccount.providers.google',
    # 'progress.apps.WebsiteIdeasConfig',
 ]
 
@@ -115,6 +119,15 @@ AUTH_PASSWORD_VALIDATORS = [
         'django.contrib.auth.password_validation.NumericPasswordValidator',
     }
 ]
+AUTHENTICATION_BACKENDS = [
+    
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+  
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
@@ -148,5 +161,26 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+SITE_ID = 1
 
+SOCIALACCOUNT_PROVIDERS = {
 
+    "google": {
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
+        # credentials, or list them here:
+        "APP": {
+            "client_id": "407761889721-t8n2fl5do3vdmnct8jm80aeb5g93bvs3.apps.googleusercontent.com",
+ "client_secret":"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",
+  
+        },
+        # These are provider-specific settings that can only be
+        # listed here:
+        "SCOPE": [
+            "profile",
+            "email",
+        ],
+        "AUTH_PARAMS": {
+            "access_type": "online",
+        }
+    }

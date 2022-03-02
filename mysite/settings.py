@@ -196,7 +196,6 @@ SOCIALACCOUNT_PROVIDERS = {
   
       
 }
-
+}
 
   
-#SOCIALACCOUNT_QUERY_EMAIL = True

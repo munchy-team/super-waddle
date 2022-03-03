@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
- #  'django.contrib.sites',
+   'django.contrib.sites',
     'testing.apps.TestingConfig',
     #'WebAuthn.apps.WebAuthnConfig',
     'Links.apps.LinksConfig',
@@ -161,7 +161,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
-
+SITE_ID = 2
 
 SOCIALACCOUNT_PROVIDERS = {
 

@@ -8,7 +8,10 @@ from django.contrib.auth.decorators import login_required
 from progress.models import Availability, Message
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
+from django.contrib import admin
+from django.contrib.auth.decorators import login_required
 
+admin.site.login = login_required(admin.site.login)
 
 def home(request):
   availabilitys = Availability.objects.all()

@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-   'django.contrib.sites',
+ #  'django.contrib.sites',
     'testing.apps.TestingConfig',
     #'WebAuthn.apps.WebAuthnConfig',
     'Links.apps.LinksConfig',
@@ -47,11 +47,11 @@ INSTALLED_APPS = [
     'Uploads.apps.UploadsConfig',
     'uploader.apps.UploaderConfig',
 
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.github',
+ #   'allauth',
+   # 'allauth.account',
+  #  'allauth.socialaccount',
+#    'allauth.socialaccount.providers.google',
+   # 'allauth.socialaccount.providers.github',
    # 'progress.apps.WebsiteIdeasConfig',
 ]
 
@@ -164,38 +164,38 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 SITE_ID = 1
 
-SOCIALACCOUNT_PROVIDERS = {
+#SOCIALACCOUNT_PROVIDERS = {
 
-    "google": {
+#    "google": {
         # For each OAuth based provider, either add a ``SocialApp``
         # (``socialaccount`` app) containing the required client
         # credentials, or list them here:
-        "APP": {
-            "client_id": "407761889721-t8n2fl5do3vdmnct8jm80aeb5g93bvs3.apps.googleusercontent.com",
- "client_secret":"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",
+      #  "APP": {
+         #   "client_id": "407761889721-t8n2fl5do3vdmnct8jm80aeb5g93bvs3.apps.googleusercontent.com",
+# "client_secret":"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",
   
-        },
+     #   },
         # These are provider-specific settings that can only be
         # listed here:
-        "SCOPE": [
-            "profile",
-            "email",
-        ],
-        "AUTH_PARAMS": {
-            "access_type": "online",
-        }
-    },
-    "github": {
-    "APP":{
-      "client_id": "fa60c81b5821c344c7d4",
-    "client_secret":"3dbea7bcb8a1b9e51574084430b3c2e2ebdbafa3",
-    },
-      "SCOPE": [
-        "user:email"
-      ]
+       # "SCOPE": [
+     #       "profile",
+            #"email",
+       # ],
+  #      "AUTH_PARAMS": {
+        #    "access_type": "online",
+     #   }
+  #  },
+  #  "github": {
+  #  "APP":{
+  #    "client_id": "fa60c81b5821c344c7d4",
+  #  "client_secret":"3dbea7bcb8a1b9e51574084430b3c2e2ebdbafa3",
+    #},
+     # "SCOPE": [
+       # "user:email"
+   #   ]
   
-      
-}
-}
+      #}
+        #}
+
 
   

@@ -10,7 +10,7 @@
   {% if user.is_authenticated %}
   <hr>
 <center><h5><strong>Hello, {{ user.username }}!</strong></h5></center>
-<center><form action="/admin/logout/">
+<center><form action="/accounts/logout">
   <input type="submit" value="Log Out" />
 </form></center>
 <hr>

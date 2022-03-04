@@ -190,4 +190,4 @@ SOCIALACCOUNT_PROVIDERS = {
         }
 
 
-  
+#Btw im going to try to add discord as a sign in option later [Hudson]

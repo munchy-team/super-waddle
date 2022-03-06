@@ -270,9 +270,7 @@
 
         {% endif %}
       -->
-
-
-    {% if user.is_superuser %}
+    {% if user.is_authenticated %}
 
     <center>
         <!-- <img src="C:\Users\lunas\source\repos\didactic-waddle\progress\templates\progress\pic2" alt="logo2" height="540" width="960"> -->
@@ -305,7 +303,7 @@
     </center>
     {% endfor %}
 
-   
+
     <hr>
     <center>
         <h4 id="availabilitys">Availabilitys:</h4>
@@ -342,7 +340,12 @@
 
     </center>
 
-    {% endfor %}
+
+
+
+
+
+
 
 
     <!--
@@ -409,7 +412,7 @@
 
     {% else %}
     <center>
-        <h3>You need to log in!</h3>
+        <h3>>You need to log in!</h3>
         <small> <a class="m-md-2 btn btn-outline-light" role="button" href="/admin/">Log In!</a></small>
     </center>
     {% endif %}

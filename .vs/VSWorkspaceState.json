@@ -1,9 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\aprovedapps",
-    "\\mysite"
+    "\\allauth",
+    "\\allauth\\templates",
+    "\\allauth\\templates\\account",
+    "\\allauth\\templates\\account\\messages",
+    "\\allauth\\templates\\socialaccount",
+    "\\allauth\\templates\\socialaccount\\messages",
+    "\\allauth\\templates\\socialaccount\\snippets",
+    "\\mysite",
+    "\\templates"
   ],
-  "SelectedNode": "\\aprovedapps\\models.py",
   "PreviewInSolutionExplorer": false
 }

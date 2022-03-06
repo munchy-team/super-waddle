@@ -34,16 +34,22 @@
     {% endif %}
 <hr>
     <div class="center-a">
-      <strong class="center-a">Menu:</strong>
-      <ul>
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-        <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
-        {% else %}
-        <li><a href="{% url 'account_login' %}">Sign In</a></li>
-        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-        {% endif %}
-      </ul>
+        <p><strong class="center-a">Menu:</strong></p>
+      
+        <ul>
+            {% if user.is_authenticated %}
+            <center>
+                <a class="btn btn-outline-light" href="{% url 'account_email' %}" type="button">Change E-mail</a>
+                <a class="btn btn-outline-light" href="{% url 'account_logout' %}" type="button">Log Out</a>
+            </center>
+            {% else %}
+            <div class="d-grid gap-2 col-1 mx-auto">
+                <a class="btn btn-outline-light" href="{% url 'account_login' %}" type="button">Sign In</a>
+                <a class="btn btn-outline-light" href="{% url 'account_signup' %}" type="button">Sign Up</a>
+            </div>
+
+            {% endif %}
+        </ul>
     </div>
     <hr>
     {% block content %}

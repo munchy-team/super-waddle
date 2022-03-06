@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\aprovedapps",
+    "\\mysite"
   ],
-  "SelectedNode": "\\progress",
+  "SelectedNode": "\\aprovedapps\\models.py",
   "PreviewInSolutionExplorer": false
 }

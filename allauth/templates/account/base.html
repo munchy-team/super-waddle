@@ -38,49 +38,54 @@
             <div>
                 <hr>
                 <h6>Messages:</h6>
-               
+
                 <ul>
                     {% for message in messages %}
                     <!-- <center>
-        <div class="alert alert-success w-50" role="alert">
+                <div class="alert alert-success w-50" role="alert">
 
-        </div>
+                </div>
 
-    </center> -->
+            </center> -->
                     <center>
                         <div class="w-50 alert alert-primary " role="alert">
-                          
-                           
-                            
-                            
+
+
+
+
                             <div>
                                 {{message}}
                             </div>
+
                     </center>
                 </ul>
             </div>
             {% endfor %}
-            {% endif %}
             <hr>
+            {% endif %}
+
             <div class="center-a">
+                {% if user.is_authenticated %}
+                <hr>
                 <p><strong class="center-a">Menu:</strong></p>
 
                 <ul>
-                    {% if user.is_authenticated %}
+
                     <center>
                         <a class="btn btn-outline-light" href="{% url 'account_email' %}" type="button">Change E-mail</a>
                         <a class="btn btn-outline-light" href="{% url 'account_logout' %}" type="button">Log Out</a>
                     </center>
                     {% else %}
-                    <div class="">
-                        <a class="btn btn-outline-light" href="{% url 'account_login' %}" type="button">Sign In</a>
-                        <a class="btn btn-outline-light" href="{% url 'account_signup' %}" type="button">Sign Up</a>
-                    </div>
-
+                    <!--
+            <div class="">
+                <a class="btn btn-outline-light" href="{% url 'account_login' %}" type="button">Sign In</a>
+                <a class="btn btn-outline-light" href="{% url 'account_signup' %}" type="button">Sign Up</a>
+            </div>
+                -->
                     {% endif %}
                 </ul>
             </div>
-            <hr>
+
             {% block content %}
             {% endblock %}
             {% endblock %}

@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\allauth",
+    "\\allauth\\account",
+    "\\allauth\\socialaccount",
+    "\\allauth\\templates",
+    "\\allauth\\templates\\account",
+    "\\allauth\\templates\\openid",
+    "\\allauth\\templates\\socialaccount",
+    "\\allauth\\templates\\socialaccount\\snippets",
+    "\\allauth\\templates\\tests"
   ],
-  "SelectedNode": "\\progress",
+  "SelectedNode": "\\allauth\\templates\\account\\previous-one-base.html",
   "PreviewInSolutionExplorer": false
 }

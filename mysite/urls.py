@@ -65,7 +65,8 @@ urlpatterns = [
     path('navigation', TemplateView.as_view(template_name="navigation.html")),
     path('navigation/specific-header', TemplateView.as_view(template_name="specific-header.html")),
     path('ml/', TemplateView.as_view(template_name="logedin.html")),
-  path('CSerror', views.CSRF_ERROR)
+  path('CSerror', views.CSRF_ERROR),
+  path('munchy2', TemplateView.as_view(template_name="logon2.html"))
    # url(r'^upload-tool/$', views.main, name='main'),
   #  url(r'^uploader/media/$', views.simple_upload, name='simple_upload'),
    # url(r'^media/documents/test.txt$', views.main, name='simple_upload'),

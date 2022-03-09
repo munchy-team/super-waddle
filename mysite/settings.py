@@ -51,6 +51,10 @@ INSTALLED_APPS = [
    'allauth.socialaccount',
  'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.github',
+  'accountss.apps.AccountssConfig',
+  'blog',
+  'personal',
+  #'django.contrib.accounts2',
 
   
    # 'progress.apps.WebsiteIdeasConfig',

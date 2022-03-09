@@ -6,6 +6,8 @@ from django.contrib import admin
 from .models import Progresse, WebsiteIdea, VisualStudioCodeLink, Assignment, Message, File_Upload_Center, Statuse, ScheduledTask
 #=======
 from .models import Progresse, WebsiteIdea, VisualStudioCodeLink, Assignment, Message, File_Upload_Center, Availability
+
+from accountss.models import MyAccountManager
 #>>>>>>> origin/Testing
 
 class ProgresseAdmin(admin.ModelAdmin):

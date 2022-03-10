@@ -16,7 +16,7 @@
   	}
 </style>
 
-<div class="container">
+<div class="container text-light">
 	<div class="row">
 		<div class="col-lg-7 offset-lg-1">
 			<form class="create-form" method="post" enctype="multipart/form-data">{% csrf_token %}
@@ -24,19 +24,19 @@
 				<!-- title -->
 				<div class="form-group">
 					<label class="text-light" for="id_title">Title</label>
-					<input class="form-control bg-dark" type="text" name="title" id="id_title" placeholder="Title" required autofocus>
+					<input class="form-control bg-dark text-light" type="text" name="title" id="id_title" placeholder="Title" required autofocus>
 				</div>
 
 				<!-- Body -->
 				<div class="form-group text-light">
 					<label for="id_body">Content</label>
-					<textarea class="form-control bg-dark" rows="10" type="text" name="body" id="id_body" placeholder="This blog is about..." required></textarea>
+					<textarea class="form-control bg-dark text-light" rows="10" type="text" name="body" id="id_body" placeholder="This blog is about..." required></textarea>
 				</div>
 
 				<!-- Image -->
 				<div class="form-group">
 					<label class="text-light" for="id_image">Image</label>
-					<input class="text-light" type="file" name="image" id="id_image" accept="image/*" required>
+					<input class="text-light" type="file" name="image" id="id_image" accept="image/*" >
 				</div>
 
 				<!-- Submit btn -->

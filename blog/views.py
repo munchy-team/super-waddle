@@ -5,17 +5,18 @@ from django.http import HttpResponse
 from blog.models import BlogPost
 from blog.forms import CreateBlogPostForm, UpdateBlogPostForm
 #from account.models import Account
-
+# i killed it 
 from accountss.models import Account
 from accountss.views import must_authenticate_view
 def create_blog_view(request):
 
 	context = {}
-
+# don not change anything below I am working on the thingy you want to change. 
+  #can i run djanog 3.2.11
+  # sure idc.
 	user = request.user
 	if not user.is_authenticated:
-		return redirect('must_authenticate_view')
-
+		return render(request, 'account/must_authenticate.html', {})
 	form = CreateBlogPostForm(request.POST or None, request.FILES or None)
 	if form.is_valid():
 		obj = form.save(commit=False)

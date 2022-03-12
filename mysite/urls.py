@@ -31,9 +31,9 @@ from blog import urls
 #from accountss import urls
 from accountss.views import registration_view, logout_view,login_view,account_view,must_authenticate_view
 from blog.views import create_blog_view,detail_blog_view,edit_blog_view,get_blog_queryset
-from bllog import urls
+#from bllog import urls
 
-from bllog.views import create_blog_view,detail_blog_view,edit_blog_view,get_blog_queryset
+#from bllog.views import create_blog_view,detail_blog_view,edit_blog_view,get_blog_queryset
 
 from personal.views import home_screen_view
 # from accountss import urls
@@ -94,21 +94,21 @@ urlpatterns = [
 	path('blogs/must_authenticate/', must_authenticate_view, name="must_authenticate"),
     path('blogs/register/', registration_view, name="register"),
 #asdfasdf
-  path('answers/', include('bllog.urls')),
+ # path('answers/', include('bllog.urls')),
   # path('accountss/', include('accountss.urls')),
    # url(r'^upload-tool/$', views.main, name='main'),
   #  url(r'^uploader/media/$', views.simple_upload, name='simple_upload'),
    # url(r'^media/documents/test.txt$', views.main, name='simple_upload'),
    # url(r'^main/$', views.main, name='main'),
    # url(r'^downloads/$', views.simple_upload, name='simple_upload'),
-   path('answers/', home_screen_view, name="home"),
-    path('answers/account/', account_view, name="account"),
-    path('answers/admin/', admin.site.urls),
-    path('answers/', include('bllog.urls', 'blog')),
-    path('answers/login/', login_view, name="login"),
-    path('answers/logout/', logout_view, name="logout"),
-	path('answers/must_authenticate/', must_authenticate_view, name="must_authenticate"),
-    path('answers/register/', registration_view, name="register"),
+ #  path('answers/', home_screen_view, name="home"),
+ #   path('answers/account/', account_view, name="account"),
+  #  path('answers/admin/', admin.site.urls),
+ #   path('answers/', include('bllog.urls', 'blog')),
+ #   path('answers/login/', login_view, name="login"),
+  #  path('answers/logout/', logout_view, name="logout"),
+#	path('answers/must_authenticate/', must_authenticate_view, name="must_authenticate"),
+ #   path('answers/register/', registration_view, name="register"),
     # Password reset links (ref: https://github.com/django/django/blob/master/django/contrib/auth/views.py)
     #path('blogs/password_change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='registration/password_change_done.html'), 
         #name='password_change_done'),

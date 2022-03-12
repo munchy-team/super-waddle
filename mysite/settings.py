@@ -54,6 +54,9 @@ INSTALLED_APPS = [
   'accountss.apps.AccountssConfig',
   'blog',
   'personal',
+  'bllog',
+  'accountsss',
+  'personall',
   #'django.contrib.accounts2',
 
   

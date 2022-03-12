@@ -116,9 +116,11 @@
     {% if redirect_field_value %}
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endif %}
-    <!-- <button type="submit">{% trans "Sign Up" %} &raquo;</button> -->
+    <!--<button type="submit">{% trans "Sign Up" %} &raquo;</button> -->
     <br>
-    <a class="w-25 btn  btn-outline-light" href="{{ signup_url }}" role="button" type="submit">Sign Up for MunchySite</a>
+ 
+    <button class="w-25 btn  btn-outline-light" role="button" type="submit">Sign Up for MunchySite</button>
+  <!--{% trans "Sign Up for MunchySite" %} -->
     <br>
     
     <hr class="w-50">

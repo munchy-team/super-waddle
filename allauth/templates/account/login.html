@@ -116,65 +116,67 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
+   <!-- <link href="signin.css" rel="stylesheet"> -->
 </head>
-<body class="bg-dark  text-light">
+<body class="bg-black  text-light">
+    <div class="card bg-dark" style="width: 20rem;">
+        <main class="form-signin">
+            <form method="POST" action="{% url 'account_login' %}">
+                {% csrf_token %}
 
-    <main class="form-signin">
-        <form method="POST" action="{% url 'account_login' %}">
-            {% csrf_token %}
-            <hr>
-           <img class="mb-3" src="../../static/logo1-1-removebg-preview-5.png" alt="" width="70" height="70">
-            <h1 class="h3 mb-3 fw-normal">MunchySite Login</h1>
-            <hr>
-            
+                <img class="mb-3" src="../../static/logo1-1-removebg-preview-5.png" alt="" width="70" height="70">
+                <h1 class="h3 mb-3 fw-normal">MunchySite Login</h1>
+                <hr>
+
                 {{form.as_p}}
-            
-            
 
-            <!--
-                <div class="form-floating">
-                    <input type="username" class="form-control me-2 bg-dark text-light" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Username</label>
+
+
+                <!--
+                    <div class="form-floating">
+                        <input type="username" class="form-control me-2 bg-dark text-light" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Username</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control me-2 bg-dark text-light" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+
+                    <div class="checkbox mb-3">
+
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+
+                    </div>  -->
+                <button class="primary Action w-100 btn btn-lg btn-outline-light" type="submit" action="{% url 'account_login' %}" href="{% url 'account_login' %}">{% trans "Sign In" %}</button>
+
+                <br>
+                <hr>
+                <!--
+                        <button class="w-100 btn btn-outline-light mb-2" type="submit">Sign in with Google</button>
+
+                        <button class="w-100 btn  btn-outline-light" type="submit">Sign in with GitHub</button>
+                        <!--    <br>
+                <br> -->
+                <div class="socialaccount_ballot">
+
+                    <div class="socialaccount_providers">
+                        {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+                    </div>
+
+
+
                 </div>
-                <div class="form-floating">
-                    <input type="password" class="form-control me-2 bg-dark text-light" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
-                </div>
+                <hr>
+                <center><p class="mb-1">New to MunchySite?</p></center>
+                <a class="w-100 btn  btn-outline-light" href="{{ signup_url }}" role="button" type="submit">Sign Up for MunchySite</a>
+                <hr>
+                <br>
+    </div>
+    <center> <p class="mt-5 mb-2 text-muted">&copy; 2022 | MunchySite | MunchyTeam</p></center>
+    </form>
 
-                <div class="checkbox mb-3">
-
-                        <label>
-                            <input type="checkbox" value="remember-me"> Remember me
-                        </label>
-
-                </div>  -->
-            <button class="primary Action w-100 btn btn-lg btn-outline-light" type="submit" action="{% url 'account_login' %}" href="{% url 'account_login' %}">{% trans "Sign In" %}</button>
-
-            <br>
-            <hr>
-            <!--
-                    <button class="w-100 btn btn-outline-light mb-2" type="submit">Sign in with Google</button>
-
-                    <button class="w-100 btn  btn-outline-light" type="submit">Sign in with GitHub</button>
-                    <!--    <br>
-            <br> -->
-            <div class="socialaccount_ballot">
-
-                <div class="socialaccount_providers">
-                    {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-                </div>
-
-
-
-            </div>
-            <hr>
-            <center><p class="mb-1">New to MunchySite?</p></center>
-            <a class="w-100 btn  btn-outline-light" href="{{ signup_url }}" role="button" type="submit">Sign Up for MunchySite</a>
-            <hr>
-            <br>
-            <center> <p class="mt-5 mb-2 text-muted">&copy; 2022 | MunchySite | MunchyTeam</p></center>
-        </form>
     </main>
 
 

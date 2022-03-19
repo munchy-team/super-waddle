@@ -1,3 +1,4 @@
+from django.db import models
 from django.http import HttpResponse
 from django.shortcuts import render 
 from django.shortcuts import render, redirect
@@ -10,13 +11,45 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib import admin
 from django.contrib.auth.decorators import login_required
+from munchyblog.models import HomeBlog
+#from munchyblog.models import models
+#from munchyblog.models import HomeBlog
+##from munchyblog.models import Title
+#from munchyblog.models import Date
+#from munchyblog.models import Author
+##from munchyblog.models import Header1
+#from munchyblog.models import Paragraph1
+#from munchyblog.models import Second_Paragraph
+#from munchyblog.models import Header2
+#from munchyblog.models import Paragraph2
+#from munchyblog.models import Header2_Second_Paragraph
+#from munchyblog.models import Header3
+#from munchyblog.models import Paragraph3
+#from munchyblog.models import Header3_Second_Paragraph
 
 admin.site.login = login_required(admin.site.login)
 
 def home(request):
-  availabilitys = Availability.objects.all()
-  messages = Message.objects.all().order_by('-Posted_At')
-  return render(request, 'progress/home.html', {'messages': messages, 'availabilitys' : availabilitys })
+    homeblogs = HomeBlog.objects.all().order_by('-Date')
+  #  posttitles = Title.objects.all()
+   # dates = Date.objects.all()
+   # authors = Author.objects.all()
+   ## header1s = Header1.objects.all()
+   # paragraph1s = Paragraph1.objects.all()
+   # secondparagraphs = Second_Paragraph.objects.all()
+   # header2s = Header2.objects.all()
+   # paragraph2s = Paragraph2.objects.all()
+   # header2secondparagraphs = Header2_Second_Paragraph.objects.all()
+   # header3s = Header3.objects.all()
+   # paragraph3s = Paragraph3.objects.all()
+   # header3secondparagraphs = Header3_Second_Paragraph.objects.all()
+
+    return render(request, 'progress/home3.html', {'homeblogs':homeblogs})#{'posttitles': posttitles, 'dates':dates, 'authors':authors,
+                                                  #'header1s':header1s, 'paragraph1s':paragraph1s,'secondparagraphs':secondparagraphs,
+                                                  #'header2s':header2s,'paragraph2s':paragraph2s,'header2secondparagraphs':header2secondparagraphs,'header3s':header3s,
+                                                  #'paragraph3s':paragraph3s,'header3secondparagraphs':header3secondparagraphs
+                                                  #})
+
 
 def realhomepage(request):
   availabilitys = Availability.objects.all()

@@ -46,7 +46,6 @@ from personal.views import home_screen_view
 
 
 
-
 from . import views
 
 
@@ -59,7 +58,7 @@ urlpatterns = [
     path('', views.realhomepage),
     #path('', TemplateView.as_view(template_name="homepage.html"), name="realhomepage"),
     path('old-home', TemplateView.as_view(template_name="Home.html")),
-    path('home', views.home),
+    path('home3', views.home),
     path('firstview', TemplateView.as_view(template_name="firstview.html")),
     path('progress', views.progress),
     path('progress/', include('progress.urls')),

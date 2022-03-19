@@ -1,16 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\allauth",
-    "\\allauth\\account",
-    "\\allauth\\socialaccount",
-    "\\allauth\\templates",
-    "\\allauth\\templates\\account",
-    "\\allauth\\templates\\openid",
-    "\\allauth\\templates\\socialaccount",
     "\\allauth\\templates\\socialaccount\\snippets",
-    "\\allauth\\templates\\tests"
+    "\\allauth\\templates\\tests",
+    "\\MunchyBlog",
+    "\\mysite",
+    "\\progress",
+    "\\progress\\templates",
+    "\\progress\\templates\\progress",
+    "\\templates"
   ],
-  "SelectedNode": "\\allauth\\templates\\account\\previous-one-base.html",
+  "SelectedNode": "\\mysite\\urls.py",
   "PreviewInSolutionExplorer": false
 }

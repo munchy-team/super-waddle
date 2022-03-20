@@ -55,7 +55,8 @@ admin.site.site_header= "Project Progress Website"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.realhomepage),
+    path('', views.home),
+    path('/admins', views.realhomepage),
     #path('', TemplateView.as_view(template_name="homepage.html"), name="realhomepage"),
     path('old-home', TemplateView.as_view(template_name="Home.html")),
     path('home3', views.home),

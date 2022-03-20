@@ -26,11 +26,20 @@ from munchyblog.models import HomeBlog
 #from munchyblog.models import Header3
 #from munchyblog.models import Paragraph3
 #from munchyblog.models import Header3_Second_Paragraph
+from django.core.paginator import Paginator
 
 admin.site.login = login_required(admin.site.login)
 
 def home(request):
     homeblogs = HomeBlog.objects.all().order_by('-Date')
+
+    homeblog_paginator = Paginator(homeblogs, 4)
+
+   # page = homeblog_paginator.get_page(1)
+
+   # context = {
+    #    'count' : homeblog_paginator.count,
+     ##  }
   #  posttitles = Title.objects.all()
    # dates = Date.objects.all()
    # authors = Author.objects.all()

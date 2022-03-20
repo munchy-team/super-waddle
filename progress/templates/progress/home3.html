@@ -162,7 +162,8 @@
                     {% endif %}
                 </div>
                 <div class="col-4 text-center">
-                    <a class="blog-header-logo text-dark" href="#">MunchySite</a>
+                    <br>
+                    <a class="blog-header-logo text-dark" href="/">MunchySite</a>
                 </div>
                 <div class="col-4 d-flex justify-content-end align-items-center">
                     <!--<a class="link-secondary" href="#" aria-label="Search">
@@ -189,10 +190,10 @@
 
         <div class="nav-scroller py-1 mb-2">
             <nav class="nav d-flex justify-content-between">
-                <a class="p-2 link-secondary" href="#">MunchyTeam</a>
-                <a class="p-2 link-secondary" href="#">MunchySite</a>
-                <a class="p-2 link-secondary" href="#">MunchySite Questions</a>
-                <a class="p-2 link-secondary" href="#">MunchySite Answers</a>
+                <a class="p-2 link-secondary" href="/">MunchyTeam</a>
+                <a class="p-2 link-secondary" href="/">MunchySite</a>
+                <a class="p-2 link-secondary" href="https://munchysite-q.herokuapp.com">MunchySite Questions</a>
+                <a class="p-2 link-secondary" href="https://munchysite-a.herokuapp.com">MunchySite Answers</a>
                 <a class="p-2 link-secondary" href="#">MunchySite Apps</a>
                 <a class="p-2 link-secondary" href="#">Blog Posts</a>
                 <a class="p-2 link-secondary" href="#">Polls</a>
@@ -209,9 +210,9 @@
         <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
             <div class="col-md-6 px-0">
                 <!---->
-                <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
-                <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about ----- most interesting in this ----- contents.</p>
-                <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+                <h1 class="display-4 fst-italic">Introducing MunchyOne</h1>
+                <p class="lead my-3">Now you can sign up for MunchyOne, which allows you to have one account to enrich yourself with the whole suite of MunchyTeam apps and tools.</p>
+                <a href="/accounts/signup" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">Sign Up</a>
             </div>
         </div>
 
@@ -221,15 +222,15 @@
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-primary">MunchyTeam Suite</strong>
                         <h3 class="mb-0">MunchySite</h3>
-                        <div class="mb-1 text-muted">Nov 12</div>
-                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                       
+                        <p class="card-text mb-auto">The best place to be in order to always stay updated about MunchyTeam, and its suite of tools and apps.</p>
                         {% if user.is_superuser %}
                         <a href="/admin" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to Admin Panel</a>
                         {% elif user.is_authenticated %}
-                        <a href="#" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to your Account</a>
+                        <a href="/user" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to your Account</a>
 
                         {% else %}
-                        <a href="#" role="button" class="stretched-link btn btn-primary w-75 mr-2">Sign Up</a>
+                        <a href="/accounts/signup" role="button" class="stretched-link btn btn-primary w-75 mr-2">Sign Up</a>
                         {% endif %}
 
                     </div>
@@ -243,8 +244,8 @@
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-success">MunchyTeam Suite</strong>
                         <h3 class="mb-0">MunchySite Apps</h3>
-                        <div class="mb-1 text-muted">Nov 11</div>
-                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+ 
+                        <p class="mb-auto">The tool that allows you to download MunchyTeam exclusive apps.</p>
                         <a href="#" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to MunchySite Apps</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
@@ -258,9 +259,9 @@
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-danger">MunchyTeam Suite</strong>
                         <h3 class="mb-0">MunchySite Questions</h3>
-                        <div class="mb-1 text-muted">Nov 12</div>
-                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to MunchySite Questions</a>
+
+                        <p class="card-text mb-auto">The best place to ask learning-related questions only about math, language arts, and social studies. </p>
+                        <a href="https://munchysite-q.herokuapp.com" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to MunchySite Questions</a>
 
                     </div>
                     <div class="col-auto d-none d-lg-block">
@@ -274,9 +275,9 @@
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-warning">MunchyTeam Suite</strong>
                         <h3 class="mb-0">MunchySite Answers</h3>
-                        <div class="mb-1 text-muted">Nov 11</div>
-                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to MunchySite Answers</a>
+    
+                        <p class="mb-auto">The best place to go to find answers to your learning-related questions about math, language arts, and social studies. </p>
+                        <a href="https://munchysite-a.herokuapp.com" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to MunchySite Answers</a>
 
                     </div>
                     <div class="col-auto d-none d-lg-block">
@@ -292,7 +293,7 @@
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-info">MunchySite Blog: SuperUser Only</strong>
                         <h3 class="mb-0">Create a Blog Post</h3>
-                        <div class="mb-1 text-muted">Nov 12</div>
+          
                         <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
                         <a href="/admin/munchyblog/homeblog/" role="button" class="stretched-link btn btn-primary w-75 mr-2">Create a Blog Post</a>
 
@@ -307,9 +308,9 @@
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-info">MunchySite Blog: SuperUser Only</strong>
                         <h3 class="mb-0">Messages</h3>
-                        <div class="mb-1 text-muted">Nov 12</div>
+      
                         <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                        <a href="/#messages" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to Messages</a>
+                        <a href="/admins/#messages" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to Messages</a>
 
                     </div>
                     <div class="col-auto d-none d-lg-block">
@@ -339,6 +340,7 @@
     <hr> -->
 
                     <h2>{{obj.Header1}}</h2>
+                   
                     <p>{{obj.Paragraph1}}</p>
                     <p>{{obj.SecondParagraph}}</p>
                     <h2>{{obj.Header2}}</h2>
@@ -392,7 +394,7 @@
     <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
     <pre><code>Example code block</code></pre>
     <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p> -->
-                    <hr>
+                    <strong><hr class="bg-black w-100"></strong> 
                 </article>
                 {% endfor %}
                 <!--
@@ -468,7 +470,7 @@
                 <div class="position-sticky" style="top: 2rem;">
                     <div class="p-4 mb-3 bg-light rounded">
                         <h4 class="fst-italic">About</h4>
-                        <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
+                        <p class="mb-0">Welcome to MunchySite, a MunchyTeam tool. This is the MunchyBlog, which is a part of MunchySite, and it allows you always stay updated about MunchyTeam!</p>
                     </div>
 
                     <div class="p-4">
@@ -493,7 +495,7 @@
                     <div class="p-4">
                         <h4 class="fst-italic">Elsewhere</h4>
                         <ol class="list-unstyled">
-                            <li><a href="#">GitHub</a></li>
+                            <!-- <li><a href="#">GitHub</a></li> -->
                             <li><a href="#">Twitter</a></li>
                             <li><a href="#">Facebook</a></li>
                         </ol>

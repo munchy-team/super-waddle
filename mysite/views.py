@@ -27,6 +27,7 @@ from munchyblog.models import HomeBlog
 #from munchyblog.models import Paragraph3
 #from munchyblog.models import Header3_Second_Paragraph
 from django.core.paginator import Paginator
+from apps.models import MunchyApp
 
 admin.site.login = login_required(admin.site.login)
 
@@ -58,8 +59,18 @@ def home(request):
                                                   #'header2s':header2s,'paragraph2s':paragraph2s,'header2secondparagraphs':header2secondparagraphs,'header3s':header3s,
                                                   #'paragraph3s':paragraph3s,'header3secondparagraphs':header3secondparagraphs
                                                   #})
+                                                  #})
+@login_required
+def account_holder(request):
+    	return render(request, "users.html")
 
 
+def munchy_blog_post(request):
+        homeblogs = HomeBlog.objects.all().order_by('-Date')
+        return render(request, "blog_post.html",  {'homeblogs':homeblogs})
+def munchy_apps(request):
+        munchyapps = MunchyApp.objects.all()
+        return render(request, "munchy_apps.html", {'munchyapps':munchyapps})
 def realhomepage(request):
   availabilitys = Availability.objects.all()
   messages = Message.objects.all().order_by('-Posted_At')

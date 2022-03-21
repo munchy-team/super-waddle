@@ -36,6 +36,7 @@ from blog.views import create_blog_view,detail_blog_view,edit_blog_view,get_blog
 #from bllog.views import create_blog_view,detail_blog_view,edit_blog_view,get_blog_queryset
 
 from personal.views import home_screen_view
+from django.contrib.auth import views as auth_views
 # from accountss import urls
 
 #from django.conf.urls import url
@@ -55,6 +56,9 @@ admin.site.site_header= "Project Progress Website"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('user/account/', views.account_holder),
+    path('blogposts/', views.munchy_blog_post),
+    path('apps/',views.munchy_apps),
     path('', views.home),
     path('admins/', views.realhomepage),
     #path('', TemplateView.as_view(template_name="homepage.html"), name="realhomepage"),
@@ -110,20 +114,20 @@ urlpatterns = [
 #	path('answers/must_authenticate/', must_authenticate_view, name="must_authenticate"),
  #   path('answers/register/', registration_view, name="register"),
     # Password reset links (ref: https://github.com/django/django/blob/master/django/contrib/auth/views.py)
-    #path('blogs/password_change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='registration/password_change_done.html'), 
-        #name='password_change_done'),
+    path('blogs/password_change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='registration/password_change_done.html'), 
+        name='password_change_done'),
 
-    #path('blogs/password_change/', auth_views.PasswordChangeView.as_view(template_name='registration/password_change.html'), 
-        #name='password_change'),
+    path('user/password_change/', auth_views.PasswordChangeView.as_view(template_name='registration/password_change.html'), 
+        name='password_change'),
 
-    #path('blogs/password_reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_done.html'),
-     #name='password_reset_done'),
+    path('blogs/password_reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_done.html'),
+     name='password_reset_done'),
 
-    #path('blogs/reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
-    #path('blogs/password_reset/', auth_views.PasswordResetView.as_view(), name='password_reset'),
+    path('blogs/reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
+    path('blogs/password_reset/', auth_views.PasswordResetView.as_view(), name='password_reset'),
     
-    #path('blogs/reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_complete.html'),
-     #name='password_reset_complete'),
+    path('blogs/reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_complete.html'),
+     name='password_reset_complete'),
 ]
 
 

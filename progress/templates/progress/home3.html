@@ -172,12 +172,12 @@
                     {% if user.is_superuser %}
                     <a class="btn btn-sm btn-outline-secondary ms-2 " href="/admin">Admin Panel</a>
                     <a class="btn btn-sm btn-outline-secondary ms-2 " href="/admin/munchyblog/homeblog/">BPs</a>
-                    <a class="btn btn-sm btn-outline-secondary ms-2 " href="/messages">Messages</a>
+                    <a class="btn btn-sm btn-outline-secondary ms-2 " href="/admins">Messages</a>
 
 
                     {% endif %}
                     {% if user.is_authenticated %}
-                    <a class="btn btn-sm btn-outline-secondary ms-2 " href="/accounts/logout">Account</a>
+                    <a class="btn btn-sm btn-outline-secondary ms-2 " href="/user/account">Account</a>
                     <a class="btn btn-sm btn-outline-secondary ms-2" href="/accounts/logout">Sign Out</a>
 
                     {% else %}
@@ -194,8 +194,8 @@
                 <a class="p-2 link-secondary" href="/">MunchySite</a>
                 <a class="p-2 link-secondary" href="https://munchysite-q.herokuapp.com">MunchySite Questions</a>
                 <a class="p-2 link-secondary" href="https://munchysite-a.herokuapp.com">MunchySite Answers</a>
-                <a class="p-2 link-secondary" href="#">MunchySite Apps</a>
-                <a class="p-2 link-secondary" href="#">Blog Posts</a>
+                <a class="p-2 link-secondary" href="/apps">MunchySite Apps</a>
+                <a class="p-2 link-secondary" href="blogposts/">Blog Posts</a>
                 <a class="p-2 link-secondary" href="#">Polls</a>
                 <!-- <a class="p-2 link-secondary" href="#">Opinion</a>
                  <a class="p-2 link-secondary" href="#">Science</a>
@@ -227,7 +227,7 @@
                         {% if user.is_superuser %}
                         <a href="/admin" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to Admin Panel</a>
                         {% elif user.is_authenticated %}
-                        <a href="/user" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to your Account</a>
+                        <a href="/user/account" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to your Account</a>
 
                         {% else %}
                         <a href="/accounts/signup" role="button" class="stretched-link btn btn-primary w-75 mr-2">Sign Up</a>
@@ -246,7 +246,7 @@
                         <h3 class="mb-0">MunchySite Apps</h3>
  
                         <p class="mb-auto">The tool that allows you to download MunchyTeam exclusive apps.</p>
-                        <a href="#" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to MunchySite Apps</a>
+                        <a href="/apps" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to MunchySite Apps</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
                         <img src="../../../static/apps3.png" alt="" class="bd-placeholder-img" width="220" height="250">
@@ -508,7 +508,7 @@
     </main>
 
     <footer class="blog-footer">
-        <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        <p>MunchySite | MunchyTeam | 2022.</p>
         <p>
             <a href="#">Back to top</a>
         </p>

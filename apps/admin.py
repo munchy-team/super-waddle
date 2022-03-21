@@ -1,10 +1,11 @@
 from django.contrib import admin
-from .models import MunchyApps
+from .models import MunchyApp
 
-class MunchyAppsAdmin(admin.ModelAdmin):
+class MunchyAppAdmin(admin.ModelAdmin):
     list_display = ('AppName', 'AppCreator','DateCreated')
 
-admin.site.register(MunchyApps, MunchyAppsAdmin)
+admin.site.register(MunchyApp, MunchyAppAdmin)
 
 # Register your models here.
+
 

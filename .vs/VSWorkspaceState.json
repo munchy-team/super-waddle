@@ -1,13 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\munchyblog",
     "\\mysite",
+    "\\personal",
+    "\\personal\\templates",
+    "\\personal\\templates\\personal",
     "\\progress",
     "\\progress\\templates",
     "\\progress\\templates\\progress",
-    "\\staticfiles",
-    "\\templates"
+    "\\templates",
+    "\\templates\\registration",
+    "\\templates\\snippets"
   ],
   "SelectedNode": "\\mysite\\views.py",
   "PreviewInSolutionExplorer": false

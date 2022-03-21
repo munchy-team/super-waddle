@@ -55,6 +55,7 @@ INSTALLED_APPS = [
   'blog',
   'personal',
   'munchyblog',
+  'apps',
   #'django.contrib.accounts2',
 
   

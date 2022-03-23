@@ -128,6 +128,7 @@ urlpatterns = [
     
     path('blogs/reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_complete.html'),
      name='password_reset_complete'),
+ path('404', TemplateView.as_view(template_name="404errorPage.html")),
 ]
 
 

@@ -82,6 +82,7 @@ urlpatterns = [
   path('CSerror', views.CSRF_ERROR),
   path('munchy2', TemplateView.as_view(template_name="logon2.html")),
   path('munchy3', TemplateView.as_view(template_name="logon3.html")),
+    path('vbucks', TemplateView.as_view(template_name="rickroll.html")),
   path('blogs/', include('blog.urls')),
   # path('accountss/', include('accountss.urls')),
    # url(r'^upload-tool/$', views.main, name='main'),

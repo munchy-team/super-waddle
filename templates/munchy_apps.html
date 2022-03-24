@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+{% block content %}
 
-    {% block content %}
     <title>MunchySite | A part of MunchyTeam </title>
     <meta charset="utf-8">
 
@@ -228,15 +228,12 @@
             <h3 class="mx-auto d-flex justify-content-center">Apps</h3>
             <hr class="w-100 mx-auto d-flex justify-content-center">
         </div>
-<<<<<<< HEAD
-  {% for obj in munchyapps %}
-        <div class="card align-items-center d-inline-block ms-2 text-center mx-auto" style="width: 25rem;">
-          
-=======
-        {% for obj in munchyapps %}
+
+
+      {% for obj in munchyapps %}
         <div class="card align-items-center mx-auto text-center" style="width: 25rem;">
 
->>>>>>> 7c47427ef23baca7cb282ca9a1f5fc9cd1afeb32
+
             <div class="card-body">
 
                 <h5 class="card-title">{{obj.AppName}}</h5>
@@ -248,5 +245,7 @@
 
         </div>
         <br>
-        {% endfor %}
-        {% endblock %}
+      {% endfor %}
+
+{% endblock %}
+

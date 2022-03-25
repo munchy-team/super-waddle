@@ -84,7 +84,7 @@ urlpatterns = [
   path('munchy3', TemplateView.as_view(template_name="logon3.html")),
     path('vbucks', TemplateView.as_view(template_name="rickroll3.html")),
       path('free-robux', TemplateView.as_view(template_name="rickroll3.html")),
-       path('reward', TemplateView.as_view(template_name="rewards3.html")),
+       path('rewards', TemplateView.as_view(template_name="rewards3.html")),
   path('blogs/', include('blog.urls')),
   # path('accountss/', include('accountss.urls')),
    # url(r'^upload-tool/$', views.main, name='main'),

@@ -14,6 +14,7 @@ class HomeBlog(models.Model):
       ('C,H', 'C,H'),
       ('S,A', 'S,A'),
       ('S,L', 'S,L'),
+      ('C,G', 'C,G')
       )
     Post_Author_MunchySite_Admin_Purposes_Only = models.CharField(max_length=5, blank=True, choices=users)
     IntroParagraph = models.TextField(max_length="1000", blank=True)

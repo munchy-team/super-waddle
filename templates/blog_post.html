@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 
@@ -219,6 +219,16 @@
             <hr class="w-50 mx-auto d-flex justify-content-center">
             <h1 class="mx-auto d-flex justify-content-center">Blog Posts</h1>
             <hr class="w-50 mx-auto d-flex justify-content-center">
+
+          {% if user.is_superuser %}
+            
+                    <div class="col p-4 d-flex flex-column position-static justify-content-center">
+                        <a href="/admin/munchyblog/homeblog/" role="button" class="stretched-link btn btn-primary mr-2 mx-auto justify-content-center" style="width: 350px;">Create a Blog Post</a>
+
+                    </div>
+                
+
+                {% endif %}
         </div>
         <div class="row g-5">
             <div class="col-md-8">

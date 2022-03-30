@@ -95,7 +95,8 @@ def test(request):
   html = '<html> <title>this is a test page do whatever you want</title> <h1>THIS MUST WORKS!</h1> <h2>yes this works</h2> <h2><a href="/navigation/"> Go back to the Directory</a> </h2></html>'
   return HttpResponse(html)
 
-  
+def munchy404(request, exception):
+  return render(request, 'errorPage404.html')
 #HEY TYPE YOUR PW IN COMMAND PROMPT
 #okay
 # over ride the warning!
@@ -138,5 +139,6 @@ def simple_upload(request):
 
 def dev_tools(request):
     return HttpResponse()
+
 def CSRF_ERROR(request):
   return HttpResponse('bad error hahahahahahahahahahahahah')

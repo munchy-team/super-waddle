@@ -132,7 +132,7 @@ urlpatterns = [
     
     path('blogs/reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_complete.html'),
      name='password_reset_complete'),
- path('404', TemplateView.as_view(template_name="errorPage404.html")),
+
 ]
 
 
@@ -142,6 +142,7 @@ if settings.DEBUG==True:
    #urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
    #urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+handler404 = 'mysite.views.munchy404'
  # how can we implement this: https://www.youtube.com/watch?v=v5FWAxi5QqQ look at timestamp 7:18. I dont know how to implement that in html. #no idea help 
   
     

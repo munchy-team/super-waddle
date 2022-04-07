@@ -1,7 +1,6 @@
 {
   "ExpandedNodes": [
     "",
-    "\\apps",
     "\\aprovedapps",
     "\\munchyblog",
     "\\progress",
@@ -11,6 +10,6 @@
     "\\templates\\registration",
     "\\templates\\snippets"
   ],
-  "SelectedNode": "\\templates\\munchy_apps.html",
+  "SelectedNode": "\\munchyblog\\models.py",
   "PreviewInSolutionExplorer": false
 }

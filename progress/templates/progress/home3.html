@@ -206,6 +206,18 @@
     </div>
 
     <main class="container">
+        <div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: rgb(255, 102, 102);">
+            <div class="col-md-6 px-0">
+                <!---->
+                <h1 class="display-4 fst-italic" >Battle for Munchy Coin</h1>
+                <p class="lead my-3">Battle for the fate of Munchy Coin! Join the resistance now!
+                <br/>
+                  <a href="/munchycoin/learn" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">Learn More</a>
+                </p>
+                <a href="https://docs.google.com/spreadsheets/d/1hKXAu-VjwOD2agmnQbwjz22Hs0RGsNi5BY4BetF2B7A/edit?usp=sharing" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">Inlist</a>
+                <a href="https://docs.google.com/presentation/d/11j1TOj9eY66tFNN2rmV27wu2esmAoIXxbtzvvbGNdiI/edit?usp=sharing" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">Join The Fight</a>
+            </div>
+        </div>
         <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
             <div class="col-md-6 px-0">
                 <!---->
@@ -277,15 +289,37 @@
     
                         <p class="mb-auto">The best place to go to find answers to your learning-related questions about math, language arts, and social studies. </p>
                         <a href="https://munchysite-a.herokuapp.com" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to MunchySite Answers</a>
+            
+                    </div>
+                  <div class="col-auto d-none d-lg-block">
+                        <img src="https://munchy-team.github.io/logos/MunchyAnswersIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
+
+                    </div>
+                </div>
+                    </div>
+                  <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-warning" style="color: rgb(255, 199, 31);">MunchyTeam Suite</strong>
+                        <h5 class="mb-0">Munchy Bank</h5>
+    
+                        <p class="mb-auto">The one-stop shop... well... bank, to get digital Munchy Coin!<br/>(Munchy Coin is not a real currency)</p>
+                        <a class="stretched-link btn w-75 mr-2" style="background-color: rgb(190, 190, 190); color: white;">Coming Soon</a>
 
                     </div>
                     <div class="col-auto d-none d-lg-block">
 
-                        <!--  <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-                        <img src="https://munchy-team.github.io/logos/MunchyAnswersIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
+                       
+                       <!-- RE-IMPLEMENT WHEN THERE IS A LOGO FOR IT
+                      
+                      <img src="https://munchy-team.github.io/logos/MunchyAnswersIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
+                    
+                    -->
                     </div>
                 </div>
             </div>
+              
+              
             {% if user.is_superuser %}
             <div class="col-md-6">
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -357,6 +391,7 @@
                     <p>{{obj.ListItem7}}</p>
                     <p>{{obj.ListItem8}}</p>
                     <p>{{obj.ListItem9}}</p>
+                   <!-- <div>{{obj.Embeded}}</div> -->
 
 
                     <!--  <blockquote class="blockquote">

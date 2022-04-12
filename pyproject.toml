@@ -17,6 +17,7 @@ djangoblogs = "^0.2.0"
 sudo = "^1.0.0"
 sudoaptinstall = "^0.3"
 apt-local = "^0.0.2-beta.1"
+certbot = "^1.26.0"
 
 [tool.poetry.dev-dependencies]
 

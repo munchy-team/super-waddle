@@ -10,7 +10,7 @@ from progress.models import Availability, Message
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib import admin
-from django.contrib.auth.decorators import login_required
+
 from munchyblog.models import HomeBlog
 #from munchyblog.models import models
 #from munchyblog.models import HomeBlog
@@ -96,7 +96,9 @@ def test(request):
   return HttpResponse(html)
 
 def munchy404(request, exception):
-  return render(request, 'errorPage404.html')
+  return render(request, '404errorPage.html')
+def munchy500(requesr, exception):
+  return render(requesr, '500errorPage.html')
 #HEY TYPE YOUR PW IN COMMAND PROMPT
 #okay
 # over ride the warning!

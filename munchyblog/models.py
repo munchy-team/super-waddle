@@ -36,3 +36,4 @@ class HomeBlog(models.Model):
     ListItem7 = models.CharField(max_length=100, blank=True)
     ListItem8 = models.CharField(max_length=100, blank=True)
     ListItem9 = models.CharField(max_length=100, blank=True)
+   # Embeded = models.CharField(max_length=1000, blank=True)

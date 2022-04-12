@@ -10,6 +10,8 @@ class HomeBlog(models.Model):
         ('Calvin','Calvin'),
         ('LS', 'LS'),
         ('Hudson Crisp','Hudson Crisp'),
+        ('Carson Hayes','Carson Hayes'),
+        ('Other','Other'),
 
 
         )

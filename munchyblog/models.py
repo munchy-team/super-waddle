@@ -2,20 +2,20 @@ from django.db import models
 
 # Create your models here.
 class HomeBlog(models.Model):
-    Post_Title = models.CharField(max_length=200, blank=True)
-    Date = models.DateField(blank=True)
+    Post_Title = models.CharField(max_length=200)
+    Date = models.DateTimeField()
     mod = (
         ('MunchyTeam Moderator', 'MunchyTeam Moderator'),
         ('AS','AS'),
         ('Calvin','Calvin'),
         ('LS', 'LS'),
         ('Hudson Crisp','Hudson Crisp'),
-        ('Carson Hayes','Carson Hayes'),
-        ('Other','Other'),
+        ('Carson','Carson'),
+        ('MunchyBlog Author','MunchyBlog Author'),
 
 
         )
-    Author = models.CharField(choices=mod, max_length=30, blank=True)
+    Author = models.CharField(choices=mod, max_length=30)
    
     users = (
       ('test','test'),
@@ -23,6 +23,7 @@ class HomeBlog(models.Model):
       ('S,A', 'S,A'),
       ('S,L', 'S,L'),
       ('C,G', 'C,G'),
+      ('Other','Other'),
       )
     Post_Author_MunchySite_Admin_Purposes_Only = models.CharField(max_length=5, blank=True, choices=users)
     IntroParagraph = models.TextField(max_length="1000", blank=True)

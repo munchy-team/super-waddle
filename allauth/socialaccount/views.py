@@ -21,7 +21,7 @@ from .models import SocialAccount, SocialLogin
 
 
 class SignupView(
-    RedirectAuthenticatedUserMixin,
+   RedirectAuthenticatedUserMixin,
     CloseableSignupMixin,
     AjaxCapableProcessFormViewMixin,
     FormView,

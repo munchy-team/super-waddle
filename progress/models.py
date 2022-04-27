@@ -90,8 +90,8 @@ class Message(models.Model):
       ('S,A', 'S,A'),
       ('S,L', 'S,L'),
       )
-  From = models.CharField(max_length=5, choices=ppl, blank=True)
-  To = models.CharField(max_length=5, choices=ppl, blank=True)
+  From = models.CharField(max_length=5, choices=ppl)
+  To = models.CharField(max_length=5, choices=ppl)
   #name = models.CharField(max_length=200)
   Posted_At = models.DateTimeField(null=True, blank=True)
   Message = models.TextField(max_length=135)

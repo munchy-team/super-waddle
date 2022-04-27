@@ -3,6 +3,7 @@
     "",
     "\\aprovedapps",
     "\\munchyblog",
+    "\\mysite",
     "\\progress",
     "\\progress\\templates",
     "\\progress\\templates\\progress",
@@ -10,5 +11,6 @@
     "\\templates\\registration",
     "\\templates\\snippets"
   ],
+  "SelectedNode": "\\mysite\\settings.py",
   "PreviewInSolutionExplorer": false
 }

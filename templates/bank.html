@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MunchyBank | A Part of MunchyTeam</title>.
+    <script>
+      function store () {
+        var munchyCoin
+        munchyCoin = localStorage.getItem("munchyCoinAmount")
+        localStorage.setItem("munchyCoinAmount", munchyCoin)
+        location.href = "/progress/templates/progress/home3.html";
+      }
+    </script>
+    <!-- css properties spot -->
+  </head>
+  <body>
+    <!-- Header spot -->
+    <main class="container">
+        <div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: rgb(0,0,0);">
+            <div class="col-md-6 px-0">
+                <!---->
+                <h1 class="display-4 fst-italic" >Your Munchy Coin:</h1>
+                <p class="lead my-3">The war is done! As of 6:00 pm CST, the war was stopped! Peace is now among us once again! 
+                <br>
+                </p>
+            </div>
+        </div>
+    </main>  
+    
+    <div style="text-align: center;">
+      <p>Your Munchy Coin:</p>
+      <div id="munchyCoinBankDisplay"></div>
+    </div>
+    <!-- Footer spot -->
+  </body>
+</html>

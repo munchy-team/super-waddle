@@ -9,8 +9,9 @@
   <!-- another update as of 02-2022-->
   {% if user.is_authenticated %}
   <hr>
-<center><h5><strong>Hello, {{ user.username }}!</strong></h5></center>
-<center><form action="/admin/logout/">
+<center><h5><strong>Hello, {{ user.username }}!</strong></h5></center>\
+<!-- why is this not working -->
+<center><form action="/accounts/logout">
   <input type="submit" value="Log Out" />
 </form></center>
 <hr>
@@ -34,6 +35,7 @@ Home:</h3> <ul>
   <li><form action="/admin"> 
   <input type="submit" value="Go To Admin" />
 </form></li>
+  
 <!--
 <li><form action="/accounts/login">  
   <input type="submit" value="Log In Page" />

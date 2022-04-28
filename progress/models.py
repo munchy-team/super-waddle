@@ -1,4 +1,5 @@
 from django.db import models
+# testing
 
 class Availability(models.Model):
   ppl = (
@@ -16,7 +17,7 @@ class Availability(models.Model):
   Available = models.CharField(max_length=5, choices=yesno)
   On_Docs = models.CharField(max_length=5, choices=yesno)
   Notes = models.CharField(max_length=250,blank=True)
-  Updated_At = models.TimeField(blank=True, null=True)
+  Updated_at = models.DateTimeField(blank=True, null=True)
 
 class Progresse(models.Model):
   name = models.CharField(max_length=255)
@@ -83,18 +84,18 @@ class Assignment(models.Model):
   Message_Posted_At = models.TimeField(blank=True, null=True)
   Less_Important_Messages_And_Chat = models.TextField(blank=True, max_length=5000)  
 
-class Messages(models.Model):
+class Message(models.Model):
   ppl = (
      ('test', 'test'),
       ('C,H', 'C,H'),
       ('S,A', 'S,A'),
       ('S,L', 'S,L'),
       )
-  From = models.CharField(max_length=5, choices=ppl, blank=True)
-  To = models.CharField(max_length=5, choices=ppl, blank=True)
+  From = models.CharField(max_length=5, choices=ppl)
+  To = models.CharField(max_length=5, choices=ppl)
   #name = models.CharField(max_length=200)
-  date = models.DateTimeField(null=True, blank=True)
-  Message = models.TextField(max_length=700)
+  Posted_At = models.DateTimeField(null=True, blank=True)
+  Message = models.TextField(max_length=135)
   #Time = models.DateTimeField()
   #To = models.CharField(choices=ppl, max_length=100)
  # Subject = models.CharField(max_length=250,  blank=True)

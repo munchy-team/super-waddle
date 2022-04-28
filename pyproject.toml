@@ -10,6 +10,14 @@ python = "^3.8"
 Django = "^4.0.4"
 psycopg2-binary = "^2.9.3"
 whitenoise = "^6.0.0"
+django-allauth = "^0.49.0"
+jwt = "^1.3.1"
+mock = "^4.0.3"
+djangoblogs = "^0.2.0"
+sudo = "^1.0.0"
+sudoaptinstall = "^0.3"
+apt-local = "^0.0.2-beta.1"
+certbot = "^1.26.0"
 
 [tool.poetry.dev-dependencies]
 

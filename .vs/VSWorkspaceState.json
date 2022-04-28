@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\aprovedapps",
+    "\\munchyblog",
+    "\\mysite",
+    "\\progress",
+    "\\progress\\templates",
+    "\\progress\\templates\\progress",
+    "\\templates",
+    "\\templates\\registration",
+    "\\templates\\snippets"
+  ],
+  "SelectedNode": "\\mysite\\settings.py",
+  "PreviewInSolutionExplorer": false
+}

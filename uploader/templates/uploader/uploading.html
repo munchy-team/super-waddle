@@ -27,6 +27,7 @@
 
   {% if uploaded_file_url %}
     <p>The file was uploaded to: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+    <img src="{{ uploaded_file_url}}" alt="{{ filename }}">
   {% endif %}
 
   <p><a href="{% url 'main' %}">Go to Main Page</a></p>

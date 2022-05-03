@@ -11,6 +11,6 @@
     "\\templates\\registration",
     "\\templates\\snippets"
   ],
-  "SelectedNode": "\\mysite\\settings.py",
+  "SelectedNode": "\\mysite\\wsgi.py",
   "PreviewInSolutionExplorer": false
 }

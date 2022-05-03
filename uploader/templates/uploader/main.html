@@ -8,27 +8,35 @@
 </head>
 <body>
 
-<h2>Testing</h2>
-{% block content %}
-  <ul>
-    <li>
-      <a href="/admin/uploader/document/add/"><button> upload</button></a>
-      <!-- core is app name -->
-    </li>
+    <h2>Testing</h2>
+    {% block content %}
+    <ul>
+        <li>
+            <a href="/admin/uploader/document/add/"><button> upload</button></a>
+            <!-- core is app name -->
+        </li>
 
-  </ul>
+    </ul>
+    <img src="">
 
-  <p>Uploaded files:</p>
-  <ul>
-    {% for obj in documents %}
-      <li>
-        <a href="{{ obj.document.url }}">{{ obj.document.name }}</a>
-        <small>(Uploaded at: {{ obj.uploaded_at }})</small>
-      </li>
-    {% endfor %}
-  </ul>
-{% endblock %}
-<!--<a href="/uploader/media"><button> upload again</button></a>
--->
+    <p>Uploaded files:</p>
+    <ul>
+        {% for obj in documents %}
+        <li>
+            <a href="{{ obj.document.url }}">
+                {{ obj.document.name }}
+
+            </a>
+            <small>(Uploaded at: {{ obj.uploaded_at }})</small>
+            <br>
+            <img src="{{obj.document.url}}">
+
+
+        </li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+    <!--<a href="/uploader/media"><button> upload again</button></a>
+    -->
 </body>
 </html>

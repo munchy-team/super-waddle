@@ -65,8 +65,8 @@ urlpatterns = [
     path('old-home', TemplateView.as_view(template_name="Home.html")),
     path('home3', views.home),
    # path('firstview', TemplateView.as_view(template_name="firstview.html")),
-     path('bank-menu', TemplateView.as_view(template_name="firstview.html")),
-     path('bank', TemplateView.as_view(template_name="logon2.html")),
+     path('bank-menu', views.bank_menu),# TemplateView.as_view(template_name="firstview.html")),
+     path('bank', views.bank),#TemplateView.as_view(template_name="logon2.html")),
 
     path('progress', views.progress),
     path('progress/', include('progress.urls')),

@@ -75,7 +75,7 @@ urlpatterns = [
     path('links/', views.navigation),
    path('veriosn', TemplateView.as_view(template_name="versions.html")),
    path('accounts/', include('allauth.urls')),
-       path('bank/accounts/', include('allauth.urls')),
+    #   path('bank/accounts/', include('allauth.urls')),
     re_path(r'^theuploader/$', views.main, name='main'),
     #url(r'/^$', views.main, name='main'),
     re_path(r'^uploader/media/$', views.simple_upload, name='simple_upload'),

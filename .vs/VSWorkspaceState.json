@@ -1,16 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\aprovedapps",
     "\\munchyblog",
-    "\\mysite",
-    "\\progress",
-    "\\progress\\templates",
-    "\\progress\\templates\\progress",
-    "\\templates",
-    "\\templates\\registration",
-    "\\templates\\snippets"
+    "\\mysite"
   ],
-  "SelectedNode": "\\mysite\\wsgi.py",
+  "SelectedNode": "\\munchyblog\\models.py",
   "PreviewInSolutionExplorer": false
 }

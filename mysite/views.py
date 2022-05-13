@@ -82,9 +82,12 @@ def realhomepage(request):
 #    model = Message
 #    success_url = reverse_lazy('messages')
   
+def bank_menu(request):
+  return render(request, 'firstview.html')
+@login_required
+def bank(request):
+  return render(request, 'logon2.html')
 
-def firstview(request):
-  return HttpResponse('Our first view.py is up at 1:23PM')
 def version(request):
   return HttpResponse('this is version 19')
 

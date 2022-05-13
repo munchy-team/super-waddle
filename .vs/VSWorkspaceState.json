@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\munchyblog",
-    "\\mysite"
+    "\\mysite",
+    "\\templates"
   ],
-  "SelectedNode": "\\munchyblog\\models.py",
+  "SelectedNode": "\\mysite\\urls.py",
   "PreviewInSolutionExplorer": false
 }

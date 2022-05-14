@@ -406,32 +406,58 @@
 
                     </div>
                     <div class="col-auto d-none d-lg-block">
-                        <img src="https://munchy-team.github.io/logos/MunchyAnswersIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
+                        <!--  <img src="https://munchy-team.github.io/logos/MunchyAnswersIco.png" alt="" class="bd-placeholder-img" width="260" height="250"> -->
 
                     </div>
                 </div>
             </div>
+            {% if user.is_superuser %}
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-info">MunchySite Blog: SuperUser Only</strong>
+                        <h3 class="mb-0">Create a Blog Post</h3>
 
+                        <p class="card-text mb-auto">Create a blog post to give the latest news about MunchyTeam!</p>
+                        <a href="/admin/munchyblog/homeblog/" role="button" class="stretched-link btn btn-primary w-75 mr-2">Create a Blog Post</a>
 
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://munchy-team.github.io/logos/MunchyBlogSUIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-info">MunchySite Blog: SuperUser Only</strong>
+                        <h3 class="mb-0">Messages</h3>
 
-            <!-- RE-IMPLEMENT WHEN THERE IS A LOGO FOR IT
+                        <p class="card-text mb-auto">The right place to go to find the latest notifications.</p>
+                        <a href="/admins/" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to Messages</a>
 
-          <img src="https://munchy-team.github.io/logos/MunchyAnswersIco.png" alt="" class="bd-placeholder-img" style="background-color: rgb(190, 190, 190); width="260" height="250">
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://munchy-team.github.io/logos/MunchyMessagesSUIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+       
 
-        -->
-        </div>
-        </div>
-        </div>
+        <!-- RE-IMPLEMENT WHEN THERE IS A LOGO FOR IT
 
+      <img src="https://munchy-team.github.io/logos/MunchyAnswersIco.png" alt="" class="bd-placeholder-img" style="background-color: rgb(190, 190, 190); width="260" height="250">
 
-        {% if user.is_superuser %}
-        <div class="col-md-6">
+    -->
+
+       <!-- <div class="col-md-6">
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                     <strong class="d-inline-block mb-2 text-info">MunchySite Blog: SuperUser Only</strong>
                     <h3 class="mb-0">Create a Blog Post</h3>
 
-                    <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text mb-auto">Create a blog post to give the latest news about MunchyTeam!</p>
                     <a href="/admin/munchyblog/homeblog/" role="button" class="stretched-link btn btn-primary w-75 mr-2">Create a Blog Post</a>
 
                 </div>
@@ -446,7 +472,7 @@
                     <strong class="d-inline-block mb-2 text-info">MunchySite Blog: SuperUser Only</strong>
                     <h3 class="mb-0">Messages</h3>
 
-                    <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text mb-auto">The right place to go to find the latest notifications.</p>
                     <a href="/admins/" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to Messages</a>
 
                 </div>
@@ -454,10 +480,10 @@
                     <img src="https://munchy-team.github.io/logos/MunchyMessagesSUIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
                 </div>
             </div>
-            {% endif %}
-        </div>
 
         </div>
+            -->
+
 
         <div class="row g-5">
             <div class="col-md-8">

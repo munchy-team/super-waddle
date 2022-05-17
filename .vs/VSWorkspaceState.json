@@ -3,8 +3,11 @@
     "",
     "\\munchyblog",
     "\\mysite",
+    "\\progress",
+    "\\progress\\templates",
+    "\\progress\\templates\\progress",
     "\\templates"
   ],
-  "SelectedNode": "\\templates\\logon2.html",
+  "SelectedNode": "\\progress\\templates\\progress\\home3.html",
   "PreviewInSolutionExplorer": false
 }

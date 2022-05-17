@@ -31,7 +31,7 @@ from apps.models import MunchyApp
 
 admin.site.login = login_required(admin.site.login)
 
-@login_required
+#@login_required
 def home(request):
     homeblogs = HomeBlog.objects.all().order_by('-Date')
     messages = Message.objects.all().order_by('-Posted_At')

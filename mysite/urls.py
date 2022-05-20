@@ -28,6 +28,8 @@ from django.conf.urls.static import static
 # from django.conf.urls import url
 from uploader import views
 from blog import urls
+from polls import urls
+from pages import urls
 #from accountss import urls
 from accountss.views import registration_view, logout_view,login_view,account_view,must_authenticate_view
 from blog.views import create_blog_view,detail_blog_view,edit_blog_view,get_blog_queryset
@@ -91,6 +93,8 @@ urlpatterns = [
        path('rewards', TemplateView.as_view(template_name="rewards3.html")),
       path('money', TemplateView.as_view(template_name="rickroll3.html")),
   path('blogs/', include('blog.urls')),
+  path('polling/', include('polls.urls')),
+  path('polling2/', include('pages.urls')),
 
   # path('accountss/', include('accountss.urls')),
    # url(r'^upload-tool/$', views.main, name='main'),

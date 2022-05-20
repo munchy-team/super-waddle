@@ -93,7 +93,7 @@ urlpatterns = [
        path('rewards', TemplateView.as_view(template_name="rewards3.html")),
       path('money', TemplateView.as_view(template_name="rickroll3.html")),
   path('blogs/', include('blog.urls')),
-  path('polls/', include('polls.urls')),
+  path('polling/', include('polls.urls')),
   path('polling2/', include('pages.urls')),
 
   # path('accountss/', include('accountss.urls')),

@@ -1,6 +1,13 @@
 {% extends 'polling.html' %}
 {% block content %}
 <a class="btn btn-secondary btn-sm mb-3" href="{% url 'polls:index' %}">Back To Polls</a>
+<style>
+	h1, h2, h3, h4, h5, h6 {
+		font-family: "Playfair Display", Georgia, "Times New Roman", /*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+	}
+</style>
+<link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+
 <h1 class="text-center mb-3">{{ question.question_text }}</h1>
 
 {% if error_message %}
@@ -10,19 +17,16 @@
 {% endif %}
 
 <form action="{% url 'polls:vote' question.id %}" method="post">
-	{% csrf_token %} 
+	{% csrf_token %}
 	{% for choice in question.choice_set.all %}
-		<div class="form-check">
-			<input
-				type="radio"
-				name="choice"
-				class="form-check-input"
-				id="choice{{ forloop.counter }}"
-				value="{{ choice.id }}"
-			/>
-			<label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label
-			>
-		</div>
+	<div class="form-check">
+		<input type="radio"
+			   name="choice"
+			   class="form-check-input"
+			   id="choice{{ forloop.counter }}"
+			   value="{{ choice.id }}" />
+		<label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
+	</div>
 	{% endfor %}
 	<input type="submit" value="Vote" class="btn btn-success btn-lg btn-block mt-4" />
 </form>

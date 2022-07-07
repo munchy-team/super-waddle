@@ -24,6 +24,16 @@
 
 
     <style>
+        input {
+            background-color: white;
+        }
+        /*
+        label {
+            font-family: "Playfair Display", Georgia, "Times New Roman", serif /*rtl:Amiri, Georgia, "Times New Roman", serif;
+            font-size: 15px;
+        }
+        */
+
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -32,22 +42,12 @@
             user-select: none;
         }
 
-        @media (min-width: 768px) {
+        @media (min-width: 600px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
             }
 
-            html,
-            body {
-                height: 100%;
-            }
-
-            body {
-                align-items: center;
-                padding-top: 40px;
-                padding-bottom: 40px;
-                background-color: #f5f5f5;
-            }
+           
 
             .form-signin {
                 width: 100%;
@@ -86,11 +86,11 @@
 
             width: 70%;
             padding: 0.375rem 0.75rem;
-            background-color: #212529;
+            /*background-color: #212529;*/
             font-size: 1rem;
             font-weight: 400;
             line-height: 1.5;
-            color: #212529;
+            /* color: #212529; */
             /*background-color: #fff;
                 background-clip: padding-box; */
             border: 1px solid #ced4da;
@@ -99,7 +99,6 @@
                 appearance: none; */
             border-radius: 0.25rem;
             transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-            color: white;
         }
 
 
@@ -110,78 +109,201 @@
             input[type="checkbox"] {
                 display: inline-block;
                 float: inline-end;
-                background-color: #212529;
+                /*background-color: #212529; */
+            }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .blog-header {
+            line-height: 1;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .blog-header-logo {
+            font-family: "Playfair Display", Georgia, "Times New Roman", serif /*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+            font-size: 2.25rem;
+        }
+
+            .blog-header-logo:hover {
+                text-decoration: none;
+            }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Playfair Display", Georgia, "Times New Roman", serif /*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+        }
+
+        .display-4 {
+            font-size: 2.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .display-4 {
+                font-size: 3rem;
+            }
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+            .nav-scroller .nav {
+                display: flex;
+                flex-wrap: nowrap;
+                padding-bottom: 1rem;
+                margin-top: -1px;
+                overflow-x: auto;
+                text-align: center;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav-scroller .nav-link {
+                padding-top: .75rem;
+                padding-bottom: .75rem;
+                font-size: .875rem;
+            }
+
+        .card-img-right {
+            height: 100%;
+            border-radius: 0 3px 3px 0;
+        }
+
+        .flex-auto {
+            flex: 0 0 auto;
+        }
+
+        .h-250 {
+            height: 250px;
+        }
+
+        @media (min-width: 768px) {
+            .h-md-250 {
+                height: 250px;
+            }
+        }
+
+        /* Pagination */
+        .blog-pagination {
+            margin-bottom: 4rem;
+        }
+
+            .blog-pagination > .btn {
+                border-radius: 2rem;
+            }
+
+        /*
+        * Blog posts
+        */
+        .blog-post {
+            margin-bottom: 4rem;
+        }
+
+        .blog-post-title {
+            margin-bottom: .25rem;
+            font-size: 2.5rem;
+        }
+
+        .blog-post-meta {
+            margin-bottom: 1.25rem;
+            color: #727272;
+        }
+
+        /*
+        * Footer
+        */
+        .blog-footer {
+            padding: 2.5rem 0;
+            color: #727272;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-top: .05rem solid #e5e5e5;
+        }
+
+            .blog-footer p:last-child {
+                margin-bottom: 0;
             }
     </style>
+    <br>
+ 
+    <body class="">
+        <div class="card " style="width: 20rem;">
+            <main class="form-signin">
+                <form method="POST" action="{% url 'account_login' %}">
+                    {% csrf_token %}
 
+                    <img class="mb-3" src="https://munchy-team.github.io/logos/MTLogo1-removebg-preview.png" alt="" width="70" height="70">
+                    <h1 class="h3 mb-3 fw-normal">MunchySite Login</h1>
+                    <hr>
 
-    <!-- Custom styles for this template -->
-   <!-- <link href="signin.css" rel="stylesheet"> -->
-</head>
-<body class="bg-black  text-light">
-    <div class="card bg-dark" style="width: 20rem;">
-        <main class="form-signin">
-            <form method="POST" action="{% url 'account_login' %}">
-                {% csrf_token %}
-
-                <img class="mb-3" src="https://munchy-team.github.io//logos/logo1-1-removebg-preview-5.png" alt="" width="70" height="70">
-                <h1 class="h3 mb-3 fw-normal">MunchySite Login</h1>
-                <hr>
-
-                {{form.as_p}}
+                    {{form.as_p}}
 
 
 
-                <!--
-                    <div class="form-floating">
-                        <input type="username" class="form-control me-2 bg-dark text-light" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Username</label>
+                    <!--
+                        <div class="form-floating">
+                            <input type="username" class="form-control me-2 bg-dark text-light" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Username</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control me-2 bg-dark text-light" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+
+                        <div class="checkbox mb-3">
+
+                                <label>
+                                    <input type="checkbox" value="remember-me"> Remember me
+                                </label>
+
+                        </div>  -->
+                    <button class="primary Action w-100 btn btn-lg btn-primary" type="submit" action="{% url 'account_login' %}" href="{% url 'account_login' %}">{% trans "Sign In" %}</button>
+
+                    <br>
+                    <hr>
+                    <!--
+                            <button class="w-100 btn btn-outline-light mb-2" type="submit">Sign in with Google</button>
+
+                            <button class="w-100 btn  btn-outline-light" type="submit">Sign in with GitHub</button>
+                            <!--    <br>
+                    <br> -->
+                    <div class="socialaccount_ballot">
+
+                        <div class="socialaccount_providers">
+                            {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+                        </div>
+
+
+
                     </div>
-                    <div class="form-floating">
-                        <input type="password" class="form-control me-2 bg-dark text-light" id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword">Password</label>
-                    </div>
+                    <hr>
+                    <center><p class="mb-1">New to MunchySite?</p></center>
+                    <a class="w-100 btn  btn-secondary" href="{{ signup_url }}" role="button" type="submit">Sign Up for MunchySite</a>
+                    <hr>
 
-                    <div class="checkbox mb-3">
+        </div>
+        <center> <p class="mt-5 mb-2 text-muted">&copy; 2022 | MunchySite | MunchyTeam</p></center>
+        </form>
 
-                            <label>
-                                <input type="checkbox" value="remember-me"> Remember me
-                            </label>
-
-                    </div>  -->
-                <button class="primary Action w-100 btn btn-lg btn-outline-light" type="submit" action="{% url 'account_login' %}" href="{% url 'account_login' %}">{% trans "Sign In" %}</button>
-
-                <br>
-                <hr>
-                <!--
-                        <button class="w-100 btn btn-outline-light mb-2" type="submit">Sign in with Google</button>
-
-                        <button class="w-100 btn  btn-outline-light" type="submit">Sign in with GitHub</button>
-                        <!--    <br>
-                <br> -->
-                <div class="socialaccount_ballot">
-
-                    <div class="socialaccount_providers">
-                        {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-                    </div>
+        </main>
 
 
 
-                </div>
-                <hr>
-                <center><p class="mb-1">New to MunchySite?</p></center>
-                <a class="w-100 btn  btn-outline-light" href="{{ signup_url }}" role="button" type="submit">Sign Up for MunchySite</a>
-                <hr>
-                <br>
-    </div>
-    <center> <p class="mt-5 mb-2 text-muted">&copy; 2022 | MunchySite | MunchyTeam</p></center>
-    </form>
-
-    </main>
-
-
-
-</body>
+    </body>
 </html>
 
 

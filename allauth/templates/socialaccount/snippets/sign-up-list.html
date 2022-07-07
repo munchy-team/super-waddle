@@ -16,7 +16,7 @@
 {% endfor %}
 {% endif %}
 
-<a title=" {{provider.name}} " class="socialaccount_provider btn btn-outline-light w-100 mb-2 {{provider.id}}"
+<a title=" {{provider.name}} " class="socialaccount_provider w-100 btn btn-primary mb-2 {{provider.id}}"
    href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}" role="button">
     Sign Up with {{provider.name}}
 </a>

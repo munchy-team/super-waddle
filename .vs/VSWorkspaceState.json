@@ -1,16 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\pages",
-    "\\polls",
-    "\\progress",
-    "\\progress\\templates",
-    "\\progress\\templates\\progress",
-    "\\templates",
-    "\\templates\\pages",
-    "\\templates\\partials",
-    "\\templates\\polls"
+    ""
   ],
-  "SelectedNode": "\\mysite\\urls.py",
   "PreviewInSolutionExplorer": false
 }

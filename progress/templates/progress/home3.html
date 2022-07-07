@@ -194,17 +194,18 @@
         <div class="nav-scroller py-1 mb-2">
             <nav class="nav d-flex justify-content-between">
                 <a class="p-2 link-secondary" href="/">MunchyTeam</a>
-                <a class="p-2 link-secondary" href="/">MunchySite</a>
+                <a class="p-2 link-secondary" href="https://bank-munchyteam.herokuapp.com">MunchyBank</a>
+                <a class="p-2 link-secondary" href="https://mtrealtor.herokuapp.com">MunchyTeam Realtor</a>
                 <a class="p-2 link-secondary" href="https://munchysite-q.herokuapp.com">MunchySite Questions</a>
                 <a class="p-2 link-secondary" href="https://munchysite-a.herokuapp.com">MunchySite Answers</a>
                 <a class="p-2 link-secondary" href="/apps">MunchySite Apps</a>
                 <a class="p-2 link-secondary" href="blogposts/">Blog Posts</a>
                 <a class="p-2 link-secondary" href="/polls">Polls</a>
                 <!-- <a class="p-2 link-secondary" href="#">Opinion</a>
-                 <a class="p-2 link-secondary" href="#">Science</a>
-                 <a class="p-2 link-secondary" href="#">Health</a>
-                 <a class="p-2 link-secondary" href="#">Style</a>
-                 <a class="p-2 link-secondary" href="#">Travel</a> -->
+     <a class="p-2 link-secondary" href="#">Science</a>
+     <a class="p-2 link-secondary" href="#">Health</a>
+     <a class="p-2 link-secondary" href="#">Style</a>
+     <a class="p-2 link-secondary" href="#">Travel</a> -->
             </nav>
         </div>
     </div>
@@ -387,11 +388,14 @@
             <div class="col-md-6">
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                     <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-primary" style="color: rgb(255, 199, 31);">MunchyTeam Suite</strong>
-                        <h5 class="mb-0">Munchy Bank</h5>
+                        <strong class="d-inline-block mb-2 text-primary">MunchyTeam Suite</strong>
+                        <h4 class="mb-0">MunchyBank</h4>
 
                         <p class="mb-auto">The one-stop shop... well... bank,<br> to get digital Munchy Coin!<br>  (Munchy Coin is <br>not a real currency)</p>
-                        <a class="stretched-link btn w-50 mr-2 btn-primary " role="button" color: white;" href="/bank-menu">Go to MunchyBank</a>
+                        <a href="https://bank-munchyteam.herokuapp.com" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to MunchyBank</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://munchy-team.github.io/logos/MTLogo1-removebg-preview.png" alt="" class="bd-placeholder-img" width="260" height="250">
 
                     </div>
                 </div>
@@ -400,14 +404,13 @@
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-success">MunchyTeam Suite</strong>
-                        <h5 class="mb-0">MunchySite Polls</h5>
+                        <h4 class="mb-0">MunchySite Polls</h4>
 
-                        <p class="mb-auto">Give your input and let MunchyTeam know on various polls you wish to vote in. </p>
-                        <a href="/polls" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to Polls</a>
-
+                        <p class="mb-auto">Give your input and let MunchyTeam know on various polls you wish to vote in.</p>
+                        <a href="/polls" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to MunchySite Polls</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
-                        <!--  <img src="https://munchy-team.github.io/logos/MunchyAnswersIco.png" alt="" class="bd-placeholder-img" width="260" height="250"> -->
+                        <img src="https://munchy-team.github.io/logos/MTLogo1-removebg-preview.png" alt="" class="bd-placeholder-img" width="260" height="250">
 
                     </div>
                 </div>
@@ -416,18 +419,19 @@
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-danger">MunchyTeam Suite</strong>
-                        <h5 class="mb-0">MunchyTeam Realtor</h5>
+                        <h4 class="mb-0">MunchyTeam Realtor</h4>
 
-                        <p class="mb-auto">The best place to have fun and "buy" imaginary houses with imaginary MunchyCoin.  (Munchy Coin is not a real currency) </p>
+                        <p class="mb-auto">The best place to have fun and "buy" imaginary houses with imaginary MunchyCoin.  (Munchy Coin is not a real currency)</p>
                         <a href="https://mtrealtor.herokuapp.com" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to MunchyTeam Realtor</a>
-
                     </div>
                     <div class="col-auto d-none d-lg-block">
-                        <!--  <img src="https://munchy-team.github.io/logos/MunchyAnswersIco.png" alt="" class="bd-placeholder-img" width="260" height="250"> -->
+                        <img src="https://munchy-team.github.io/logos/MTLogo1-removebg-preview.png" alt="" class="bd-placeholder-img" width="260" height="250">
 
                     </div>
                 </div>
             </div>
+
+           
             {% if user.is_superuser %}
             <div class="col-md-6">
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -468,37 +472,37 @@
 
     -->
             <!-- <div class="col-md-6">
-         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-             <div class="col p-4 d-flex flex-column position-static">
-                 <strong class="d-inline-block mb-2 text-info">MunchySite Blog: SuperUser Only</strong>
-                 <h3 class="mb-0">Create a Blog Post</h3>
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-info">MunchySite Blog: SuperUser Only</strong>
+                <h3 class="mb-0">Create a Blog Post</h3>
 
-                 <p class="card-text mb-auto">Create a blog post to give the latest news about MunchyTeam!</p>
-                 <a href="/admin/munchyblog/homeblog/" role="button" class="stretched-link btn btn-primary w-75 mr-2">Create a Blog Post</a>
+                <p class="card-text mb-auto">Create a blog post to give the latest news about MunchyTeam!</p>
+                <a href="/admin/munchyblog/homeblog/" role="button" class="stretched-link btn btn-primary w-75 mr-2">Create a Blog Post</a>
 
-             </div>
-             <div class="col-auto d-none d-lg-block">
-                 <img src="https://munchy-team.github.io/logos/MunchyBlogSUIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
-             </div>
-         </div>
-     </div>
-     <div class="col-md-6">
-         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-             <div class="col p-4 d-flex flex-column position-static">
-                 <strong class="d-inline-block mb-2 text-info">MunchySite Blog: SuperUser Only</strong>
-                 <h3 class="mb-0">Messages</h3>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+                <img src="https://munchy-team.github.io/logos/MunchyBlogSUIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-info">MunchySite Blog: SuperUser Only</strong>
+                <h3 class="mb-0">Messages</h3>
 
-                 <p class="card-text mb-auto">The right place to go to find the latest notifications.</p>
-                 <a href="/admins/" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to Messages</a>
+                <p class="card-text mb-auto">The right place to go to find the latest notifications.</p>
+                <a href="/admins/" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to Messages</a>
 
-             </div>
-             <div class="col-auto d-none d-lg-block">
-                 <img src="https://munchy-team.github.io/logos/MunchyMessagesSUIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
-             </div>
-         </div>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+                <img src="https://munchy-team.github.io/logos/MunchyMessagesSUIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
+            </div>
+        </div>
 
-     </div>
-         -->
+    </div>
+        -->
 
 
             <div class="row g-5">
@@ -557,6 +561,7 @@
 
                     {% for obj in homeblogs %}
                     <article class="blog-post">
+
                         <h2 class="blog-post-title">{{obj.Post_Title}}</h2>
 
 

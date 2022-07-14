@@ -59,6 +59,8 @@ INSTALLED_APPS = [
   'apps',
   'pages',
   'polls',
+  'homepage',
+  'a1homepage',
   #'django.contrib.accounts2',
 
   

@@ -2,15 +2,15 @@
 <html>
 <head>
     <meta name="google-site-verification" content="nzPhigQuVXoO9TOYvx6JClPIXbgPY6PDkQLNqvedbl8" />
-{% block content %}
+    {% block content %}
     <title>MunchySite | A part of MunchyTeam </title>
     <script>
-      const munchyCoinWarOpponent = [Carson, Calvin];
+        const munchyCoinWarOpponent = [Carson, Calvin];
     </script>
     <meta charset="utf-8">
 
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -149,7 +149,7 @@
 
 
     <!-- Custom styles for this template -->
-     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
 </head>
 <body>
@@ -249,6 +249,7 @@
     {% endif %} -->
         <!-- Class for td data on top class="fst-italic"
     -->
+        <br>
         {% if user.is_authenticated %}
         <div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: rgb(48,255,165);">
             <div class="col-md-6 px-0">
@@ -259,12 +260,79 @@
                     <br>
 
                 </p>
-                <!-- <a href="https://docs.google.com/spreadsheets/d/1hKXAu-VjwOD2agmnQbwjz22Hs0RGsNi5BY4BetF2B7A/edit?usp=sharing" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">Inlist</a>
-              <a href="https://docs.google.com/presentation/d/11j1TOj9eY66tFNN2rmV27wu2esmAoIXxbtzvvbGNdiI/edit?usp=sharing" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">Join The Fight</a>
-            <a href="/munchycoin/learn" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">Learn More</a> -->
+
             </div>
         </div>
         {% else %}
+        <div class="p-4 p-md-6 mb-3 rounded   text-bg-secondary" >
+            <div class="row   text-bg-secondary">
+                {% if user.is_authenticated %}
+                <div class="card mx-2  text-bg-secondary" style="width: 50rem;">
+                    <div class="card-body">
+                        <br>
+                        <h1 class="display-4 fst-italic">Welcome, {{request.user.username}}</h1>
+
+                        <p class="lead my-3">
+                            Enrich yourself with information with the updates from MunchyBlog and the MunchyTeam suite of apps and tools!
+                        </p>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                        <a href="/blogposts" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">View Blog Posts</a>
+                        <a href="/polls" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">Vote in Polls</a>
+
+
+                    </div>
+                    {% else %}
+                    <div class="card mx-2  text-bg-secondary" style="width: 50rem;">
+                        <div class="card-body">
+                            <br>
+                            <h1 class="display-4 fst-italic">Introducing MunchyOne</h1>
+
+                            <p class="lead my-3">Now you can sign up for MunchyOne, which allows you to have one account to enrich yourself with the whole suite of MunchyTeam apps and tools.</p>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+
+                            <br>
+                            <br>
+                            <br>
+                            <a href="/accounts/login" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">Log In</a>
+
+                            <a href="/accounts/signup" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">Sign Up</a>
+
+                            <a href="/polls" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">Vote in Polls</a>
+
+                        </div>
+                    </div>
+                    <div class="card  btn-outline-light text-bg-secondary" style="width: 28rem;">
+                        <div class="card-body">
+                            <hr>
+                            <h3 class="card-title text-center">MunchyWar Economy</h3>
+                            <hr>
+                            <h4 class="text-center">
+                                MCI:  000.00 ᴍᴄɪ
+                            </h4>
+                            <br>
+                            <h4 class=" text-center">AMG:  000.00 ᴀᴍɢ</h4>
+
+                            <br>
+                            <hr>
+                            <small class="text-center">*The MunchyWar economy has been shut down since 4/16/2022 at 6:00 PM CDT.</small>
+                            <br>
+                            <br>
+
+                            <small class="text-center">**MCI and AMG are imaginative currecies. They were created to expand imagination. They are not real and worth zero in real life.</small>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            <!-- (REMOVE TO RESTORE PREV VERSION)
         <div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: rgb(48,255,165);">
             <div class="col-md-6 px-0">
 
@@ -276,7 +344,7 @@
                 </p>
                 <!-- <a href="https://docs.google.com/spreadsheets/d/1hKXAu-VjwOD2agmnQbwjz22Hs0RGsNi5BY4BetF2B7A/edit?usp=sharing" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">Inlist</a>
               <a href="https://docs.google.com/presentation/d/11j1TOj9eY66tFNN2rmV27wu2esmAoIXxbtzvvbGNdiI/edit?usp=sharing" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">Join The Fight</a>
-            <a href="/munchycoin/learn" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">Learn More</a> -->
+            <a href="/munchycoin/learn" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">Learn More</a> (ADD a comment stop here to restore)
             </div>
         </div>
         <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
@@ -285,6 +353,7 @@
                 <h1 class="display-4 fst-italic">Introducing MunchyOne</h1>
                 <p class="lead my-3">Now you can sign up for MunchyOne, which allows you to have one account to enrich yourself with the whole suite of MunchyTeam apps and tools.</p>
                 <a href="/accounts/signup" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">Sign Up</a>
+           
             </div>
         </div>
 
@@ -431,7 +500,7 @@
                 </div>
             </div>
 
-           
+
             {% if user.is_superuser %}
             <div class="col-md-6">
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -468,41 +537,41 @@
 
             <!-- RE-IMPLEMENT WHEN THERE IS A LOGO FOR IT
 
-      <img src="https://munchy-team.github.io/logos/MunchyAnswersIco.png" alt="" class="bd-placeholder-img" style="background-color: rgb(190, 190, 190); width="260" height="250">
+          <img src="https://munchy-team.github.io/logos/MunchyAnswersIco.png" alt="" class="bd-placeholder-img" style="background-color: rgb(190, 190, 190); width="260" height="250">
 
-    -->
-            <!-- <div class="col-md-6">
-        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-info">MunchySite Blog: SuperUser Only</strong>
-                <h3 class="mb-0">Create a Blog Post</h3>
-
-                <p class="card-text mb-auto">Create a blog post to give the latest news about MunchyTeam!</p>
-                <a href="/admin/munchyblog/homeblog/" role="button" class="stretched-link btn btn-primary w-75 mr-2">Create a Blog Post</a>
-
-            </div>
-            <div class="col-auto d-none d-lg-block">
-                <img src="https://munchy-team.github.io/logos/MunchyBlogSUIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
-            </div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-info">MunchySite Blog: SuperUser Only</strong>
-                <h3 class="mb-0">Messages</h3>
-
-                <p class="card-text mb-auto">The right place to go to find the latest notifications.</p>
-                <a href="/admins/" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to Messages</a>
-
-            </div>
-            <div class="col-auto d-none d-lg-block">
-                <img src="https://munchy-team.github.io/logos/MunchyMessagesSUIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
-            </div>
-        </div>
-
-    </div>
         -->
+            <!-- <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-info">MunchySite Blog: SuperUser Only</strong>
+                    <h3 class="mb-0">Create a Blog Post</h3>
+
+                    <p class="card-text mb-auto">Create a blog post to give the latest news about MunchyTeam!</p>
+                    <a href="/admin/munchyblog/homeblog/" role="button" class="stretched-link btn btn-primary w-75 mr-2">Create a Blog Post</a>
+
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img src="https://munchy-team.github.io/logos/MunchyBlogSUIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-info">MunchySite Blog: SuperUser Only</strong>
+                    <h3 class="mb-0">Messages</h3>
+
+                    <p class="card-text mb-auto">The right place to go to find the latest notifications.</p>
+                    <a href="/admins/" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to Messages</a>
+
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img src="https://munchy-team.github.io/logos/MunchyMessagesSUIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
+                </div>
+            </div>
+
+        </div>
+            -->
 
 
             <div class="row g-5">
@@ -529,33 +598,33 @@
 
                     <!--<p>Posted At: {{obj.Posted_At}}</p>
 
-            <p></p> -->
+                <p></p> -->
                     <hr>
                     <!--
 
-            <center>
+                <center>
 
-                <table width="200%">
-                    <ol>
-                        <hr width="200%">
-                    <tr>
-                        <th width="5%">To:</th>
-                        <th width="5%">From:</th>
-                        <th width="68%">Message:</th>
-                        <th width="35%">Posted At:</th>
-                    </tr>
-                    <tr>
-                        <td width="5%" ><strong>{{obj.To}}</strong></td>
-                        <td width="5%"><strong>{{obj.From}}</strong></td>
-                        <td width="68%">{{obj.Message}}<br></td>
-                        <td width="35%">{{obj.Posted_At}}</td>
+                    <table width="200%">
+                        <ol>
+                            <hr width="200%">
+                        <tr>
+                            <th width="5%">To:</th>
+                            <th width="5%">From:</th>
+                            <th width="68%">Message:</th>
+                            <th width="35%">Posted At:</th>
+                        </tr>
+                        <tr>
+                            <td width="5%" ><strong>{{obj.To}}</strong></td>
+                            <td width="5%"><strong>{{obj.From}}</strong></td>
+                            <td width="68%">{{obj.Message}}<br></td>
+                            <td width="35%">{{obj.Posted_At}}</td>
 
-                </table>
+                    </table>
 
-                </ol>
+                    </ol>
 
 
-            </center> -->
+                </center> -->
                     {% endfor %}
                     {% else %}
 
@@ -569,7 +638,7 @@
 
                         <p>{{obj.IntroParagraph}}</p>
                         <!--<p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
-                <hr> -->
+                    <hr> -->
 
                         <h2>{{obj.Header1}}</h2>
 
@@ -592,114 +661,114 @@
                         <p>{{obj.ListItem9}}</p>
                         <!-- <div>{{obj.Embeded}}</div> -->
                         <!--  <blockquote class="blockquote">
-                    <p>Quoted text goes here.</p>
-                </blockquote>
-                <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-                <h3>Example lists</h3>
-                <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout. This is an example unordered list:</p>
-                <ul>
-                    <li>First list item</li>
-                    <li>Second list item with a longer description</li>
-                    <li>Third list item to close it out</li>
-                </ul>
-                <p>And this is an ordered list:</p>
-                <ol>
-                    <li>First list item</li>
-                    <li>Second list item with a longer description</li>
-                    <li>Third list item to close it out</li>
-                </ol>
-                <p>And this is a definition list:</p>
-                <dl>
-                    <dt>HyperText Markup Language (HTML)</dt>
-                    <dd>The language used to describe and define the content of a Web page</dd>
-                    <dt>Cascading Style Sheets (CSS)</dt>
-                    <dd>Used to describe the appearance of Web content</dd>
-                    <dt>JavaScript (JS)</dt>
-                    <dd>The programming language used to build advanced Web sites and applications</dd>
-                </dl>
-                <h2>Inline HTML elements</h2>
-                <p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
-                <ul>
-                    <li><strong>To bold text</strong>, use <code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>.</li>
-                    <li><em>To italicize text</em>, use <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code>.</li>
-                    <li>Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use <code class="language-plaintext highlighter-rouge">&lt;abbr&gt;</code>, with an optional <code class="language-plaintext highlighter-rouge">title</code> attribute for the full phrase.</li>
-                    <li>Citations, like <cite>� Mark Otto</cite>, should use <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
-                    <li><del>Deleted</del> text should use <code class="language-plaintext highlighter-rouge">&lt;del&gt;</code> and <ins>inserted</ins> text should use <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
-                    <li>Superscript <sup>text</sup> uses <code class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.</li>
-                </ul>
-                <p>Most of these elements are styled by browsers with few modifications on our part.</p>
-                <h2>Heading</h2>
-                <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-                <h3>Sub-heading</h3>
-                <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-                <pre><code>Example code block</code></pre>
-                <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p> -->
+                        <p>Quoted text goes here.</p>
+                    </blockquote>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                    <h3>Example lists</h3>
+                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout. This is an example unordered list:</p>
+                    <ul>
+                        <li>First list item</li>
+                        <li>Second list item with a longer description</li>
+                        <li>Third list item to close it out</li>
+                    </ul>
+                    <p>And this is an ordered list:</p>
+                    <ol>
+                        <li>First list item</li>
+                        <li>Second list item with a longer description</li>
+                        <li>Third list item to close it out</li>
+                    </ol>
+                    <p>And this is a definition list:</p>
+                    <dl>
+                        <dt>HyperText Markup Language (HTML)</dt>
+                        <dd>The language used to describe and define the content of a Web page</dd>
+                        <dt>Cascading Style Sheets (CSS)</dt>
+                        <dd>Used to describe the appearance of Web content</dd>
+                        <dt>JavaScript (JS)</dt>
+                        <dd>The programming language used to build advanced Web sites and applications</dd>
+                    </dl>
+                    <h2>Inline HTML elements</h2>
+                    <p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
+                    <ul>
+                        <li><strong>To bold text</strong>, use <code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>.</li>
+                        <li><em>To italicize text</em>, use <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code>.</li>
+                        <li>Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use <code class="language-plaintext highlighter-rouge">&lt;abbr&gt;</code>, with an optional <code class="language-plaintext highlighter-rouge">title</code> attribute for the full phrase.</li>
+                        <li>Citations, like <cite>� Mark Otto</cite>, should use <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
+                        <li><del>Deleted</del> text should use <code class="language-plaintext highlighter-rouge">&lt;del&gt;</code> and <ins>inserted</ins> text should use <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
+                        <li>Superscript <sup>text</sup> uses <code class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.</li>
+                    </ul>
+                    <p>Most of these elements are styled by browsers with few modifications on our part.</p>
+                    <h2>Heading</h2>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                    <h3>Sub-heading</h3>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                    <pre><code>Example code block</code></pre>
+                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p> -->
                         <strong><hr class="bg-black w-100"></strong>
                     </article>
                     {% endfor %}
                     {% endif %}
 
                     <!--
-            <article class="blog-post">
-                <h2 class="blog-post-title">Another blog post</h2>
-                <p class="blog-post-meta">December 23, 2020 by <a href="#">Jacob</a></p>
+                <article class="blog-post">
+                    <h2 class="blog-post-title">Another blog post</h2>
+                    <p class="blog-post-meta">December 23, 2020 by <a href="#">Jacob</a></p>
 
-                <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-                <blockquote>
-                    <p>Longer quote goes here, maybe with some <strong>emphasized text</strong> in the middle of it.</p>
-                </blockquote>
-                <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-                <h3>Example table</h3>
-                <p>And don't forget about tables in these posts:</p>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Upvotes</th>
-                            <th>Downvotes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Alice</td>
-                            <td>10</td>
-                            <td>11</td>
-                        </tr>
-                        <tr>
-                            <td>Bob</td>
-                            <td>4</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td>Charlie</td>
-                            <td>7</td>
-                            <td>9</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td>Totals</td>
-                            <td>21</td>
-                            <td>23</td>
-                        </tr>
-                    </tfoot>
-                </table>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                    <blockquote>
+                        <p>Longer quote goes here, maybe with some <strong>emphasized text</strong> in the middle of it.</p>
+                    </blockquote>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                    <h3>Example table</h3>
+                    <p>And don't forget about tables in these posts:</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Upvotes</th>
+                                <th>Downvotes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alice</td>
+                                <td>10</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>Bob</td>
+                                <td>4</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Charlie</td>
+                                <td>7</td>
+                                <td>9</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Totals</td>
+                                <td>21</td>
+                                <td>23</td>
+                            </tr>
+                        </tfoot>
+                    </table>
 
-                <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
-            </article>
+                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+                </article>
 
-            <article class="blog-post">
-                <h2 class="blog-post-title">New feature</h2>
-                <p class="blog-post-meta">December 14, 2020 by <a href="#">Chris</a></p>
+                <article class="blog-post">
+                    <h2 class="blog-post-title">New feature</h2>
+                    <p class="blog-post-meta">December 14, 2020 by <a href="#">Chris</a></p>
 
-                <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-                <ul>
-                    <li>First list item</li>
-                    <li>Second list item with a longer description</li>
-                    <li>Third list item to close it out</li>
-                </ul>
-                <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
-            </article> -->
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                    <ul>
+                        <li>First list item</li>
+                        <li>Second list item with a longer description</li>
+                        <li>Third list item to close it out</li>
+                    </ul>
+                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+                </article> -->
 
                     <nav class="blog-pagination" aria-label="Pagination">
                         <a class="btn btn-outline-primary" href="#">Older</a>
@@ -735,21 +804,21 @@
 
                         <div class="p-4">
                             <!--
-                    <h4 class="fst-italic">Archives</h4>
-                    <ol class="list-unstyled mb-0">
-                      <li><a href="#">March 2021</a></li>
-                      <li><a href="#">February 2021</a></li>
-                      <li><a href="#">January 2021</a></li>
-                      <li><a href="#">December 2020</a></li>
-                      <li><a href="#">November 2020</a></li>
-                      <li><a href="#">October 2020</a></li>
-                      <li><a href="#">September 2020</a></li>
-                      <li><a href="#">August 2020</a></li>
-                      <li><a href="#">July 2020</a></li>
-                      <li><a href="#">June 2020</a></li>
-                      <li><a href="#">May 2020</a></li>
-                      <li><a href="#">April 2020</a></li>
-                    </ol> -->
+                        <h4 class="fst-italic">Archives</h4>
+                        <ol class="list-unstyled mb-0">
+                          <li><a href="#">March 2021</a></li>
+                          <li><a href="#">February 2021</a></li>
+                          <li><a href="#">January 2021</a></li>
+                          <li><a href="#">December 2020</a></li>
+                          <li><a href="#">November 2020</a></li>
+                          <li><a href="#">October 2020</a></li>
+                          <li><a href="#">September 2020</a></li>
+                          <li><a href="#">August 2020</a></li>
+                          <li><a href="#">July 2020</a></li>
+                          <li><a href="#">June 2020</a></li>
+                          <li><a href="#">May 2020</a></li>
+                          <li><a href="#">April 2020</a></li>
+                        </ol> -->
                         </div>
                         {% if user.is_superuser %}
                         <div class="p-4 mb-3 rounded" style="background-color: rgb(232, 232, 232);">
@@ -789,7 +858,7 @@
             </div>
 
 
-</main>
+    </main>
 
     <footer class="blog-footer">
         <p>MunchySite | MunchyTeam | 2022.</p>
@@ -803,3 +872,9 @@
 </body>
 </html>
 {% endblock %}
+
+
+<!--GARBAGE SNIPPETS-->
+<!--
+    
+-->

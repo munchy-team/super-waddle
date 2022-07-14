@@ -28,11 +28,20 @@ from munchyblog.models import HomeBlog
 #from munchyblog.models import Header3_Second_Paragraph
 from django.core.paginator import Paginator
 from apps.models import MunchyApp
+from a1homepage.models import Banner
+from a1homepage.models import AdminBanner
+from a1homepage.models import Economy
+from a1homepage.models import BannerBackground
+
 
 admin.site.login = login_required(admin.site.login)
 
 #@login_required
 def home(request):
+    banners = Banner.objects.all()
+    adminbanners = AdminBanner.objects.all()
+    economys = Economy.objects.all()
+    bannerbkg = BannerBackground.objects.all()
     homeblogs = HomeBlog.objects.all().order_by('-Date')
     messages = Message.objects.all().order_by('-Posted_At')
 
@@ -56,7 +65,7 @@ def home(request):
    # paragraph3s = Paragraph3.objects.all()
    # header3secondparagraphs = Header3_Second_Paragraph.objects.all()
 
-    return render(request, 'progress/home3.html', {'homeblogs':homeblogs, 'messages':messages})#{'posttitles': posttitles, 'dates':dates, 'authors':authors,
+    return render(request, 'progress/home4.html', {'homeblogs':homeblogs, 'messages':messages, 'banners':banners, 'adminbanners':adminbanners, 'economys':economys, 'bannerbkg':bannerbkg})#{'posttitles': posttitles, 'dates':dates, 'authors':authors,
                                                   #'header1s':header1s, 'paragraph1s':paragraph1s,'secondparagraphs':secondparagraphs,
                                                   #'header2s':header2s,'paragraph2s':paragraph2s,'header2secondparagraphs':header2secondparagraphs,'header3s':header3s,
                                                   #'paragraph3s':paragraph3s,'header3secondparagraphs':header3secondparagraphs

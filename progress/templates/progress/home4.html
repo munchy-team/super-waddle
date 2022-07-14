@@ -255,8 +255,10 @@
         <div class="{{obj.div_class}}" style="{{obj.style}}">
     -->
 
-        <!-- IF NOT MUNCHYWAR  THEN BELOW SHOULD HAPPEN-->
-        <div class="p-4 p-md-6 mb-3 rounded text-white text-bg-secondary" style="">
+        <!-- IF NOT MUNCHYWAR  THEN BELOW SHOULD HAPPEN
+        <div class="p-4 p-md-6 mb-3 rounded text-white text-bg-secondary" style=""> TURNED OFF AS OF 7-14-22-->
+        <div class="{{obj.div_class}}" style="{{obj.style}}">
+        
 
             <div class="row">
                 <!-- {7% if user.is_authenticated %}
@@ -283,7 +285,8 @@
     <div class="{{obj.div_class_info_banner}}" style="{{obj.style_info_banner}}">-->
                 <!-- IF NOT MUNCHYWAR  THEN BELOW SHOULD HAPPEN-->
                 <!-- ------------- CHANGE WIDTH to 50 rem when MUNCHYWAR ECONOMY BANNER IS ADD----------------------------- -->
-                <div class="card mx-2 text-bg-secondary" style="width: 78.5rem;">
+               <!-- <div class="card mx-2 text-bg-secondary" style="width: 78.5rem;"> TEMPORARILY TURNED OFF as of 7-14-22 -->
+                    <div class="{{obj.div_class_info_banner}}" style="{{obj.style_info_banner}}">
                     {% endfor %}
                     <div class="card-body">
                         <br>
@@ -364,15 +367,17 @@
 
                     </div>
                 </div>
-                <!-- ----------------------------------------DISABLING ECONOMY BANNER ------------------------------------ -->
+                <!-- ----------------------------------------DISABLING ECONOMY BANNER(NOT AS OF 7-14) ------------------------------------ -->
                 <!--
                 {% for obj in economys %}
-                <!-- IF MUNCHYWAR
+                <!-- IF MUNCHYWAR 
          <div class="{{obj.div_class}}" style="{{obj.style}}">
     -->
-                <!-- IF NOT MUNCHYWAR  THEN BELOW SHOULD HAPPEN-->
-                <!-- DISBALING CONTINUATION
-                    <div class="card btn-outline-light text-bg-secondary" style="width: 28rem;">
+                <!-- IF NOT MUNCHYWAR  THEN BELOW SHOULD HAPPEN  <div class="card btn-outline-light text-bg-secondary" style="width: 28rem;"> -->
+                <!-- DISBALING CONTINUATION -->
+         <div class="{{obj.div_class}}" style="{{obj.style}}">
+
+                   
                         <div class="card-body">
 
                             <hr>
@@ -401,7 +406,7 @@
 
 
                             {% endfor %}
-                        </div>   -->
+                        </div>   
             </div>
             </div>
         </div>

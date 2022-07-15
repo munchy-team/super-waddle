@@ -53,7 +53,8 @@ from . import views
 
 
 from django.views.generic import TemplateView
-admin.site.site_header= "Project Progress Website"
+#admin.site.site_header= "Project Progress Website"
+admin.site.site_header= "MunchySite | MunchyTeam"
 
 
 urlpatterns = [

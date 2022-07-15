@@ -200,6 +200,11 @@ SOCIALACCOUNT_PROVIDERS = {
      ]
   
       }
+    ##################
+    'microsoft': {
+        'TENANT': 'organizations',
+    }
+    ##################
         }
 
 

@@ -171,7 +171,7 @@ STATICFILES_FINDERS = (
  )
 
 MEDIA_ROOT = os.path.join(BASE_DIR, '.well-known')#'media'
-MEDIA_URL = '/.well-known/' #real one - #MEDIA_URL = '/media/'
+MEDIA_URL = "/.well-known/" #real one - #MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 SITE_ID = 2

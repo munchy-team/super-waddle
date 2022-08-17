@@ -1,1 +1,912 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="google-site-verification" content="nzPhigQuVXoO9TOYvx6JClPIXbgPY6PDkQLNqvedbl8" />
+    {% block content %}
+    <title>MunchySite | A part of MunchyTeam </title>
+    <script>
+        const munchyCoinWarOpponent = [Carson, Calvin];
+    </script>
+    <meta charset="utf-8">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+    <!-- Bootstrap core CSS -->
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .blog-header {
+            line-height: 1;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .blog-header-logo {
+            font-family: "Playfair Display", Georgia, "Times New Roman", serif /*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+            font-size: 2.25rem;
+        }
+
+            .blog-header-logo:hover {
+                text-decoration: none;
+            }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Playfair Display", Georgia, "Times New Roman", serif /*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+        }
+
+        .display-4 {
+            font-size: 2.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .display-4 {
+                font-size: 3rem;
+            }
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+            .nav-scroller .nav {
+                display: flex;
+                flex-wrap: nowrap;
+                padding-bottom: 1rem;
+                margin-top: -1px;
+                overflow-x: auto;
+                text-align: center;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav-scroller .nav-link {
+                padding-top: .75rem;
+                padding-bottom: .75rem;
+                font-size: .875rem;
+            }
+
+        .card-img-right {
+            height: 100%;
+            border-radius: 0 3px 3px 0;
+        }
+
+        .flex-auto {
+            flex: 0 0 auto;
+        }
+
+        .h-250 {
+            height: 250px;
+        }
+
+        @media (min-width: 768px) {
+            .h-md-250 {
+                height: 250px;
+            }
+        }
+
+        /* Pagination */
+        .blog-pagination {
+            margin-bottom: 4rem;
+        }
+
+            .blog-pagination > .btn {
+                border-radius: 2rem;
+            }
+
+        /*
+        * Blog posts
+        */
+        .blog-post {
+            margin-bottom: 4rem;
+        }
+
+        .blog-post-title {
+            margin-bottom: .25rem;
+            font-size: 2.5rem;
+        }
+
+        .blog-post-meta {
+            margin-bottom: 1.25rem;
+            color: #727272;
+        }
+
+        /*
+        * Footer
+        */
+        .blog-footer {
+            padding: 2.5rem 0;
+            color: #727272;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-top: .05rem solid #e5e5e5;
+        }
+
+            .blog-footer p:last-child {
+                margin-bottom: 0;
+            }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+</head>
+<body>
+
+    <div class="container">
+        <header class="blog-header py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-4 pt-1">
+                    {% if user.is_authenticated %}
+                    <h6 class="mx-2 my-0">Hello, <u>{{user.username}}</u>!</h6>
+                    {% else %}
+                    <a class="btn btn-sm btn-outline-secondary" href="/accounts/signup">Subscribe / Sign Up</a>
+                    {% endif %}
+                </div>
+                <div class="col-4 text-center">
+                    <br>
+                    <a class="blog-header-logo text-dark" href="/">MunchySite</a>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    <!--<a class="link-secondary" href="#" aria-label="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5" /><path d="M21 21l-5.2-5.2" /></svg>
+                    </a> -->
+                    {% if user.is_superuser %}
+                    <a class="btn btn-sm btn-outline-secondary ms-2 " href="/admin">Admin Panel</a>
+                    <a class="btn btn-sm btn-outline-secondary ms-2 " href="/admin/munchyblog/homeblog/">BPs</a>
+                    <a class="btn btn-sm btn-outline-secondary ms-2 " href="/admins">Messages</a>
+
+
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                    <a class="btn btn-sm btn-outline-secondary ms-2 " href="/user/account">Account</a>
+                    <a class="btn btn-sm btn-outline-secondary ms-2" href="/accounts/logout">Sign Out</a>
+
+                    {% else %}
+                    <a class="btn btn-sm btn-outline-secondary" href="/accounts/login">Log In</a>
+                    {% endif %}
+
+                </div>
+            </div>
+        </header>
+
+        <div class="nav-scroller py-1 mb-2">
+            <nav class="nav d-flex justify-content-between">
+                <a class="p-2 link-secondary" href="/">MunchyTeam</a>
+                <a class="p-2 link-secondary" href="https://bank-munchyteam.herokuapp.com">MunchyBank</a>
+                <a class="p-2 link-secondary" href="https://mtrealtor.herokuapp.com">MunchyTeam Realtor</a>
+                <a class="p-2 link-secondary" href="https://munchysite-q.herokuapp.com">MunchySite Questions</a>
+                <a class="p-2 link-secondary" href="https://munchysite-a.herokuapp.com">MunchySite Answers</a>
+                <a class="p-2 link-secondary" href="/apps">MunchySite Apps</a>
+                <a class="p-2 link-secondary" href="blogposts/">Blog Posts</a>
+                <a class="p-2 link-secondary" href="/polls">Polls</a>
+                <!-- <a class="p-2 link-secondary" href="#">Opinion</a>
+                <a class="p-2 link-secondary" href="#">Science</a>
+                <a class="p-2 link-secondary" href="#">Health</a>
+                <a class="p-2 link-secondary" href="#">Style</a>
+                <a class="p-2 link-secondary" href="#">Travel</a> -->
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <!--
+    {% if user.is_superuser %}
+    <div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: rgb(48,255,165);">
+        <div class="col-md-6 px-0">
+            <!--
+          <u> <h1 class="display-4 fst-italic text-right" >Superuser Updates:</h1></u>
+           <p class="" >Click <a class="text-light" href="/blogposts">here</a> to view the public blog posts. Scroll down for more info.</p>
+           <br>
+
+           {% for obj in messages %}
+           <center>
+
+               <table width="200%">
+                   <ol>
+                       <hr width="200%">
+                   <tr>
+                       <th width="5%">To:</th>
+                       <th width="5%">From:</th>
+                       <th width="68%">Message:</th>
+                       <th width="35%">Posted At:</th>
+                   </tr>
+                   <tr>
+                       <td width="5%" ><strong>{{obj.To}}</strong></td>
+                       <td width="5%"><strong>{{obj.From}}</strong></td>
+                       <td width="68%">{{obj.Message}}<br></td>
+                       <td width="35%">{{obj.Posted_At}}</td>
+
+               </table>
+
+               </ol>
+
+
+           </center>
+           {% endfor %}            </div>
+    </div>
+    {% endif %} -->
+        <!-- Class for td data on top class="fst-italic"
+    -->
+        {% for obj in bannerbkg %}
+    
+        <div class="{{obj.div_class}}" style="{{obj.style}}">
+ 
+
+        <!-- IF NOT MUNCHYWAR  THEN BELOW SHOULD HAPPEN
+        <div class="p-4 p-md-6 mb-3 rounded text-white text-bg-secondary" style=""> TURNED OFF AS OF 7-14-22-->
+        <div class="{{obj.div_class}}" style="{{obj.style}}">
+        
+
+            <div class="row">
+                <!-- {7% if user.is_authenticated %}
+    <div class="card mx-2  text-bg-secondary" style="width: 50rem;">
+        <div class="card-body">
+            <br>
+            <h1 class="display-4 fst-italic">Welcome, {{request.user.username}}</h1>
+
+            <p class="lead my-3">
+                Enrich yourself with information with the updates from MunchyBlog and the MunchyTeam suite of apps and tools!
+            </p>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <a href="/blogposts" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">View Blog Posts</a>
+            <a href="/polls" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">Vote in Polls</a>
+
+
+        </div>
+        {7% else %} -->
+                <!--IF MUNCHYWAR -->
+    <div class="{{obj.div_class_info_banner}}" style="{{obj.style_info_banner}}">
+                <!-- IF NOT MUNCHYWAR  THEN BELOW SHOULD HAPPEN-->
+                <!-- ------------- CHANGE WIDTH to 50 rem when MUNCHYWAR ECONOMY BANNER IS ADD----------------------------- -->
+               <!-- <div class="card mx-2 text-bg-secondary" style="width: 78.5rem;"> TEMPORARILY TURNED OFF as of 7-14-22 -->
+                    <div class="{{obj.div_class_info_banner}}" style="{{obj.style_info_banner}}">
+                    {% endfor %}
+                    <div class="card-body">
+                        <br>
+                        {% if user.is_authenticated %}
+                        {% for obj in adminbanners %}
+
+                        <!--Welcome User if they are authenticated-->
+
+                        <h1 class="display-4 fst-italic">Welcome, {{request.user.username}}!</h1>
+
+
+
+                        <!-- Authenticated User sees the authenticated paragraph-->
+
+                        <p class="lead my-3">
+                            {{obj.Paragraph}}
+                        </p>
+
+                        <br>
+                        <br>
+                        <br>
+
+
+
+                        <br>
+                        <br>
+                        <br>
+                        <!-- Authenticated User sees the buttoons they are supposed when logged in.-->
+
+
+                        <a href="{{obj.Hyperlink_of_Button1}}" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">{{obj.Link_or_Button_Name_For_Button_1}}</a>
+
+                        <a href="{{obj.Hyperlink_of_Button2}}" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">{{obj.Link_or_Button_Name_For_Button_2}}</a>
+
+                        <!-- <a href="{{obj.Hyperlink_of_Button3}}" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">{{obj.Link_or_Button_Name_For_Button_3}}</a>-->
+                        {% endfor %}
+
+                        {% else %}
+
+                        {% for obj in banners %}
+
+                        <!--Welcome User if they are authenticated-->
+
+                        <h1 class="display-4 fst-italic">{{obj.H1_Heading}}</h1>
+
+
+
+                        <!-- Authenticated User sees the authenticated paragraph-->
+
+
+
+                        <p class="lead my-3">{{obj.Paragraph}}</p>
+
+                        <br>
+                        <br>
+                        <br>
+
+
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+
+                        <br>
+                        <a href="{{obj.Hyperlink_of_Button1}}" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">{{obj.Link_or_Button_Name_For_Button_1}}</a>
+
+                        <a href="{{obj.Hyperlink_of_Button2}}" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">{{obj.Link_or_Button_Name_For_Button_2}}</a>
+
+                        <a href="{{obj.Hyperlink_of_Button3}}" class="text-white fw-bold lead mb-0 btn btn-outline-light" role="button">{{obj.Link_or_Button_Name_For_Button_3}}</a>
+
+
+                        {% endfor %}
+                        {% endif %}
+
+                    </div>
+                </div>
+                <!-- ----------------------------------------ENABLING ECONOMY BANNER(YES AS OF 8-17) ------------------------------------ -->
+                
+                {% for obj in economys %}
+                <!-- IF MUNCHYWAR -->
+         <div class="{{obj.div_class}}" style="{{obj.style}}">
+    <!---->
+                <!-- IF NOT MUNCHYWAR  THEN BELOW SHOULD HAPPEN  <div class="card btn-outline-light text-bg-secondary" style="width: 28rem;"> -->
+                <!-- DISBALING CONTINUATION(enabling 8-17) -->
+         <div class="{{obj.div_class}}" style="{{obj.style}}">
+
+                   
+                        <div class="card-body">
+
+                            <hr>
+                            <h3 class="card-title text-center">{{obj.H1_Heading}}</h3>
+                            <hr>
+                            <h4 class="text-center">
+                                MCI:  {{obj.MCI}} ᴍᴄɪ
+                            </h4>
+                            <br>
+                            <h4 class=" text-center">AMG:  {{obj.AMG}} ᴀᴍɢ</h4>
+
+                            <br>
+                            <center>
+                                <a href="{{obj.Hyperlink_of_Button1}}" class="text-white mb-0 btn btn-sm btn-outline-light" role="button">{{obj.Button1}}</a>
+
+                            </center>
+                            <hr>
+                            <small class="text-center">{{obj.Small_Text_1}}</small>
+                            <br>
+                            <br>
+
+                            <small class="text-center">{{obj.Small_Text_2}}</small>
+                            <br>
+                            <br>
+                            <small class="text-center">{{obj.Small_Text_3}}</small>
+
+
+                            {% endfor %}
+                        </div> 
+  
+<!--(del <!)-->
+            </div>
+            </div>
+        </div>
+        <!--  {7% endif %} -->
+       
+     
+
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">MunchyTeam Suite</strong>
+                        <h4 class="mb-0">MunchySite</h4>
+
+                        <p class="card-text mb-auto">The best place to be in order to always stay updated about MunchyTeam, and its suite of tools and apps.</p>
+                        {% if user.is_superuser %}
+                        <a href="/admin" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to Admin Panel</a>
+                        {% elif user.is_authenticated %}
+                        <a href="/user/account" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to your Account</a>
+
+                        {% else %}
+                        <a href="/accounts/signup" role="button" class="stretched-link btn btn-primary w-75 mr-2">Sign Up</a>
+                        {% endif %}
+
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://munchy-team.github.io/logos/MunchySiteIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">MunchyTeam Suite</strong>
+                        <h4 class="mb-0">MunchySite Apps</h4>
+
+                        <p class="mb-auto">The tool that allows you to download MunchyTeam exclusive apps.</p>
+                        <a href="/apps" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to MunchySite Apps</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://munchy-team.github.io/logos/MunchyAppsIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-danger">MunchyTeam Suite</strong>
+                        <h5 class="mb-0">MunchySite Questions</h5>
+
+                        <p class="card-text mb-auto">The best place to ask learning-related questions only about math, language arts, and social studies. </p>
+                        <a href="https://munchysite-q.herokuapp.com" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to MunchySite Questions</a>
+
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://munchy-team.github.io/logos/MunchyQuestionsIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-warning">MunchyTeam Suite</strong>
+                        <h5 class="mb-0">MunchySite Answers</h5>
+
+                        <p class="mb-auto">The best place to go to find answers to your learning-related questions about math, language arts, and social studies. </p>
+                        <a href="https://munchysite-a.herokuapp.com" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to MunchySite Answers</a>
+
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://munchy-team.github.io/logos/MunchyAnswersIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">MunchyTeam Suite</strong>
+                        <h4 class="mb-0">MunchyBank</h4>
+
+                        <p class="mb-auto">The one-stop shop... well... bank,<br> to get digital Munchy Coin!<br>  (Munchy Coin is <br>not a real currency)</p>
+                        <a href="https://bank-munchyteam.herokuapp.com" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to MunchyBank</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://munchy-team.github.io/logos/MTLogo1-removebg-preview.png" alt="" class="bd-placeholder-img" width="260" height="250">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">MunchyTeam Suite</strong>
+                        <h4 class="mb-0">MunchySite Polls</h4>
+
+                        <p class="mb-auto">Give your input and let MunchyTeam know on various polls you wish to vote in.</p>
+                        <a href="/polls" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to MunchySite Polls</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://munchy-team.github.io/logos/MTLogo1-removebg-preview.png" alt="" class="bd-placeholder-img" width="260" height="250">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-danger">MunchyTeam Suite</strong>
+                        <h4 class="mb-0">MunchyTeam Realtor</h4>
+
+                        <p class="mb-auto">The best place to have fun and "buy" imaginary houses with imaginary MunchyCoin.  (Munchy Coin is not a real currency)</p>
+                        <a href="https://mtrealtor.herokuapp.com" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to MunchyTeam Realtor</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://munchy-team.github.io/logos/MTLogo1-removebg-preview.png" alt="" class="bd-placeholder-img" width="260" height="250">
+
+                    </div>
+                </div>
+            </div>
+
+
+            {% if user.is_superuser %}
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-info">MunchySite Blog: SuperUser Only</strong>
+                        <h3 class="mb-0">Create a Blog Post</h3>
+
+                        <p class="card-text mb-auto">Create a blog post to give the latest news about MunchyTeam!</p>
+                        <a href="/admin/munchyblog/homeblog/" role="button" class="stretched-link btn btn-primary w-75 mr-2">Create a Blog Post</a>
+
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://munchy-team.github.io/logos/MunchyBlogSUIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-info">MunchySite Blog: SuperUser Only</strong>
+                        <h3 class="mb-0">Messages</h3>
+
+                        <p class="card-text mb-auto">The right place to go to find the latest notifications.</p>
+                        <a href="/admins/" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to Messages</a>
+
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://munchy-team.github.io/logos/MunchyMessagesSUIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+
+            <!-- RE-IMPLEMENT WHEN THERE IS A LOGO FOR IT
+
+          <img src="https://munchy-team.github.io/logos/MunchyAnswersIco.png" alt="" class="bd-placeholder-img" style="background-color: rgb(190, 190, 190); width="260" height="250">
+
+        -->
+            <!-- <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-info">MunchySite Blog: SuperUser Only</strong>
+                    <h3 class="mb-0">Create a Blog Post</h3>
+
+                    <p class="card-text mb-auto">Create a blog post to give the latest news about MunchyTeam!</p>
+                    <a href="/admin/munchyblog/homeblog/" role="button" class="stretched-link btn btn-primary w-75 mr-2">Create a Blog Post</a>
+
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img src="https://munchy-team.github.io/logos/MunchyBlogSUIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-info">MunchySite Blog: SuperUser Only</strong>
+                    <h3 class="mb-0">Messages</h3>
+
+                    <p class="card-text mb-auto">The right place to go to find the latest notifications.</p>
+                    <a href="/admins/" role="button" class="stretched-link btn btn-primary w-75 mr-2">Go to Messages</a>
+
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img src="https://munchy-team.github.io/logos/MunchyMessagesSUIco.png" alt="" class="bd-placeholder-img" width="260" height="250">
+                </div>
+            </div>
+
+        </div>
+            -->
+
+
+            <div class="row g-5">
+                <div class="col-md-8">
+                    {% if user.is_superuser %}
+                    <h1 class="pb-4 mb-4 border-bottom" style="font-size: 35pt; border-weight: 4px;">
+                        Notifications:
+                    </h1>
+                    {% else %}
+                    <h1 class="pb-4 mb-4 fst-italic border-bottom" style="font-size: 35pt; border-weight: 4px;">
+                        The Latest and Greatest from MunchyBlog
+                    </h1>
+
+                    {% endif %}
+
+                    {% if user.is_superuser %}
+
+                    {% for obj in messages %}
+                    <h6 class="text-primary">From: {{obj.From}} | To: {{obj.To}} | Posted At: {{obj.Posted_At}}</h6>
+
+
+                    <h4>{{obj.From}}: {{obj.Message}}</h4>
+
+
+                    <!--<p>Posted At: {{obj.Posted_At}}</p>
+
+                <p></p> -->
+                    <hr>
+                    <!--
+
+                <center>
+
+                    <table width="200%">
+                        <ol>
+                            <hr width="200%">
+                        <tr>
+                            <th width="5%">To:</th>
+                            <th width="5%">From:</th>
+                            <th width="68%">Message:</th>
+                            <th width="35%">Posted At:</th>
+                        </tr>
+                        <tr>
+                            <td width="5%" ><strong>{{obj.To}}</strong></td>
+                            <td width="5%"><strong>{{obj.From}}</strong></td>
+                            <td width="68%">{{obj.Message}}<br></td>
+                            <td width="35%">{{obj.Posted_At}}</td>
+
+                    </table>
+
+                    </ol>
+
+
+                </center> -->
+                    {% endfor %}
+                    {% else %}
+
+                    {% for obj in homeblogs %}
+                    <article class="blog-post">
+
+                        <h2 class="blog-post-title">{{obj.Post_Title}}</h2>
+
+
+                        <p class="blog-post-meta">Written at, {{obj.Date}} by <a href="#">{{obj.Author}}</a></p>
+
+                        <p>{{obj.IntroParagraph}}</p>
+                        <!--<p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+                    <hr> -->
+
+                        <h2>{{obj.Header1}}</h2>
+
+                        <p>{{obj.Paragraph1}}</p>
+                        <p>{{obj.SecondParagraph}}</p>
+                        <h2>{{obj.Header2}}</h2>
+                        <p>{{obj.Paragraph2}}</p>
+                        <p>{{obj.Header2_Second_Paragraph}}</p>
+                        <h2>{{obj.Header3}}</h2>
+                        <p>{{obj.Paragraph3}}</p>
+                        <p>{{obj.Header3_Second_Paragraph}}</p>
+                        <p>{{obj.ListItem1}}</p>
+                        <p>{{obj.ListItem2}}</p>
+                        <p>{{obj.ListItem3}}</p>
+                        <p>{{obj.ListItem4}}</p>
+                        <p>{{obj.ListItem5}}</p>
+                        <p>{{obj.ListItem6}}</p>
+                        <p>{{obj.ListItem7}}</p>
+                        <p>{{obj.ListItem8}}</p>
+                        <p>{{obj.ListItem9}}</p>
+                        <!-- <div>{{obj.Embeded}}</div> -->
+                        <!--  <blockquote class="blockquote">
+                        <p>Quoted text goes here.</p>
+                    </blockquote>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                    <h3>Example lists</h3>
+                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout. This is an example unordered list:</p>
+                    <ul>
+                        <li>First list item</li>
+                        <li>Second list item with a longer description</li>
+                        <li>Third list item to close it out</li>
+                    </ul>
+                    <p>And this is an ordered list:</p>
+                    <ol>
+                        <li>First list item</li>
+                        <li>Second list item with a longer description</li>
+                        <li>Third list item to close it out</li>
+                    </ol>
+                    <p>And this is a definition list:</p>
+                    <dl>
+                        <dt>HyperText Markup Language (HTML)</dt>
+                        <dd>The language used to describe and define the content of a Web page</dd>
+                        <dt>Cascading Style Sheets (CSS)</dt>
+                        <dd>Used to describe the appearance of Web content</dd>
+                        <dt>JavaScript (JS)</dt>
+                        <dd>The programming language used to build advanced Web sites and applications</dd>
+                    </dl>
+                    <h2>Inline HTML elements</h2>
+                    <p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
+                    <ul>
+                        <li><strong>To bold text</strong>, use <code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>.</li>
+                        <li><em>To italicize text</em>, use <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code>.</li>
+                        <li>Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use <code class="language-plaintext highlighter-rouge">&lt;abbr&gt;</code>, with an optional <code class="language-plaintext highlighter-rouge">title</code> attribute for the full phrase.</li>
+                        <li>Citations, like <cite>� Mark Otto</cite>, should use <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
+                        <li><del>Deleted</del> text should use <code class="language-plaintext highlighter-rouge">&lt;del&gt;</code> and <ins>inserted</ins> text should use <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
+                        <li>Superscript <sup>text</sup> uses <code class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.</li>
+                    </ul>
+                    <p>Most of these elements are styled by browsers with few modifications on our part.</p>
+                    <h2>Heading</h2>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                    <h3>Sub-heading</h3>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                    <pre><code>Example code block</code></pre>
+                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p> -->
+                        <strong><hr class="bg-black w-100"></strong>
+                    </article>
+                    {% endfor %}
+                    {% endif %}
+
+                    <!--
+                <article class="blog-post">
+                    <h2 class="blog-post-title">Another blog post</h2>
+                    <p class="blog-post-meta">December 23, 2020 by <a href="#">Jacob</a></p>
+
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                    <blockquote>
+                        <p>Longer quote goes here, maybe with some <strong>emphasized text</strong> in the middle of it.</p>
+                    </blockquote>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                    <h3>Example table</h3>
+                    <p>And don't forget about tables in these posts:</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Upvotes</th>
+                                <th>Downvotes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alice</td>
+                                <td>10</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>Bob</td>
+                                <td>4</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Charlie</td>
+                                <td>7</td>
+                                <td>9</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Totals</td>
+                                <td>21</td>
+                                <td>23</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+                </article>
+
+                <article class="blog-post">
+                    <h2 class="blog-post-title">New feature</h2>
+                    <p class="blog-post-meta">December 14, 2020 by <a href="#">Chris</a></p>
+
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                    <ul>
+                        <li>First list item</li>
+                        <li>Second list item with a longer description</li>
+                        <li>Third list item to close it out</li>
+                    </ul>
+                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+                </article> -->
+
+                    <nav class="blog-pagination" aria-label="Pagination">
+                        <a class="btn btn-outline-primary" href="#">Older</a>
+                        <a class="btn btn-outline-secondary disabled">Newer</a>
+                    </nav>
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="position-sticky" style="top: 2rem; overflow-y: scroll;">
+                        <div class="p-4 mb-3 bg-light rounded">
+
+                            {% if user.is_superuser %}
+                            <h4 class="fst-italic">SuperUser Tools:</h4>
+                            <hr>
+                            <li><a href="/blogposts"> All Blog Posts</a></li>
+                            <li><a href="/admin/munchyblog/homeblog/">Create a Public Blog Post</a></li>
+                            <li><a href="/admin/progress/message/add/">Reply to a SuperUser Message</a></li>
+
+                            <hr>
+                            <li><a href="https://github.com/munchy-team">GitHub</a></li>
+                            <li><a href="https://munchyteam.jetbrains.space">MunchyTeam Space</a></li>
+                            <li><a href="https://replit.com/@codingproject101010101">Replit</a></li>
+                            <hr>
+
+                            {% else %}
+                            <h4 class="fst-italic">About</h4>
+                            <p class="mb-0">Welcome to MunchySite, a MunchyTeam tool. This is the MunchyBlog, which is a part of MunchySite, and it allows you always stay updated about MunchyTeam!</p>
+                            {% endif %}
+
+
+                        </div>
+
+                        <div class="p-4">
+                            <!--
+                        <h4 class="fst-italic">Archives</h4>
+                        <ol class="list-unstyled mb-0">
+                          <li><a href="#">March 2021</a></li>
+                          <li><a href="#">February 2021</a></li>
+                          <li><a href="#">January 2021</a></li>
+                          <li><a href="#">December 2020</a></li>
+                          <li><a href="#">November 2020</a></li>
+                          <li><a href="#">October 2020</a></li>
+                          <li><a href="#">September 2020</a></li>
+                          <li><a href="#">August 2020</a></li>
+                          <li><a href="#">July 2020</a></li>
+                          <li><a href="#">June 2020</a></li>
+                          <li><a href="#">May 2020</a></li>
+                          <li><a href="#">April 2020</a></li>
+                        </ol> -->
+                        </div>
+                        {% if user.is_superuser %}
+                        <div class="p-4 mb-3 rounded" style="background-color: rgb(232, 232, 232);">
+                            <h4 class="fst-italic" style="padding-lower: 0px;">Superuser Posts</h4>
+                            <p class="fst-italic border-bottom" style="font-size: 10pt; font-weight: 265">
+                                Sent to
+                                <label for="sent-filter"></label>
+                                <select name="sent-filter" id="sent-filter">
+                                    <option value="me">Me ({{user.username}})</option>
+                                    <option value="as">Ayiaz</option>
+                                    <option value="ls">Li</option>
+                                    <option value="hc">Hudson</option>
+                                    <option value="all">All</option>
+                                </select>
+                            </p>
+                            {% for obj in message %}
+                            <article class="blog-post">
+                                <p>{{obj.Message}}</p>
+                            </article>
+                            {% endfor %}
+                            {% endif %}
+                        </div>
+                        <div class="p-4">
+                            <h4 class="fst-italic">Elsewhere</h4>
+                            <ol class="list-unstyled">
+
+                                <li><a href="#">GitHub</a></li>
+                                <li><a href="#">Twitter</a></li>
+                                <li><a href="#">Facebook</a></li>
+                                <li><a href="#">Discord</a></li>
+
+                            </ol>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+    </main>
+
+    <footer class="blog-footer">
+        <p>MunchySite | MunchyTeam | 2022.</p>
+        <p>
+            <a href="#">Back to top</a>
+        </p>
+    </footer>
+
+
+
+</body>
+</html>
+{% endblock %}
+
+
+<!--GARBAGE SNIPPETS-->
+<!--
+
+-->
 

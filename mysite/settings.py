@@ -28,7 +28,7 @@ SECRET_KEY = 'b#s*_o(3t3ai_k(c5po@h7a=nj5#vjkd3u7ckhnx@)mi=8fn67'
 DEBUG = True
 #need to define
 LOGIN_REDIRECT_URL = '/'
-ALLOWED_HOSTS = ["*, https://munchyteam.tk"]
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 

@@ -111,6 +111,14 @@ DATABASES = {
 
         'HOST': 'ec2-34-230-198-12.compute-1.amazonaws.com',
         'PORT': '5432',
+    },
+    'users': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'munchyteam', 
+        'USER': 'munchyteam_user',
+        'PASSWORD': 'fFk3CaIEYpw50VzjtQwP0XznZrUViQm6'
+        'HOST': 'dpg-cc4i6e1gp3jiap6h5rf0-a.ohio-postgres.render.com',
+        'PORT': '5432',
     }
 }
 

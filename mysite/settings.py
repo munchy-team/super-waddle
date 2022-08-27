@@ -111,6 +111,7 @@ DATABASES = {
         'PASSWORD': '3H4D6S/ye',
         'HOST': 'munchydb.postgres.database.azure.com',
         'PORT': '5432',
+        'OPTIONS': {'sslmode': 'require'},
        #host=munchydb.postgres.database.azure.com port=5432 dbname=munchydb user=munchy password={your_password} sslmode=require
     }
     

@@ -1,12 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\homepage",
-    "\\mysite",
-    "\\progress",
-    "\\progress\\templates",
-    "\\progress\\templates\\progress"
+    ""
   ],
-  "SelectedNode": "\\homepage\\models.py",
   "PreviewInSolutionExplorer": false
 }

@@ -108,7 +108,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'munchydb', 
         'USER': 'munchy',
-        'PASSWORD': 'Garbage#1234',
+        'PASSWORD': '3H4D6S/ye',
         'HOST': 'munchydb.postgres.database.azure.com',
         'PORT': '5432',
        #host=munchydb.postgres.database.azure.com port=5432 dbname=munchydb user=munchy password={your_password} sslmode=require
@@ -209,23 +209,6 @@ SOCIALACCOUNT_PROVIDERS = {
 #Btw im going to try to add discord as a sign in option later [Hudson]
 
 
- '''
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dfauu6s2p9c2mc', 
-        'USER': 'sjndilncqlgysz',
-        'PASSWORD': 'e8538d5f8ee333d967cea5ec709d41be8106f14a642dbf270ef43535217c58f6',
 
-        'HOST': 'ec2-34-230-198-12.compute-1.amazonaws.com',
-        'PORT': '5432',
-    },
-    'users': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'munchyteam', 
-        'USER': 'munchyteam_user',
-        'PASSWORD': 'fFk3CaIEYpw50VzjtQwP0XznZrUViQm6',
-        'HOST': 'dpg-cc4i6e1gp3jiap6h5rf0-a.ohio-postgres.render.com',
-        'PORT': '5432',
-    },
-    '''
+
     

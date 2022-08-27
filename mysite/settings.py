@@ -103,6 +103,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
+    '''
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'dfauu6s2p9c2mc', 
@@ -120,7 +121,8 @@ DATABASES = {
         'HOST': 'dpg-cc4i6e1gp3jiap6h5rf0-a.ohio-postgres.render.com',
         'PORT': '5432',
     },
-    'azure':{
+    '''
+    'default':{
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'munchydb', 
         'USER': 'munchy',

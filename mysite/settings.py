@@ -106,7 +106,7 @@ DATABASES = {
    
     'default':{
         'ENGINE': 'django.db.backends.postgresql',
-        #'NAME': 'munchydb', 
+        'NAME': 'munchydb', 
         'USER': 'munchy',
         'PASSWORD': 'Garbage#1234',
         'HOST': 'munchydb.postgres.database.azure.com',

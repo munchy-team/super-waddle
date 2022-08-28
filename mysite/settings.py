@@ -119,22 +119,8 @@ DATABASES = {
         'PASSWORD': 'fFk3CaIEYpw50VzjtQwP0XznZrUViQm6',
         'HOST': 'dpg-cc4i6e1gp3jiap6h5rf0-a.ohio-postgres.render.com',
         'PORT': '5432',
-    }
-    
-    '''
+    },
    
-    'default':{
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'munchydb', 
-        'USER': 'munchy',
-        'PASSWORD': 'Garbage#1234',
-        'HOST': 'munchydb.postgres.database.azure.com',
-        'PORT': '5432',
-        'OPTIONS': {'sslmode': 'require'},
-       #host=munchydb.postgres.database.azure.com port=5432 dbname=munchydb user=munchy password={your_password} sslmode=require
-    }
-    '''
-    
 }
 
 

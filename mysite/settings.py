@@ -120,7 +120,17 @@ DATABASES = {
         'HOST': 'dpg-cc4i6e1gp3jiap6h5rf0-a.ohio-postgres.render.com',
         'PORT': '5432',
     },
+    'main': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway', 
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'containers-us-west-30.railway.app',
+        'PORT': '5776',
+    },
    
+   
+    
 }
 
 

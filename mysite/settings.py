@@ -128,7 +128,7 @@ DATABASES = {
         'HOST': 'containers-us-west-30.railway.app',
         'PORT': '5776',
     },
-    'more_stuff':{
+    'morestuff': {
         default='postgresql://postgres:QsWvrljPSwOXhfTZWxMH@containers-us-west-30.railway.app:5776/railway'
     }
    

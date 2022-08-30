@@ -130,6 +130,7 @@ DATABASES = {
     },
     'more_stuff':{
         default='postgresql://postgres:QsWvrljPSwOXhfTZWxMH@containers-us-west-30.railway.app:5776/railway'
+    }
    
    
     

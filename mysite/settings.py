@@ -137,12 +137,12 @@ DATABASES = {
     #},
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'mt-testing-anything',
-        'USER': 'admin',
-       'PASSWORD': 'Rq44vGwcSsEAzZeHtEdpGtHJayG7cA',
-       'HOST': 'us-west-2.bb352230-c512-4425-9e64-461fa9f2e31a.aws.ybdb.io',
-       'PORT': '5432',
-       'CONN_MAX_AGE': None,
+       'NAME': 'yugabyte',
+        'USER': 'munchy',
+       'PASSWORD': 'Munchy1234',
+       'HOST': 'us-west-2.1226948a-6d45-49b7-b41e-1632a207e96b.aws.ybdb.io',
+       'PORT': '5433',
+    
     }
     #'morestuff': {
     #    default='postgresql://postgres:QsWvrljPSwOXhfTZWxMH@containers-us-west-30.railway.app:5776/railway'

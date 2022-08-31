@@ -127,14 +127,14 @@ DATABASES = {
         'HOST': 'dpg-cc4i6e1gp3jiap6h5rf0-a.ohio-postgres.render.com',
         'PORT': '5432',
     },
-    'garbage': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway', 
-        'USER': 'postgres',
-        'PASSWORD': 'QsWvrljPSwOXhfTZWxMH',
-        'HOST': 'containers-us-west-30.railway.app',
-        'PORT': '5776',
-    },
+    #'garbage': {
+    #    'ENGINE': 'django.db.backends.postgresql',
+    #    'NAME': 'railway', 
+    #    'USER': 'postgres',
+    #    'PASSWORD': 'QsWvrljPSwOXhfTZWxMH',
+    #    'HOST': 'containers-us-west-30.railway.app',
+    #    'PORT': '5776',
+    #},
     'users': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'mt-testing-anything',

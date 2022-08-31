@@ -135,15 +135,15 @@ DATABASES = {
     #    'HOST': 'containers-us-west-30.railway.app',
     #    'PORT': '5776',
     #},
-    'users': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mt-testing-anything',
-        'USER': 'admin',
-        'PASSWORD': 'Rq44vGwcSsEAzZeHtEdpGtHJayG7cA',
-        'HOST': 'us-west-2.bb352230-c512-4425-9e64-461fa9f2e31a.aws.ybdb.io',
-        'PORT': '5433',
-        'CONN_MAX_AGE': None,
-    }
+    #'users': {
+    #    'ENGINE': 'django.db.backends.postgresql',
+    #    'NAME': 'mt-testing-anything',
+    #    'USER': 'admin',
+    #    'PASSWORD': 'Rq44vGwcSsEAzZeHtEdpGtHJayG7cA',
+    #    'HOST': 'us-west-2.bb352230-c512-4425-9e64-461fa9f2e31a.aws.ybdb.io',
+    #    'PORT': '5433',
+    #    'CONN_MAX_AGE': None,
+    #}
     #'morestuff': {
     #    default='postgresql://postgres:QsWvrljPSwOXhfTZWxMH@containers-us-west-30.railway.app:5776/railway'
     #}

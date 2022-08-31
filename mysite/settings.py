@@ -141,7 +141,7 @@ DATABASES = {
         'USER': 'admin',
        'PASSWORD': 'Rq44vGwcSsEAzZeHtEdpGtHJayG7cA',
        'HOST': 'us-west-2.bb352230-c512-4425-9e64-461fa9f2e31a.aws.ybdb.io',
-       'PORT': '5433',
+       'PORT': '5432',
        'CONN_MAX_AGE': None,
     }
     #'morestuff': {

@@ -135,7 +135,16 @@ DATABASES = {
     #    'HOST': 'containers-us-west-30.railway.app',
     #    'PORT': '5776',
     #},
-    'default': {
+    'default':{
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'yugabyte',
+        'USER': 'admin',
+       'PASSWORD': 'Rq44vGwcSsEAzZeHtEdpGtHJayG7cA',
+       'HOST': 'us-west-2.bb352230-c512-4425-9e64-461fa9f2e31a.aws.ybdb.io',
+       'PORT': '5433',
+       #'CONN_MAX_AGE': None,
+    },
+    'default-test': {
         'ENGINE': 'django.db.backends.postgresql',
        'NAME': 'yugabyte',
         'USER': 'munchy',

@@ -61,11 +61,18 @@ INSTALLED_APPS = [
   'polls',
   'homepage',
   'a1homepage',
+  'rest_framework',
   #'django.contrib.accounts2',
 
   
    # 'progress.apps.WebsiteIdeasConfig',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [],
+    'DEFAULT_PERMISSION_CLASSES': [],
+    'UNAUTHENTICATED_USER': None,
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -112,7 +119,7 @@ DATABASES = {
         'HOST': 'ec2-34-230-198-12.compute-1.amazonaws.com',
         'PORT': '5432',
     },
-    'users': {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'munchyteam', 
         'USER': 'munchyteam_user',
@@ -120,7 +127,7 @@ DATABASES = {
         'HOST': 'dpg-cc4i6e1gp3jiap6h5rf0-a.ohio-postgres.render.com',
         'PORT': '5432',
     },
-    'default': {
+    'garbage': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway', 
         'USER': 'postgres',
@@ -128,6 +135,15 @@ DATABASES = {
         'HOST': 'containers-us-west-30.railway.app',
         'PORT': '5776',
     },
+    'users': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mt-testing-anything',
+        'USER': 'admin',
+        'PASSWORD': 'Rq44vGwcSsEAzZeHtEdpGtHJayG7cA',
+        'HOST': 'us-west-2.bb352230-c512-4425-9e64-461fa9f2e31a.aws.ybdb.io',
+        'PORT': '5433',
+        'CONN_MAX_AGE': None,
+    }
     #'morestuff': {
     #    default='postgresql://postgres:QsWvrljPSwOXhfTZWxMH@containers-us-west-30.railway.app:5776/railway'
     #}

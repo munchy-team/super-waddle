@@ -50,14 +50,22 @@ from django.contrib.auth import views as auth_views
 
 
 from . import views
-
+from rest_framework import routers
+from .views import UserViewSet
+router = routers.SimpleRouter(trailing_slash=False)
+router.register(r'users', UserViewSet)
 
 from django.views.generic import TemplateView
 #admin.site.site_header= "Project Progress Website"
 admin.site.site_header= "MunchySite | MunchyTeam"
 
+#from django.urls import path, include
+#from django.conf.urls import url, include
+#from rest_framework import routers
+#from .views import UserViewSet
 
 urlpatterns = [
+    re_path(r'^', include(router.urls)),
     path('admin/', admin.site.urls),
     path('user/account/', views.account_holder),
     path('blogposts/', views.munchy_blog_post),

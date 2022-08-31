@@ -32,6 +32,14 @@ from a1homepage.models import Banner
 from a1homepage.models import AdminBanner
 from a1homepage.models import Economy
 from a1homepage.models import BannerBackground
+from django.shortcuts import render
+from progress.models import Users
+from rest_framework import viewsets
+from .serializers import UserSerializer
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = Users.objects.all()
+    serializer_class = UserSerializer
 
 
 admin.site.login = login_required(admin.site.login)

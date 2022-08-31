@@ -110,3 +110,15 @@ class File_Upload_Center(models.Model):
   File_Name = models.CharField(max_length=250)
   Upload_File = models.FileField()
   Description = models.TextField(max_length=250)
+
+class Users(models.Model):
+    userId = models.AutoField(db_column='user_id', primary_key=True, serialize=False)
+    firstName = models.CharField(max_length=50, db_column='first_name')
+    lastName = models.CharField(max_length=50, db_column='last_name')
+    email = models.CharField(max_length=100, db_column='user_email')
+
+    class Meta:
+        db_table = "users"
+
+    def __str__(self):
+        return '%d %s %s %s' % (self.userId, self.firstName, self.lastName, self.email)

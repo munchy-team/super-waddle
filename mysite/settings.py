@@ -155,26 +155,27 @@ DATABASES = {
  #      'PORT': '5433',
        #'CONN_MAX_AGE': None,
  #   },
-    'default':{
+'default':{
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'munchysite',
         'USER': 'munchy',
         'PASSWORD': '40jpUUMYoOjWD3yFquNeCbOAtEgbt8',
         'HOST': 'munchysitedb-prod-database-hleew7.mo1.mogenius.io',
         'PORT': '80',
-    }
-}
-  #          'default2':{
-    #    'ENGINE': 'django_cockroachdb',
-     #   'NAME': 'defaultdb',
-    #    'USER': 'munchy',
-    #    'PASSWORD': '40jpUUMYoOjWD3yFquNeCbOAtEgbt8',
-   #     'HOST': 'free-tier14.aws-us-east-1.cockroachlabs.cloud',
-    #    'PORT': '26257',
-     #   'OPTIONS': {
+    },
+
+'default2':{
+        'ENGINE': 'django_cockroachdb',
+        'NAME': 'defaultdb',
+        'USER': 'munchy',
+        'PASSWORD': '40jpUUMYoOjWD3yFquNeCbOAtEgbt8',
+        'HOST': 'free-tier14.aws-us-east-1.cockroachlabs.cloud',
+        'PORT': '26257',
+        'OPTIONS': {
             #'sslmode': 'verify-full',
-    #        'options': '--cluster=calmed-beast-4627'
-    #    },
+            'options': '--cluster=calmed-beast-4627'
+    },
+}
        #'CONN_MAX_AGE': None,
 #    },
     # 'default-test': {

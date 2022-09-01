@@ -162,7 +162,8 @@ DATABASES = {
         'PASSWORD': '40jpUUMYoOjWD3yFquNeCbOAtEgbt8',
         'HOST': 'tcp-mo1.mogenius.io',
         'PORT': '36010',
-    },
+    }
+}
   #          'default2':{
     #    'ENGINE': 'django_cockroachdb',
      #   'NAME': 'defaultdb',

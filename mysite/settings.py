@@ -29,7 +29,18 @@ DEBUG = True
 #need to define
 LOGIN_REDIRECT_URL = '/'
 ALLOWED_HOSTS = ["*"]
+'''
+import os
+import psycopg2
 
+conn = psycopg2.connect(os.environ["postgresql://munchy:HNijsJ6xXjqKV4_Ahm-ZYw@free-tier14.aws-us-east-1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full&options=--cluster%3Dcalmed-beast-4627"])
+
+with conn.cursor() as cur:
+    cur.execute("SELECT now()")
+    res = cur.fetchall()
+    conn.commit()
+    print(res)
+'''
 # Application definition
 
 INSTALLED_APPS = [
@@ -135,13 +146,26 @@ DATABASES = {
     #    'HOST': 'containers-us-west-30.railway.app',
     #    'PORT': '5776',
     #},
-    'default':{
+    'default-test-2':{
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'yugabyte',
         'USER': 'admin',
        'PASSWORD': 'Rq44vGwcSsEAzZeHtEdpGtHJayG7cA',
        'HOST': 'us-west-2.bb352230-c512-4425-9e64-461fa9f2e31a.aws.ybdb.io',
        'PORT': '5433',
+       #'CONN_MAX_AGE': None,
+    },
+    'default':{
+        'ENGINE': 'django_cockroachdb',
+        'NAME': 'defaultdb',
+        'USER': 'munchy',
+        'PASSWORD': 'HNijsJ6xXjqKV4_Ahm-ZYw',
+        'HOST': 'free-tier14.aws-us-east-1.cockroachlabs.cloud',
+        'PORT': '26257',
+        'OPTIONS': {
+            'sslmode': 'verify-full',
+            'options': '--cluster=calmed-beast-4627'
+        },
        #'CONN_MAX_AGE': None,
     },
     'default-test': {
@@ -249,6 +273,10 @@ SOCIALACCOUNT_PROVIDERS = {
       }
   
         }
+
+
+
+DISABLE_COCKROACHDB_TELEMETRY = True
 
 
 #Btw im going to try to add discord as a sign in option later [Hudson]

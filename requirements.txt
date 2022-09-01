@@ -7,5 +7,6 @@ typing_extensions
 django-allauth
 djangorestframework
 Pillow
+django-cockroachdb==4.1
 
  

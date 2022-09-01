@@ -163,7 +163,7 @@ DATABASES = {
         'HOST': 'free-tier14.aws-us-east-1.cockroachlabs.cloud',
         'PORT': '26257',
         'OPTIONS': {
-            'sslmode': 'verify-full',
+            #'sslmode': 'verify-full',
             'options': '--cluster=calmed-beast-4627'
         },
        #'CONN_MAX_AGE': None,

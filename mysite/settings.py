@@ -176,7 +176,7 @@ DATABASES = {
     #        'options': '--cluster=calmed-beast-4627'
     #    },
        #'CONN_MAX_AGE': None,
-    },
+#    },
     # 'default-test': {
       #   'ENGINE': 'django.db.backends.postgresql',
       # 'NAME': 'yugabyte',

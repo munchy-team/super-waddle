@@ -131,7 +131,7 @@ DATABASES = {
         'PORT': '5432',
     },
  
-    'defaultno': {
+    'default': {
         'ENGINE': 'django_cockroachdb',
         'NAME': 'defaultdb',
         'USER': 'munchy',
@@ -169,7 +169,7 @@ DATABASES = {
        #'CONN_MAX_AGE': None,
  #   },
  
-  'default':{
+  'default-this-is-trash':{
      'ENGINE': 'django.db.backends.postgresql',
        'NAME': 'munchysite',
        'USER': 'munchy',

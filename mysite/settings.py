@@ -160,8 +160,8 @@ DATABASES = {
         'NAME': 'munchysite',
         'USER': 'munchy',
         'PASSWORD': '40jpUUMYoOjWD3yFquNeCbOAtEgbt8',
-        'HOST': 'tcp-mo1.mogenius.io',
-        'PORT': '36010',
+        'HOST': 'munchysitedb-prod-database-hleew7.mo1.mogenius.io',
+        'PORT': '80',
     }
 }
   #          'default2':{

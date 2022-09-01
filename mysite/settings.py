@@ -29,18 +29,18 @@ DEBUG = True
 #need to define
 LOGIN_REDIRECT_URL = '/'
 ALLOWED_HOSTS = ["*"]
-'''
+# '''
 import os
-import psycopg2
+# import psycopg2
 
-conn = psycopg2.connect(os.environ["postgresql://munchy:HNijsJ6xXjqKV4_Ahm-ZYw@free-tier14.aws-us-east-1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full&options=--cluster%3Dcalmed-beast-4627"])
+# conn = psycopg2.connect(os.environ["postgresql://munchy:HNijsJ6xXjqKV4_Ahm-ZYw@free-tier14.aws-us-east-1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full&options=--cluster%3Dcalmed-beast-4627"])
 
-with conn.cursor() as cur:
-    cur.execute("SELECT now()")
-    res = cur.fetchall()
-    conn.commit()
-    print(res)
-'''
+# with conn.cursor() as cur:
+ #    cur.execute("SELECT now()")
+  #   res = cur.fetchall()
+   #  conn.commit()
+  #   print(res)
+# '''
 # Application definition
 
 INSTALLED_APPS = [
@@ -130,14 +130,14 @@ DATABASES = {
         'HOST': 'ec2-34-230-198-12.compute-1.amazonaws.com',
         'PORT': '5432',
     },
-    'munchy': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'munchyteam', 
-        'USER': 'munchyteam_user',
-        'PASSWORD': 'fFk3CaIEYpw50VzjtQwP0XznZrUViQm6',
-        'HOST': 'dpg-cc4i6e1gp3jiap6h5rf0-a.ohio-postgres.render.com',
-        'PORT': '5432',
-    },
+  #  'munchy': {
+      #  'ENGINE': 'django.db.backends.postgresql',
+       # 'NAME': 'munchyteam', 
+#        'USER': 'munchyteam_user',
+  #      'PASSWORD': 'fFk3CaIEYpw50VzjtQwP0XznZrUViQm6',
+  #      'HOST': 'dpg-cc4i6e1gp3jiap6h5rf0-a.ohio-postgres.render.com',
+  #      'PORT': '5432',
+   # },
     #'garbage': {
     #    'ENGINE': 'django.db.backends.postgresql',
     #    'NAME': 'railway', 
@@ -146,15 +146,15 @@ DATABASES = {
     #    'HOST': 'containers-us-west-30.railway.app',
     #    'PORT': '5776',
     #},
-    'default-test-2':{
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'yugabyte',
-        'USER': 'admin',
-       'PASSWORD': 'Rq44vGwcSsEAzZeHtEdpGtHJayG7cA',
-       'HOST': 'us-west-2.bb352230-c512-4425-9e64-461fa9f2e31a.aws.ybdb.io',
-       'PORT': '5433',
+   # 'default-test-2':{
+  #      'ENGINE': 'django.db.backends.postgresql',
+   #     'NAME': 'yugabyte',
+   #     'USER': 'admin',
+ #      'PASSWORD': 'Rq44vGwcSsEAzZeHtEdpGtHJayG7cA',
+ #      'HOST': 'us-west-2.bb352230-c512-4425-9e64-461fa9f2e31a.aws.ybdb.io',
+ #      'PORT': '5433',
        #'CONN_MAX_AGE': None,
-    },
+ #   },
     'default':{
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'munchysite',
@@ -163,28 +163,28 @@ DATABASES = {
         'HOST': 'tcp-mo1.mogenius.io',
         'PORT': '36010',
     },
-            'default2':{
-        'ENGINE': 'django_cockroachdb',
-        'NAME': 'defaultdb',
-        'USER': 'munchy',
-        'PASSWORD': '40jpUUMYoOjWD3yFquNeCbOAtEgbt8',
-        'HOST': 'free-tier14.aws-us-east-1.cockroachlabs.cloud',
-        'PORT': '26257',
-        'OPTIONS': {
+  #          'default2':{
+    #    'ENGINE': 'django_cockroachdb',
+     #   'NAME': 'defaultdb',
+    #    'USER': 'munchy',
+    #    'PASSWORD': '40jpUUMYoOjWD3yFquNeCbOAtEgbt8',
+   #     'HOST': 'free-tier14.aws-us-east-1.cockroachlabs.cloud',
+    #    'PORT': '26257',
+     #   'OPTIONS': {
             #'sslmode': 'verify-full',
-            'options': '--cluster=calmed-beast-4627'
-        },
+    #        'options': '--cluster=calmed-beast-4627'
+    #    },
        #'CONN_MAX_AGE': None,
     },
-    'default-test': {
-        'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'yugabyte',
-        'USER': 'munchy',
-       'PASSWORD': 'Munchy1234',
-       'HOST': 'us-west-2.1226948a-6d45-49b7-b41e-1632a207e96b.aws.ybdb.io',
-       'PORT': '5433',
+    # 'default-test': {
+      #   'ENGINE': 'django.db.backends.postgresql',
+      # 'NAME': 'yugabyte',
+      #  'USER': 'munchy',
+     #  'PASSWORD': 'Munchy1234',
+    #   'HOST': 'us-west-2.1226948a-6d45-49b7-b41e-1632a207e96b.aws.ybdb.io',
+    #   'PORT': '5433',
     
-    }
+#    }
     #'morestuff': {
     #    default='postgresql://postgres:QsWvrljPSwOXhfTZWxMH@containers-us-west-30.railway.app:5776/railway'
     #}

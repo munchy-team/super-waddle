@@ -130,6 +130,19 @@ DATABASES = {
         'HOST': 'ec2-34-230-198-12.compute-1.amazonaws.com',
         'PORT': '5432',
     },
+ 
+    'default': {
+        'ENGINE': 'django_cockroachdb',
+        'NAME': 'defaultdb',
+        'USER': 'munchy',
+        'PASSWORD': 'HNijsJ6xXjqKV4_Ahm-ZYw',
+        'HOST': 'free-tier14.aws-us-east-1.cockroachlabs.cloud',
+        'PORT': '26257',
+        'OPTIONS': {
+            #'sslmode': 'verify-full',
+            'options': '--cluster=calmed-beast-4627'
+        },
+    },
   #  'munchy': {
       #  'ENGINE': 'django.db.backends.postgresql',
        # 'NAME': 'munchyteam', 
@@ -155,32 +168,17 @@ DATABASES = {
  #      'PORT': '5433',
        #'CONN_MAX_AGE': None,
  #   },
- '''
-   'default':{
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'munchysite',
-        'USER': 'munchy',
-        'PASSWORD': '40jpUUMYoOjWD3yFquNeCbOAtEgbt8',
-        'HOST': 'munchysitedb-prod-database-hleew7.mo1.mogenius.io',
-        'PORT': '80',
-    },
- '''   
-
-    'default':{
-        'ENGINE': 'django_cockroachdb',
-        'NAME': 'defaultdb',
-        'USER': 'munchy',
-        'PASSWORD': '40jpUUMYoOjWD3yFquNeCbOAtEgbt8',
-        'HOST': 'free-tier14.aws-us-east-1.cockroachlabs.cloud',
-        'PORT': '26257',
-        'OPTIONS': {
-            #'sslmode': 'verify-full',
-            'options': '--cluster=calmed-beast-4627'
-    },
-
-
+ 
+ #  'default':{
+ #       'ENGINE': 'django.db.backends.postgresql',
+ #       'NAME': 'munchysite',
+ #       'USER': 'munchy',
+ #       'PASSWORD': '40jpUUMYoOjWD3yFquNeCbOAtEgbt8',
+ #       'HOST': 'munchysitedb-prod-database-hleew7.mo1.mogenius.io',
+ #       'PORT': '80',
+ #   },
     
-    },
+
 }
        #'CONN_MAX_AGE': None,
 #    },

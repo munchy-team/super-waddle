@@ -156,10 +156,18 @@ DATABASES = {
        #'CONN_MAX_AGE': None,
     },
     'default':{
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'munchysite',
+        'USER': 'munchy',
+        'PASSWORD': '40jpUUMYoOjWD3yFquNeCbOAtEgbt8',
+        'HOST': 'tcp-mo1.mogenius.io',
+        'PORT': '36010',
+    },
+            'default2':{
         'ENGINE': 'django_cockroachdb',
         'NAME': 'defaultdb',
         'USER': 'munchy',
-        'PASSWORD': 'HNijsJ6xXjqKV4_Ahm-ZYw',
+        'PASSWORD': '40jpUUMYoOjWD3yFquNeCbOAtEgbt8',
         'HOST': 'free-tier14.aws-us-east-1.cockroachlabs.cloud',
         'PORT': '26257',
         'OPTIONS': {

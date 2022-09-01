@@ -155,6 +155,7 @@ DATABASES = {
  #      'PORT': '5433',
        #'CONN_MAX_AGE': None,
  #   },
+ '''
    'default':{
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'munchysite',
@@ -163,8 +164,9 @@ DATABASES = {
         'HOST': 'munchysitedb-prod-database-hleew7.mo1.mogenius.io',
         'PORT': '80',
     },
+ '''   
 
-    'default2':{
+    'default':{
         'ENGINE': 'django_cockroachdb',
         'NAME': 'defaultdb',
         'USER': 'munchy',

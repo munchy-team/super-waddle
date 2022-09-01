@@ -155,7 +155,7 @@ DATABASES = {
  #      'PORT': '5433',
        #'CONN_MAX_AGE': None,
  #   },
-'default':{
+   'default':{
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'munchysite',
         'USER': 'munchy',
@@ -164,7 +164,7 @@ DATABASES = {
         'PORT': '80',
     },
 
-'default2':{
+    'default2':{
         'ENGINE': 'django_cockroachdb',
         'NAME': 'defaultdb',
         'USER': 'munchy',
@@ -174,6 +174,10 @@ DATABASES = {
         'OPTIONS': {
             #'sslmode': 'verify-full',
             'options': '--cluster=calmed-beast-4627'
+    },
+
+
+    
     },
 }
        #'CONN_MAX_AGE': None,

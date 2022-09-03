@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'b#s*_o(3t3ai_k(c5po@h7a=nj5#vjkd3u7ckhnx@)mi=8fn67'
-
+CSRF_TRUSTED_ORIGINS = ['https://*.azurewebsites.com']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 #need to define

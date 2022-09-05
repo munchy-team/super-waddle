@@ -259,7 +259,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, '.well-known')#'media'
 MEDIA_URL = '.well-known/' #real one - #MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
-SITE_ID = 2
+SITE_ID = 794088096717602817
 
 SOCIALACCOUNT_PROVIDERS = {
 

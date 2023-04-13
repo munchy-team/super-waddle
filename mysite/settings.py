@@ -132,16 +132,13 @@ DATABASES = {
     },
  
     'default': {
-        'ENGINE': 'django_cockroachdb',
-        'NAME': 'defaultdb',
-        'USER': 'munchy',
-        'PASSWORD': 'HNijsJ6xXjqKV4_Ahm-ZYw',
-        'HOST': 'free-tier14.aws-us-east-1.cockroachlabs.cloud',
-        'PORT': '26257',
-        'OPTIONS': {
-            #'sslmode': 'verify-full',
-            'options': '--cluster=calmed-beast-4627'
-        },
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mteam-main-db-0db78a3189396e863',
+        'USER': 'mteam-main-db-0db78a3189396e863',
+        'PASSWORD': 'dCMk1HyketFA1m2M91Tf4WDnbJjJBc',
+        'HOST': 'user-prod-us-east-2-1.cluster-cfi5vnucvv3w.us-east-2.rds.amazonaws.com',
+        'PORT': '5432',
+       
     },
   #  'munchy': {
       #  'ENGINE': 'django.db.backends.postgresql',

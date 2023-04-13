@@ -22,8 +22,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'b#s*_o(3t3ai_k(c5po@h7a=nj5#vjkd3u7ckhnx@)mi=8fn67'
-CSRF_TRUSTED_ORIGINS = ['https://*.azurewebsites.com']
+SECRET_KEY = 'b#s*_o(3t3ai_k(c5podsfisdfjodfsi@h7a=nj5#vjkd3u7ckhnx@)mi=8fn67'
+CSRF_TRUSTED_ORIGINS = ['https://mteam.adaptable.app']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 #need to define
@@ -256,7 +256,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, '.well-known')#'media'
 MEDIA_URL = '.well-known/' #real one - #MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
-SITE_ID = 794088096717602817
+SITE_ID = 1
 
 SOCIALACCOUNT_PROVIDERS = {
 
